@@ -7,5 +7,5 @@ title: AiSpect ホーム
 Java 17+ 向けのデュアルトラック AI エージェントフレームワーク
 
 - [ユーザーマニュアル](./User_Manual.md)
-- [API リファレンス](./API_Reference.md)
+- [API リファレンス](../apidocs/index.html)
 - [バージョンとリリース](./Versions.md)
