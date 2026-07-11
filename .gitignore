@@ -1,0 +1,27 @@
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencies
+vendor/
+node_modules/
+Gemfile.lock
+
+# VitePress generated files (in case you switch to VitePress as mentioned in docs)
+.vitepress/dist
+.vitepress/cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
