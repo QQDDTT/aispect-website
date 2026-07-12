@@ -18,7 +18,7 @@
 ```java
 @AiUnitAgent(
     name = DataCleanAgent.class, 
-    description = "扩展给定文本，提供更多细节和丰富的词汇。"
+    description = "Expands the given text with more details and richer vocabulary."
 )
 String processText(String originalText);
 ```
@@ -40,10 +40,10 @@ String processText(String originalText);
 ```java
 @AiUnitAgent(
     name = ImageProcessAgent.class, 
-    description = "根据指令处理或分析图像。", 
-    modelName = "gemini-2.5-flash"
+    description = "Processes an image based on instructions.", 
+    modelName = "imagen-4-generate"
 )
-String processImage(byte[] image, String instruction);
+byte[] processImage(byte[] image, String instruction); // 根据业务也可配置返回 String
 ```
 
 ---
@@ -63,8 +63,29 @@ String processImage(byte[] image, String instruction);
 ```java
 @AiUnitAgent(
     name = ImageStoryAgent.class, 
-    description = "根据图像讲述富有想象力的故事。", 
+    description = "Tells an imaginative story based on the image.", 
     modelName = "gemini-2.5-flash"
 )
 String storyFromImage(byte[] image, String instruction);
+```
+
+---
+
+## 🗂️ 4. JSON 提取器 (JsonExtractorAgent)
+
+**全限定类名**: `com.aispect.agents.data.JsonExtractorAgent`
+
+**功能描述**: 
+用于从非结构化的杂乱文本中提取出 JSON 字符串。它会拦截原有方法的执行，将传入的文本交给 AI 解析，并自动过滤掉多余的 Markdown 标记（如 ```json），仅返回纯净的 JSON 字符串。
+
+**参数契约**:
+- **参数 1 (`String` 或任意 `Object`)**: 包含杂乱数据的原始文本。
+
+**使用示例**:
+```java
+@AiUnitAgent(
+    name = JsonExtractorAgent.class, 
+    description = "提取其中的 JSON 数据"
+)
+String extractJson(String rawText);
 ```
