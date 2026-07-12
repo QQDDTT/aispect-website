@@ -45,13 +45,13 @@ public class OrderService {
 public class OrderValidatorAgentImpl implements Agent {
     
     @Override
-    public void preProcess(InvocationContext ctx) {
+    public void preProcess(AiInvocationContext ctx) {
         // 这里的逻辑会在这条链路执行前被调用，底层通过 AiClient 与大模型通信
         // 比如：判断 userRequirement 中是否包含高危词汇，如果包含则抛出异常短路流程
     }
 
     @Override
-    public void postProcess(Object result, InvocationContext ctx) {
+    public void postProcess(Object result, AiInvocationContext ctx) {
         // 这里的逻辑会在这条链路执行后被调用
     }
 }
