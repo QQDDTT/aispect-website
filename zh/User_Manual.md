@@ -17,10 +17,9 @@ AiSpect 是一个“基于注解”的 Agent 编排框架。
 在您的 `application.yml` 中添加配置：
 ```yaml
 aispect:
-  ai:
-    endpoint: "https://api.openai.com/v1"
-    api-key: "sk-xxxxxx"
-    model-name: "gpt-4o"
+  provider: gemini
+  default-model: gemini-2.5-flash
+  api-key: "${GEMINI_API_KEY:sk-xxxxxx}"
 ```
 
 ### 步骤三：编写业务与注解
