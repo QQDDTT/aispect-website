@@ -23,6 +23,3 @@ com.aispect.engine.se
 com.aispect.engine.spring
 com.aispect.engine.spring.annotation
 com.aispect.engine.spring.config
-com.aispect.test.context
-com.aispect.test.mock
-com.aispect.test.spring

@@ -73,15 +73,15 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></code>, <code><a href="../core/client/adapter/llamacpp/LlamaCppAdapter.html" title="class in com.aispect.core.client.adapter.llamacpp">LlamaCppAdapter</a></code>, <code><a href="../test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></code>, <code><a href="../core/client/adapter/ollama/OllamaAdapter.html" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a></code>, <code><a href="../core/client/adapter/openai/OpenAiAdapter.html" title="class in com.aispect.core.client.adapter.openai">OpenAiAdapter</a></code></dd>
+<dd><code><a href="../core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></code>, <code><a href="../core/client/adapter/llamacpp/LlamaCppAdapter.html" title="class in com.aispect.core.client.adapter.llamacpp">LlamaCppAdapter</a></code>, <code><a href="../core/client/adapter/ollama/OllamaAdapter.html" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a></code>, <code><a href="../core/client/adapter/openai/OpenAiAdapter.html" title="class in com.aispect.core.client.adapter.openai">OpenAiAdapter</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiClient</span></div>
-<div class="block">AI 客户端适配器接口。
+<div class="block">AI Client adapter interface.
  <p>
- 该接口定义了与底层 AI 模型服务进行通信的标准契约。它将各种具体的 AI 模型 API 
- （如 OpenAI, Gemini, Ollama, Llama.cpp 等）抽象为统一的方法，
- 使得上层的引擎与代理无需关注底层的网络通信和协议差异。
+ This interface defines the standard contract for communicating with underlying AI model services.
+ It abstracts various specific AI model APIs (e.g., OpenAI, Gemini, Ollama, Llama.cpp) into unified methods,
+ enabling upper-layer engines and agents to focus on logic rather than underlying network communications and protocol differences.
  </p></div>
 </section>
 <section class="summary">
@@ -101,13 +101,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate</a><wbr>(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;ctx,
  <a href="../core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a>&nbsp;config)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">阻塞式生成单个响应。</div>
+<div class="block">Generates a single response in a blocking manner.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate</a><wbr>(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;ctx,
  <a href="../core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a>&nbsp;config)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">流式生成响应（Server-Sent Events 模式）。</div>
+<div class="block">Generates a response via streaming (Server-Sent Events mode).</div>
 </div>
 </div>
 </div>
@@ -129,19 +129,19 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></span>&nbsp;<span class="element-name">generate</span><wbr><span class="parameters">(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;ctx,
  <a href="../core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a>&nbsp;config)</span>
            throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">阻塞式生成单个响应。
+<div class="block">Generates a single response in a blocking manner.
  <p>
- 客户端将向底层 AI 模型发送提示上下文，并等待模型返回完整的计算结果。
- 适用于非流式且需要一次性拿到最终结果的场景。
+ The client will send the prompt context to the underlying AI model and wait for the complete calculation result.
+ Applicable for non-streaming scenarios where the final result is needed all at once.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前请求的提示上下文，包含系统提示、历史消息等信息</dd>
-<dd><code>config</code> - 客户端请求的配置参数，如模型名称、温度(temperature)、最大生成 token 数等</dd>
+<dd><code>ctx</code> - The prompt context of the current request, including system prompts, historical messages, etc.</dd>
+<dd><code>config</code> - Configuration parameters for the client request, such as model name, temperature, max tokens, etc.</dd>
 <dt>Returns:</dt>
-<dd>返回模型生成的完整响应结果 <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model"><code>Response</code></a></dd>
+<dd>The complete response generated by the model <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model"><code>Response</code></a></dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当网络请求失败、超时或模型服务返回异常状态码时抛出</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Thrown when a network request fails, times out, or the model service returns an abnormal status code</dd>
 </dl>
 </section>
 </li>
@@ -151,19 +151,20 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</span>&nbsp;<span class="element-name">streamGenerate</span><wbr><span class="parameters">(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;ctx,
  <a href="../core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a>&nbsp;config)</span>
                          throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">流式生成响应（Server-Sent Events 模式）。
+<div class="block">Generates a response via streaming (Server-Sent Events mode).
  <p>
- 客户端将以流的形式持续接收模型的部分生成结果，并在模型生成结束或连接中断时终止流。
- 适用于需要提供“打字机”实时输出体验的聊天型应用或长文本生成场景。
+ The client will continuously receive partial generation results from the model as a stream,
+ terminating the stream when the model finishes generating or the connection is interrupted.
+ Applicable for chat applications or long text generation scenarios that require a real-time "typewriter" output experience.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前请求的提示上下文，包含系统提示、历史消息等信息</dd>
-<dd><code>config</code> - 客户端请求的配置参数，需确保在参数中声明了 stream=true</dd>
+<dd><code>ctx</code> - The prompt context of the current request, including system prompts, historical messages, etc.</dd>
+<dd><code>config</code> - Configuration parameters for the client request (ensure stream=true is declared)</dd>
 <dt>Returns:</dt>
-<dd>返回一个包含 <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model"><code>Response</code></a> 数据块的顺序流，流会在接收到终止符时自动关闭</dd>
+<dd>A sequential stream containing <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model"><code>Response</code></a> chunks, automatically closed when the terminator is received</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当流式请求初始化失败或连接异常时抛出</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Thrown when a streaming request fails to initialize or a connection error occurs</dd>
 </dl>
 </section>
 </li>

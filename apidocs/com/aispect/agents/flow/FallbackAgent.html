@@ -83,10 +83,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">FallbackAgent</span>
 <span class="extends-implements">extends <a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span></div>
-<div class="block">容灾降级智能体。
+<div class="block">Fallback agent for disaster recovery and graceful degradation.
  <p>
- 拦截方法调用并在正常执行发生异常时介入。
- 当底层业务代码抛出异常时，使用 AI 根据上下文提供一个温和的、合理的降级回答。
+ Intercepts method calls and intervenes when an exception occurs during normal execution.
+ When the underlying business code throws an exception, it uses AI to provide a polite, reasonable fallback response based on the context.
  </p></div>
 </section>
 <section class="summary">

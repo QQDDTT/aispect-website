@@ -112,7 +112,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiClient.html" class="type-name-link" title="interface in com.aispect.api">AiClient</a> - Interface in <a href="com/aispect/api/package-summary.html">com.aispect.api</a></dt>
 <dd>
-<div class="block">AI 客户端适配器接口。</div>
+<div class="block">AI Client adapter interface.</div>
 </dd>
 <dt><a href="com/aispect/core/client/config/AiClientConfig.html" class="type-name-link" title="class in com.aispect.core.client.config">AiClientConfig</a> - Record Class in <a href="com/aispect/core/client/config/package-summary.html">com.aispect.core.client.config</a></dt>
 <dd>
@@ -160,8 +160,6 @@ loadScripts(document, 'script');</script>
 <div class="block">容器注解，用于支持 <a href="com/aispect/agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> 的可重复使用。
  允许一个类或方法同时属于多个 Stream Agent 图节点映射。</div>
 </dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#aiOperations(com.aispect.api.AiOperations)" class="member-name-link">aiOperations(AiOperations)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOperations.html" class="type-name-link" title="interface in com.aispect.api">AiOperations</a> - Interface in <a href="com/aispect/api/package-summary.html">com.aispect.api</a></dt>
 <dd>
 <div class="block">暴露给开发者用于手动控制 AI 交互的基础服务门面接口。</div>
@@ -172,7 +170,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOrchestrator.html" class="type-name-link" title="interface in com.aispect.api">AiOrchestrator</a>&lt;<a href="com/aispect/api/AiOrchestrator.html" title="type parameter in AiOrchestrator">T</a>,<wbr><a href="com/aispect/api/AiOrchestrator.html" title="type parameter in AiOrchestrator">R</a>&gt; - Interface in <a href="com/aispect/api/package-summary.html">com.aispect.api</a></dt>
 <dd>
-<div class="block">代理核心编排器接口。</div>
+<div class="block">Core orchestrator interface for agents.</div>
 </dd>
 <dt><a href="com/aispect/api/AiPostProcessor.html" class="type-name-link" title="interface in com.aispect.api">AiPostProcessor</a>&lt;<a href="com/aispect/api/AiPostProcessor.html" title="type parameter in AiPostProcessor">T</a>,<wbr><a href="com/aispect/api/AiPostProcessor.html" title="type parameter in AiPostProcessor">R</a>&gt; - Interface in <a href="com/aispect/api/package-summary.html">com.aispect.api</a></dt>
 <dd>
@@ -204,11 +202,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/common/exception/AiSpectException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable)" class="member-name-link">AiSpectException(String, Throwable)</a> - Constructor for exception com.aispect.common.exception.<a href="com/aispect/common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/spring/AiSpectTest.html" class="type-name-link" title="annotation interface in com.aispect.test.spring">AiSpectTest</a> - Annotation Interface in <a href="com/aispect/test/spring/package-summary.html">com.aispect.test.spring</a></dt>
-<dd>
-<div class="block">AiSpect 切片测试注解。
- 用于在隔离环境中测试 @AiAgent 组件，而无需加载完整的 Spring Boot 环境。</div>
-</dd>
 <dt><a href="com/aispect/agent/annotation/AiUnitAgent.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a> - Annotation Interface in <a href="com/aispect/agent/annotation/package-summary.html">com.aispect.agent.annotation</a></dt>
 <dd>
 <div class="block">标记一个方法为独立的单元 AI 代理方法（Skill）。</div>
@@ -221,8 +214,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <a href="./com/aispect/core/client/config/AiClientConfig.html#param-apiKey"><code>apiKey</code></a> record component.</div>
 </dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#args(java.lang.Object...)" class="member-name-link">args(Object...)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/model/ToolCall.FunctionCall.html#arguments()" class="member-name-link">arguments()</a> - Method in record class com.aispect.core.client.model.<a href="com/aispect/core/client/model/ToolCall.FunctionCall.html" title="class in com.aispect.core.client.model">ToolCall.FunctionCall</a></dt>
 <dd>
 <div class="block">Returns the value of the <code>arguments</code> record component.</div>
@@ -233,8 +224,6 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
 <dt><a href="com/aispect/engine/se/AiSpect.Builder.html#build()" class="member-name-link">build()</a> - Method in class com.aispect.engine.se.<a href="com/aispect/engine/se/AiSpect.Builder.html" title="class in com.aispect.engine.se">AiSpect.Builder</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#build()" class="member-name-link">build()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/engine/se/AiSpect.html#builder()" class="member-name-link">builder()</a> - Static method in class com.aispect.engine.se.<a href="com/aispect/engine/se/AiSpect.html" title="class in com.aispect.engine.se">AiSpect</a></dt>
 <dd>&nbsp;</dd>
@@ -298,12 +287,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/engine/spring/config/package-summary.html">com.aispect.engine.spring.config</a> - package com.aispect.engine.spring.config</dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/package-summary.html">com.aispect.test.context</a> - package com.aispect.test.context</dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/package-summary.html">com.aispect.test.mock</a> - package com.aispect.test.mock</dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/spring/package-summary.html">com.aispect.test.spring</a> - package com.aispect.test.spring</dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/model/Response.Usage.html#completionTokens()" class="member-name-link">completionTokens()</a> - Method in record class com.aispect.core.client.model.<a href="com/aispect/core/client/model/Response.Usage.html" title="class in com.aispect.core.client.model">Response.Usage</a></dt>
 <dd>
 <div class="block">Returns the value of the <a href="./com/aispect/core/client/model/Response.Usage.html#param-completionTokens"><code>completionTokens</code></a> record component.</div>
@@ -314,7 +297,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/agents/security/ContentModerationAgent.html" class="type-name-link" title="class in com.aispect.agents.security">ContentModerationAgent</a> - Class in <a href="com/aispect/agents/security/package-summary.html">com.aispect.agents.security</a></dt>
 <dd>
-<div class="block">内容审核智能体。</div>
+<div class="block">Content moderation agent.</div>
 </dd>
 <dt><a href="com/aispect/agents/security/ContentModerationAgent.html#%3Cinit%3E()" class="member-name-link">ContentModerationAgent()</a> - Constructor for class com.aispect.agents.security.<a href="com/aispect/agents/security/ContentModerationAgent.html" title="class in com.aispect.agents.security">ContentModerationAgent</a></dt>
 <dd>&nbsp;</dd>
@@ -331,7 +314,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="com/aispect/agents/data/DataCleanAgent.html" class="type-name-link" title="class in com.aispect.agents.data">DataCleanAgent</a> - Class in <a href="com/aispect/agents/data/package-summary.html">com.aispect.agents.data</a></dt>
 <dd>
-<div class="block">数据清洗智能体。</div>
+<div class="block">Data cleaning agent.</div>
 </dd>
 <dt><a href="com/aispect/agents/data/DataCleanAgent.html#%3Cinit%3E()" class="member-name-link">DataCleanAgent()</a> - Constructor for class com.aispect.agents.data.<a href="com/aispect/agents/data/DataCleanAgent.html" title="class in com.aispect.agents.data">DataCleanAgent</a></dt>
 <dd>&nbsp;</dd>
@@ -366,16 +349,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <a href="./com/aispect/core/client/config/AiClientConfig.html#param-endpoint"><code>endpoint</code></a> record component.</div>
 </dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html#enqueueException(com.aispect.common.exception.AiSpectException)" class="member-name-link">enqueueException(AiSpectException)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></dt>
-<dd>
-<div class="block">将一个异常加入队列（例如用于测试速率限制或超时）。</div>
-</dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html#enqueueResponse(com.aispect.core.client.model.Response)" class="member-name-link">enqueueResponse(Response)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></dt>
-<dd>
-<div class="block">将一个成功的模拟响应加入队列。</div>
-</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#env(java.lang.String,java.lang.Object)" class="member-name-link">env(String, Object)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/config/AiClientConfig.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in record class com.aispect.core.client.config.<a href="com/aispect/core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a></dt>
 <dd>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
@@ -421,7 +394,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/agents/flow/FallbackAgent.html" class="type-name-link" title="class in com.aispect.agents.flow">FallbackAgent</a> - Class in <a href="com/aispect/agents/flow/package-summary.html">com.aispect.agents.flow</a></dt>
 <dd>
-<div class="block">容灾降级智能体。</div>
+<div class="block">Fallback agent for disaster recovery and graceful degradation.</div>
 </dd>
 <dt><a href="com/aispect/agents/flow/FallbackAgent.html#%3Cinit%3E()" class="member-name-link">FallbackAgent()</a> - Constructor for class com.aispect.agents.flow.<a href="com/aispect/agents/flow/FallbackAgent.html" title="class in com.aispect.agents.flow">FallbackAgent</a></dt>
 <dd>&nbsp;</dd>
@@ -448,7 +421,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiClient.html#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate(PromptContext, AiClientConfig)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a></dt>
 <dd>
-<div class="block">阻塞式生成单个响应。</div>
+<div class="block">Generates a single response in a blocking manner.</div>
 </dd>
 <dt><a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.gemini.<a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></dt>
 <dd>&nbsp;</dd>
@@ -457,8 +430,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.ollama.<a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/adapter/openai/OpenAiAdapter.html#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.openai.<a href="com/aispect/core/client/adapter/openai/OpenAiAdapter.html" title="class in com.aispect.core.client.adapter.openai">OpenAiAdapter</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html#generate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">generate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/common/context/AiSpectContextHolder.html#get(java.lang.String)" class="member-name-link">get(String)</a> - Static method in class com.aispect.common.context.<a href="com/aispect/common/context/AiSpectContextHolder.html" title="class in com.aispect.common.context">AiSpectContextHolder</a></dt>
 <dd>
@@ -470,15 +441,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getAgentDescription()" class="member-name-link">getAgentDescription()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getAgentDescription()" class="member-name-link">getAgentDescription()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getAgentFallback()" class="member-name-link">getAgentFallback()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
 <div class="block">获取 Agent 的降级处理方法名称。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getAgentFallback()" class="member-name-link">getAgentFallback()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getAgentFallback()" class="member-name-link">getAgentFallback()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getAgentName()" class="member-name-link">getAgentName()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
@@ -486,15 +453,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getAgentName()" class="member-name-link">getAgentName()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getAgentName()" class="member-name-link">getAgentName()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getAiOperations()" class="member-name-link">getAiOperations()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
 <div class="block">获取 AI 操作门面。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getAiOperations()" class="member-name-link">getAiOperations()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getAiOperations()" class="member-name-link">getAiOperations()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/agent/core/AbstractGraphAgent.html#getAiOperations(com.aispect.api.AiInvocationContext)" class="member-name-link">getAiOperations(AiInvocationContext&lt;?&gt;)</a> - Method in class com.aispect.agent.core.<a href="com/aispect/agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a></dt>
 <dd>
@@ -508,15 +471,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getArgs()" class="member-name-link">getArgs()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getArgs()" class="member-name-link">getArgs()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOperations.html#getClient()" class="member-name-link">getClient()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></dt>
 <dd>
 <div class="block">暴露底层绑定的 <a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> 客户端适配器实例。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/AiOperationsWrapper.html#getClient()" class="member-name-link">getClient()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/AiOperationsWrapper.html" title="class in com.aispect.core.engine.context">AiOperationsWrapper</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#getClient()" class="member-name-link">getClient()</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/common/context/AiSpectContextHolder.html#getContext()" class="member-name-link">getContext()</a> - Static method in class com.aispect.common.context.<a href="com/aispect/common/context/AiSpectContextHolder.html" title="class in com.aispect.common.context">AiSpectContextHolder</a></dt>
 <dd>
@@ -528,15 +487,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getEnv()" class="member-name-link">getEnv()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getEnv()" class="member-name-link">getEnv()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getEnv(java.lang.String)" class="member-name-link">getEnv(String)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
 <div class="block">获取上下文中设定的某个特定环境变量值。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getEnv(java.lang.String)" class="member-name-link">getEnv(String)</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getEnv(java.lang.String)" class="member-name-link">getEnv(String)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getMethod()" class="member-name-link">getMethod()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
@@ -544,17 +499,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getMethod()" class="member-name-link">getMethod()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getMethod()" class="member-name-link">getMethod()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#getMockAiClient()" class="member-name-link">getMockAiClient()</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiInvocationContext.html#getModelName()" class="member-name-link">getModelName()</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a></dt>
 <dd>
 <div class="block">获取优先使用的模型名称。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getModelName()" class="member-name-link">getModelName()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getModelName()" class="member-name-link">getModelName()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/agent/core/AgentPreResponse.html#getResult()" class="member-name-link">getResult()</a> - Method in class com.aispect.agent.core.<a href="com/aispect/agent/core/AgentPreResponse.html" title="class in com.aispect.agent.core">AgentPreResponse</a></dt>
 <dd>&nbsp;</dd>
@@ -563,8 +512,6 @@ loadScripts(document, 'script');</script>
 <div class="block">获取当前被代理的目标对象实例。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#getTarget()" class="member-name-link">getTarget()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#getTarget()" class="member-name-link">getTarget()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/engine/graph/GraphEngine.html" class="type-name-link" title="class in com.aispect.core.engine.graph">GraphEngine</a> - Class in <a href="com/aispect/core/engine/graph/package-summary.html">com.aispect.core.engine.graph</a></dt>
 <dd>
@@ -612,14 +559,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/agents/data/ImageProcessAgent.html" class="type-name-link" title="class in com.aispect.agents.data">ImageProcessAgent</a> - Class in <a href="com/aispect/agents/data/package-summary.html">com.aispect.agents.data</a></dt>
 <dd>
-<div class="block">图像处理智能体，用于演示多模态、多参数和多样化参数的传输。
- 接收：模型名称(String)、图片(Base64 String)、指令(String)。</div>
+<div class="block">Image processing agent, used to demonstrate multimodal, multi-parameter, and diverse parameter transmission.</div>
 </dd>
 <dt><a href="com/aispect/agents/data/ImageProcessAgent.html#%3Cinit%3E()" class="member-name-link">ImageProcessAgent()</a> - Constructor for class com.aispect.agents.data.<a href="com/aispect/agents/data/ImageProcessAgent.html" title="class in com.aispect.agents.data">ImageProcessAgent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/agents/data/ImageStoryAgent.html" class="type-name-link" title="class in com.aispect.agents.data">ImageStoryAgent</a> - Class in <a href="com/aispect/agents/data/package-summary.html">com.aispect.agents.data</a></dt>
 <dd>
-<div class="block">看图片，讲故事智能体</div>
+<div class="block">Image storytelling agent.</div>
 </dd>
 <dt><a href="com/aispect/agents/data/ImageStoryAgent.html#%3Cinit%3E()" class="member-name-link">ImageStoryAgent()</a> - Constructor for class com.aispect.agents.data.<a href="com/aispect/agents/data/ImageStoryAgent.html" title="class in com.aispect.agents.data">ImageStoryAgent</a></dt>
 <dd>&nbsp;</dd>
@@ -628,12 +574,6 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the value of the <code>inlineData</code> record component.</div>
 </dd>
 <dt><a href="com/aispect/engine/quarkus/AiAgentCdiInterceptor.html#intercept(jakarta.interceptor.InvocationContext)" class="member-name-link">intercept(InvocationContext)</a> - Method in class com.aispect.engine.quarkus.<a href="com/aispect/engine/quarkus/AiAgentCdiInterceptor.html" title="class in com.aispect.engine.quarkus">AiAgentCdiInterceptor</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html" class="type-name-link" title="class in com.aispect.test.context">InvocationContextBuilder</a>&lt;<a href="com/aispect/test/context/InvocationContextBuilder.html" title="type parameter in InvocationContextBuilder">T</a>&gt; - Class in <a href="com/aispect/test/context/package-summary.html">com.aispect.test.context</a></dt>
-<dd>
-<div class="block">用于构建 mock AiInvocationContext 实例的构建器。</div>
-</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#%3Cinit%3E()" class="member-name-link">InvocationContextBuilder()</a> - Constructor for class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/engine/interceptor/AgentInterceptor.html#invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object%5B%5D)" class="member-name-link">invoke(Object, Method, Object[])</a> - Method in class com.aispect.core.engine.interceptor.<a href="com/aispect/core/engine/interceptor/AgentInterceptor.html" title="class in com.aispect.core.engine.interceptor">AgentInterceptor</a></dt>
 <dd>
@@ -658,7 +598,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="com/aispect/agents/data/JsonExtractorAgent.html" class="type-name-link" title="class in com.aispect.agents.data">JsonExtractorAgent</a> - Class in <a href="com/aispect/agents/data/package-summary.html">com.aispect.agents.data</a></dt>
 <dd>
-<div class="block">JSON 提取智能体。</div>
+<div class="block">JSON extraction agent.</div>
 </dd>
 <dt><a href="com/aispect/agents/data/JsonExtractorAgent.html#%3Cinit%3E()" class="member-name-link">JsonExtractorAgent()</a> - Constructor for class com.aispect.agents.data.<a href="com/aispect/agents/data/JsonExtractorAgent.html" title="class in com.aispect.agents.data">JsonExtractorAgent</a></dt>
 <dd>&nbsp;</dd>
@@ -702,31 +642,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <a href="./com/aispect/core/client/model/PromptContext.html#param-messages"><code>messages</code></a> record component.</div>
 </dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#method(java.lang.reflect.Method)" class="member-name-link">method(Method)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/model/Message.html#mimeType()" class="member-name-link">mimeType()</a> - Method in record class com.aispect.core.client.model.<a href="com/aispect/core/client/model/Message.html" title="class in com.aispect.core.client.model">Message</a></dt>
 <dd>
 <div class="block">Returns the value of the <code>mimeType</code> record component.</div>
 </dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html" class="type-name-link" title="class in com.aispect.test.mock">MockAiClient</a> - Class in <a href="com/aispect/test/mock/package-summary.html">com.aispect.test.mock</a></dt>
-<dd>
-<div class="block">用于测试目的的 AiClient 的 Mock 实现。
- 允许模拟请求响应或抛出异常以测试各种场景。</div>
-</dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html#%3Cinit%3E()" class="member-name-link">MockAiClient()</a> - Constructor for class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html" class="type-name-link" title="class in com.aispect.test.context">MockAiInvocationContext</a>&lt;<a href="com/aispect/test/context/MockAiInvocationContext.html" title="type parameter in MockAiInvocationContext">T</a>&gt; - Class in <a href="com/aispect/test/context/package-summary.html">com.aispect.test.context</a></dt>
-<dd>
-<div class="block">用于测试的 AiInvocationContext 的 Mock 实现。</div>
-</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#%3Cinit%3E(java.lang.Object,java.lang.reflect.Method,java.lang.Object%5B%5D,java.util.Map,java.util.concurrent.Callable,com.aispect.api.AiOperations,java.lang.String)" class="member-name-link">MockAiInvocationContext(Object, Method, Object[], Map&lt;String, Object&gt;, Callable&lt;T&gt;, AiOperations, String)</a> - Constructor for class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html" class="type-name-link" title="class in com.aispect.test.mock">MockAiOperations</a> - Class in <a href="com/aispect/test/mock/package-summary.html">com.aispect.test.mock</a></dt>
-<dd>
-<div class="block">用于测试目的的 AiOperations 的 Mock 实现。</div>
-</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#%3Cinit%3E(com.aispect.test.mock.MockAiClient)" class="member-name-link">MockAiOperations(MockAiClient)</a> - Constructor for class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/agent/annotation/AiGraphAgent.html#modelName()" class="member-name-link">modelName()</a> - Element in annotation interface com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/agent/annotation/AiUnitAgent.html#modelName()" class="member-name-link">modelName()</a> - Element in annotation interface com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a></dt>
@@ -777,7 +696,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/api/AiOrchestrator.html#orchestrate(com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrate(AiInvocationContext&lt;T&gt;)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a></dt>
 <dd>
-<div class="block">协调执行整个 AI 调用流程。</div>
+<div class="block">Orchestrates the entire AI invocation process.</div>
 </dd>
 <dt><a href="com/aispect/agent/core/AbstractGraphAgent.html#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph(Map&lt;Class&lt;?&gt;, F&gt;, AiInvocationContext&lt;?&gt;)</a> - Method in class com.aispect.agent.core.<a href="com/aispect/agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a></dt>
 <dd>
@@ -818,18 +737,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html#proceed()" class="member-name-link">proceed()</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/MockAiInvocationContext.html#proceed()" class="member-name-link">proceed()</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/MockAiInvocationContext.html" title="class in com.aispect.test.context">MockAiInvocationContext</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#proceedCallable(java.util.concurrent.Callable)" class="member-name-link">proceedCallable(Callable&lt;T&gt;)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#proceedReturns(T)" class="member-name-link">proceedReturns(T)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOperations.html#prompt(com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt(PromptContext)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></dt>
 <dd>
 <div class="block">手动发起一次同步的 AI 提示词调用。</div>
 </dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#prompt(com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt(PromptContext)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOperations.html#prompt(java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt(String, PromptContext)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></dt>
 <dd>
 <div class="block">手动发起一次同步的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
@@ -839,8 +750,6 @@ loadScripts(document, 'script');</script>
 <div class="block">手动发起一次同步的 AI 提示词调用，带有模型名称覆盖。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/AiOperationsWrapper.html#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt(String, String, PromptContext)</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/AiOperationsWrapper.html" title="class in com.aispect.core.engine.context">AiOperationsWrapper</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt(String, String, PromptContext)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/model/PromptContext.html" class="type-name-link" title="class in com.aispect.core.client.model">PromptContext</a> - Record Class in <a href="com/aispect/core/client/model/package-summary.html">com.aispect.core.client.model</a></dt>
 <dd>
@@ -856,8 +765,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">手动发起一次流式的 AI 提示词调用。</div>
 </dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#promptStream(com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream(PromptContext)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiOperations.html#promptStream(java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream(String, PromptContext)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></dt>
 <dd>
 <div class="block">手动发起一次流式的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
@@ -867,8 +774,6 @@ loadScripts(document, 'script');</script>
 <div class="block">手动发起一次流式的 AI 提示词调用，带有模型名称覆盖。</div>
 </dd>
 <dt><a href="com/aispect/core/engine/context/AiOperationsWrapper.html#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream(String, String, PromptContext)</a> - Method in class com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/AiOperationsWrapper.html" title="class in com.aispect.core.engine.context">AiOperationsWrapper</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiOperations.html#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream(String, String, PromptContext)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiOperations.html" title="class in com.aispect.test.mock">MockAiOperations</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/model/Response.Usage.html#promptTokens()" class="member-name-link">promptTokens()</a> - Method in record class com.aispect.core.client.model.<a href="com/aispect/core/client/model/Response.Usage.html" title="class in com.aispect.core.client.model">Response.Usage</a></dt>
 <dd>
@@ -940,13 +845,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/aispect/agents/graph/StorytellingGraphAgent.html" class="type-name-link" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a> - Class in <a href="com/aispect/agents/graph/package-summary.html">com.aispect.agents.graph</a></dt>
 <dd>
-<div class="block">流式智能体案例：实时流式生成故事或长文本。</div>
+<div class="block">Streaming agent example: generates stories or long text in real-time streaming.</div>
 </dd>
 <dt><a href="com/aispect/agents/graph/StorytellingGraphAgent.html#%3Cinit%3E()" class="member-name-link">StorytellingGraphAgent()</a> - Constructor for class com.aispect.agents.graph.<a href="com/aispect/agents/graph/StorytellingGraphAgent.html" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/api/AiClient.html#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate(PromptContext, AiClientConfig)</a> - Method in interface com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a></dt>
 <dd>
-<div class="block">流式生成响应（Server-Sent Events 模式）。</div>
+<div class="block">Generates a response via streaming (Server-Sent Events mode).</div>
 </dd>
 <dt><a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.gemini.<a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></dt>
 <dd>&nbsp;</dd>
@@ -955,8 +860,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.ollama.<a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/adapter/openai/OpenAiAdapter.html#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.core.client.adapter.openai.<a href="com/aispect/core/client/adapter/openai/OpenAiAdapter.html" title="class in com.aispect.core.client.adapter.openai">OpenAiAdapter</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/aispect/test/mock/MockAiClient.html#streamGenerate(com.aispect.core.client.model.PromptContext,com.aispect.core.client.config.AiClientConfig)" class="member-name-link">streamGenerate(PromptContext, AiClientConfig)</a> - Method in class com.aispect.test.mock.<a href="com/aispect/test/mock/MockAiClient.html" title="class in com.aispect.test.mock">MockAiClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/aispect/common/util/StringUtils.html" class="type-name-link" title="class in com.aispect.common.util">StringUtils</a> - Class in <a href="com/aispect/common/util/package-summary.html">com.aispect.common.util</a></dt>
 <dd>
@@ -971,8 +874,6 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
-<dt><a href="com/aispect/test/context/InvocationContextBuilder.html#target(java.lang.Object)" class="member-name-link">target(Object)</a> - Method in class com.aispect.test.context.<a href="com/aispect/test/context/InvocationContextBuilder.html" title="class in com.aispect.test.context">InvocationContextBuilder</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/aispect/core/client/config/AiClientConfig.html#temperature()" class="member-name-link">temperature()</a> - Method in record class com.aispect.core.client.config.<a href="com/aispect/core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a></dt>
 <dd>
 <div class="block">Returns the value of the <a href="./com/aispect/core/client/config/AiClientConfig.html#param-temperature"><code>temperature</code></a> record component.</div>

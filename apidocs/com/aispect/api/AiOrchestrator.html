@@ -73,8 +73,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法调用的返回值类型</dd>
-<dd><code>R</code> - 经过 AI 处理后期望返回的数据类型</dd>
+<dd><code>T</code> - The return type of the method call</dd>
+<dd><code>R</code> - The expected data type returned after AI processing</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -91,10 +91,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiOrchestrator&lt;T,<wbr>R&gt;</span></div>
-<div class="block">代理核心编排器接口。
+<div class="block">Core orchestrator interface for agents.
  <p>
- 该接口负责调度和协调单一类型单元（如某个具体方法的代理）的 AI 调用执行逻辑。
- 它控制了请求的前置处理、AI 的执行、结果的后置处理以及错误兜底处理。
+ This interface is responsible for scheduling and coordinating the AI invocation execution logic for a single unit type (such as a proxy for a specific method).
+ It controls request pre-processing, AI execution, result post-processing, and fallback error handling.
  </p></div>
 </section>
 <section class="summary">
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiOrchestrator.html" title="type parameter in AiOrchestrator">R</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrate(com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrate</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiOrchestrator.html" title="type parameter in AiOrchestrator">T</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">协调执行整个 AI 调用流程。</div>
+<div class="block">Orchestrates the entire AI invocation process.</div>
 </div>
 </div>
 </div>
@@ -134,14 +134,14 @@ loadScripts(document, 'script');</script>
 <h3>orchestrate</h3>
 <div class="member-signature"><span class="return-type"><a href="AiOrchestrator.html" title="type parameter in AiOrchestrator">R</a></span>&nbsp;<span class="element-name">orchestrate</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiOrchestrator.html" title="type parameter in AiOrchestrator">T</a>&gt;&nbsp;ctx)</span>
        throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">协调执行整个 AI 调用流程。</div>
+<div class="block">Orchestrates the entire AI invocation process.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
+<dd><code>ctx</code> - The interception context of the current method call</dd>
 <dt>Returns:</dt>
-<dd>返回执行完成并经过后置处理的最终结果</dd>
+<dd>The final result after execution and post-processing</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>
