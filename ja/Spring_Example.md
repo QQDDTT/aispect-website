@@ -2,43 +2,42 @@
 
 AiSpect は Spring Boot とシームレスに統合する機能を提供します。複雑な HTTP リクエストやプロンプト結合コードを記述することなく、Java インターフェースを定義するだけで大規模言語モデル（LLM）と対話できるようになります。
 
-この例（`examples/example-spring-boot` ディレクトリにあります）では、「テキストの推敲」、「画像処理」、「画像からのストーリー作成」機能を備えた Web アプリケーションを迅速に構築する方法を示します。
+この例（`examples/example-spring-boot` ディレクトリにあります）では、各種インターセプターの「フェーズ（Phase）」と「データ型（Data Type）」をテストする API ダッシュボードを構築する方法を示します。
 
 ---
 
 ## 1. アプリケーションアーキテクチャ
 
-- **コントローラー (`DocumentController`)**: フロントエンドからのテキストやファイルアップロードのリクエストを処理する REST/Web エンドポイントを提供します。
-- **規約インターフェース (`AiEditorService`)**: ビジネスロジックのコアです。実装クラスは不要で、すべてのメソッドに `@AiUnitAgent` アノテーションが付与され、実行時に AiSpect エンジンが動的にプロキシを作成し、対応するエージェントを呼び出します。
-- **フロントエンドページ (`index.html`)**: シンプルな左右分割のインタラクティブ画面を提供します。左側で編集やアップロードを行い、右側で AI の結果をプレビューします。
+- **コントローラー (`TestController`)**: 各フェーズおよびデータ型テストの REST/Web エンドポイントを提供します。
+- **規約インターフェース (`PhaseTestService` & `DataTypeTestService`)**: ビジネスロジックのコアです。`@AiUnitAgent` アノテーションを使用することで、リクエストが各エージェントへ自動的にプロキシされます。
+- **フロントエンドページ (`index.html`)**: モダンなダークテーマの API ダッシュボードを提供します。左側のサイドバーでテストを選択し、右側でリクエストの設定と結果のプレビュー（JSON フォーマットや SSE ストリーミング対応）を行えます。
 
 ---
 
-AiSpect を使用する Spring Boot アプリケーションでは、特定のアノテーションを付与するだけで `Service` インターフェースに AI 機能を持たせることができます。さらに、フォールバック（Fallback）やローカル処理ロジックを提供するための実装クラスを記述することも可能です。
+AiSpect を使用する Spring Boot アプリケーションでは、特定のアノテーションを付与するだけで `Service` インターフェースに AI 機能を持たせることができます。例えば、POJO やコレクションを処理する場合：
 
 ```java
 import com.aispect.agent.annotation.AiUnitAgent;
-import com.aispect.agents.data.DataCleanAgent;
-import com.aispect.agents.data.ImageProcessAgent;
-import com.aispect.agents.data.ImageStoryAgent;
+import com.aispect.example.spring.agents.PojoProcessAgent;
+import com.aispect.example.spring.dto.User;
+import java.util.List;
+import java.util.Map;
 
-public interface AiEditorService {
+public interface DataTypeTestService {
 
-    // テキスト処理：DataCleanAgent へプロキシ
-    @AiUnitAgent(name = DataCleanAgent.class, description = "Expands the given text with more details and richer vocabulary.")
-    String processText(String originalText);
+    // POJO の処理：PojoProcessAgent へプロキシ
+    @AiUnitAgent(name = PojoProcessAgent.class, description = "Updates the status of a user object")
+    User processPojo(User user);
     
-    // 画像分析：ImageProcessAgent へプロキシ
-    @AiUnitAgent(name = ImageProcessAgent.class, description = "Processes an image based on instructions.", modelName="imagen-4-generate")
-    byte[] processImage(byte[] image, String instruction);
-
-    // 画像ストーリー：ImageStoryAgent へプロキシ
-    @AiUnitAgent(name = ImageStoryAgent.class, description = "Tells an imaginative story based on the image.", modelName="gemini-2.5-flash")
-    String storyFromImage(byte[] image, String instruction);
+    // コレクションの処理
+    @AiUnitAgent(description = "Categorizes a list of items into fruits and vegetables")
+    Map<String, List<String>> processCollection(List<String> items);
+    
+    // ... その他のデータ型およびフェーズテスト
 }
 ```
 
-フレームワークの AOP インターセプター（`AgentInterceptor` など）は、`@AiUnitAgent` の付いたメソッドの実行を自動的にインターセプトします。呼び出し時にパラメータを自動的に抽出（例えば `byte[]` を LLM 用のマルチモーダル入力に変換）し、LLM との通信を実行します。例外が発生した場合やインターセプトが明示的に拒否された場合は、ローカルの `AiEditorServiceImpl` の実行へとグレースフルにダウングレード（フォールバック）します。
+フレームワークの AOP インターセプターは、`@AiUnitAgent` の付いたメソッドの実行を自動的にインターセプトします。呼び出し時にパラメータを自動的に抽出し、LLM との通信を実行し、指定された厳密な型（POJO、List、Map、さらには Stream や byte[]）のオブジェクトを返します。
 
 ---
 
@@ -57,4 +56,6 @@ export GEMINI_API_KEY="あなたの_API_KEY_をここに入力"
 ```
 
 ### ステップ 3: ページへのアクセス
-ブラウザを開き `http://localhost:8080` にアクセスします。左側のテキストボックスに文字を入力して **Process** をクリックするとテキストの推敲を体験でき、画像をアップロードして **Tell Story** をクリックするとマルチモーダルな画像・テキスト生成能力を体験できます。
+ブラウザを開き `http://localhost:8080` にアクセスします。新しい **AiSpect API Dashboard** が表示されます。サイドバーを使用してテストケースを切り替えます：
+- **フェーズテスト (Phase Tests)**: Before、After、Exception の各フェーズにおけるカスタムロジックのインターセプトと介入を体験できます。
+- **データ型テスト (Data Type Tests)**: 文字列、POJO (JSON)、コレクション、画像 (マルチモーダル)、ストリーム (SSE) など、さまざまなデータ型の LLM 処理と自動バインディング機能を確認できます。
