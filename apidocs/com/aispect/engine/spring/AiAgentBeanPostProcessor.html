@@ -95,7 +95,7 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.aispect.api.AiOperations)" class="member-name-link">AiAgentBeanPostProcessor</a><wbr>(<a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.springframework.beans.factory.ObjectProvider)" class="member-name-link">AiAgentBeanPostProcessor</a><wbr>(org.springframework.beans.factory.ObjectProvider&lt;<a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&gt;&nbsp;aiOperationsProvider)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -114,7 +114,11 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postProcessAfterInitialization(java.lang.Object,java.lang.String)" class="member-name-link">postProcessAfterInitialization</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;bean,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;beanName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">在 Bean 初始化后进行后置处理。
+ 扫描 Bean 中的所有方法，检查是否包含 @AiNode、@AiGraphAgent 或 @AiUnitAgent 注解。
+ 如果包含，则尝试为其第一个接口创建代理对象，从而注入 AI 编排能力。</div>
+</div>
 </div>
 </div>
 </div>
@@ -136,9 +140,9 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.aispect.api.AiOperations)">
+<section class="detail" id="&lt;init&gt;(org.springframework.beans.factory.ObjectProvider)">
 <h3>AiAgentBeanPostProcessor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AiAgentBeanPostProcessor</span><wbr><span class="parameters">(<a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AiAgentBeanPostProcessor</span><wbr><span class="parameters">(org.springframework.beans.factory.ObjectProvider&lt;<a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&gt;&nbsp;aiOperationsProvider)</span></div>
 </section>
 </li>
 </ul>
@@ -156,9 +160,17 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;bean,
  @NonNull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;beanName)</span></div>
+<div class="block">在 Bean 初始化后进行后置处理。
+ 扫描 Bean 中的所有方法，检查是否包含 @AiNode、@AiGraphAgent 或 @AiUnitAgent 注解。
+ 如果包含，则尝试为其第一个接口创建代理对象，从而注入 AI 编排能力。</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>postProcessAfterInitialization</code>&nbsp;in interface&nbsp;<code>org.springframework.beans.factory.config.BeanPostProcessor</code></dd>
+<dt>Parameters:</dt>
+<dd><code>bean</code> - 原始 Bean 实例</dd>
+<dd><code>beanName</code> - Bean 的名称</dd>
+<dt>Returns:</dt>
+<dd>如果需要代理则返回代理对象，否则返回原始 Bean</dd>
 </dl>
 </section>
 </li>

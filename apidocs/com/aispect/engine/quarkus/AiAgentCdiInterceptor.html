@@ -109,7 +109,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intercept(jakarta.interceptor.InvocationContext)" class="member-name-link">intercept</a><wbr>(jakarta.interceptor.InvocationContext&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">拦截带有 AI 注解的方法调用。
+ 拦截后会根据 @AiNode 或 @AiGraphAgent 注解提取相关参数（如代理名称、模型名称等），
+ 构建 AiInvocationContext 并交由对应的 UnitAgent 或 GraphAgent 进行编排与执行。</div>
+</div>
 </div>
 </div>
 </div>
@@ -146,9 +150,16 @@ loadScripts(document, 'script');</script>
 <h3>intercept</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">intercept</span><wbr><span class="parameters">(jakarta.interceptor.InvocationContext&nbsp;context)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
+<div class="block">拦截带有 AI 注解的方法调用。
+ 拦截后会根据 @AiNode 或 @AiGraphAgent 注解提取相关参数（如代理名称、模型名称等），
+ 构建 AiInvocationContext 并交由对应的 UnitAgent 或 GraphAgent 进行编排与执行。</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - 拦截器上下文，包含被拦截的方法及参数信息</dd>
+<dt>Returns:</dt>
+<dd>AI 引擎执行后的结果</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - 如果在执行过程中发生异常</dd>
 </dl>
 </section>
 </li>

@@ -59,67 +59,124 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;<a href="com/aispect/agent/core/AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a>&gt;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;<a href="com/aispect/agent/core/AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">T</a>,<wbr><a href="com/aispect/agent/core/AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">R</a>,<wbr><a href="com/aispect/agent/core/AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a>&gt;</div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">抽象的图式智能体处理基类。</div>
+<div class="block">抽象的图式智能体 (Graph Agent) 处理基类。</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="com/aispect/agent/core/AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>,<wbr><a href="com/aispect/agent/core/AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&gt;</div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">抽象的非流式智能体处理基类。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/interceptor/AgentInterceptor.html" title="class in com.aispect.core.engine.interceptor">AgentInterceptor</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/runtime/interceptor/AgentInterceptor.html" title="class in com.aispect.core.engine.runtime.interceptor">AgentInterceptor</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">JDK 动态代理的核心拦截器。</div>
+<div class="block">JDK 动态代理的核心拦截器，属于<b>运行阶段（Runtime）</b>职责。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agent/core/AgentPreResponse.html" title="class in com.aispect.agent.core">AgentPreResponse</a>&lt;<a href="com/aispect/agent/core/AgentPreResponse.html" title="type parameter in AgentPreResponse">R</a>&gt;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="com/aispect/api/AgentInvocationCache.html" title="type parameter in AgentInvocationCache">V</a> extends <a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">代理与节点资源的全局调度缓存接口</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/bootstrap/registry/AgentInvocationCacheImpl.html" title="class in com.aispect.core.engine.bootstrap.registry">AgentInvocationCacheImpl</a>&lt;<a href="com/aispect/core/engine/bootstrap/registry/AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">代理调用缓存的默认实现类。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/spring/AiAgentBeanPostProcessor.html" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">AI 代理请求的前置处理器响应。</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/spring/AiAgentBeanPostProcessor.html" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Spring BeanPostProcessor 扩展，用于为带有 @AiNode 或 @AiGraphAgent 注解的 Bean 自动创建代理。
  注意：为了能够脱离 Spring 上下文依赖编译，这只是一个简化版实现。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/quarkus/AiAgentCdiInterceptor.html" title="class in com.aispect.engine.quarkus">AiAgentCdiInterceptor</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/quarkus/AiAgentCdiInterceptor.html" title="class in com.aispect.engine.quarkus">AiAgentCdiInterceptor</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Quarkus / CDI 拦截器，用于处理带有 AI 注解的方法调用。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">当 AI 代理执行逻辑失败时抛出。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">AI 代理执行流程的全局拦截器/过滤器。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/engine/quarkus/AiAgentInterceptorBinding.html" title="annotation interface in com.aispect.engine.quarkus">AiAgentInterceptorBinding</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab7">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/engine/quarkus/AiAgentInterceptorBinding.html" title="annotation interface in com.aispect.engine.quarkus">AiAgentInterceptorBinding</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
 <div class="block">拦截器绑定注解。
  配合 @AiAgentCdiInterceptor 在 CDI 容器（如 Quarkus）中实现方法拦截。</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/util/AiAnnotationUtils.html" title="class in com.aispect.common.util">AiAnnotationUtils</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">AI 框架内部专用的注解检索工具。
+ 支持在无 Spring 环境下处理接口继承和元注解（多重注解）查找。</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">AI Client adapter interface.</div>
+<div class="block">AI 客户端适配器接口。</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="com/aispect/core/client/config/AiClientConfig.html" title="class in com.aispect.core.client.config">AiClientConfig</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">AI 客户端配置参数实体。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;<a href="com/aispect/api/AiFallbackHandler.html" title="type parameter in AiFallbackHandler">T</a>,<wbr><a href="com/aispect/api/AiFallbackHandler.html" title="type parameter in AiFallbackHandler">R</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">AI 异常降级处理接口。</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner">AiComponentScanner</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">AI 组件扫描器，属于<b>启动阶段（Bootstrap）</b>职责。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgent</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;<a href="com/aispect/api/AiExceptionProxy.html" title="type parameter in AiExceptionProxy">T</a>,<wbr><a href="com/aispect/api/AiExceptionProxy.html" title="type parameter in AiExceptionProxy">R</a>&gt;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">智能体的异常编排代理接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="com/aispect/agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">标识 AI 代理在拦截被代理方法时的执行生命周期阶段。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;<a href="com/aispect/api/AiExecutionProxy.html" title="type parameter in AiExecutionProxy">T</a>,<wbr><a href="com/aispect/api/AiExecutionProxy.html" title="type parameter in AiExecutionProxy">R</a>&gt;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">智能体的核心编排代理接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgent</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
+<div class="block">标记一个主干路由或主进程方法作为图式 AI 代理（Graph Agent）的入口。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/se/AiGraphAgentConsoleLauncher.html" title="class in com.aispect.engine.se">AiGraphAgentConsoleLauncher</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">针对 Java SE 控制台项目的 Graph Agent 启动器。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;<a href="com/aispect/api/AiGraphAgentHandler.html" title="type parameter in AiGraphAgentHandler">T</a>,<wbr><a href="com/aispect/api/AiGraphAgentHandler.html" title="type parameter in AiGraphAgentHandler">R</a>,<wbr><a href="com/aispect/api/AiGraphAgentHandler.html" title="type parameter in AiGraphAgentHandler">F</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">图代理处理器 (Graph Agent Handler)</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiGraphAgents.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgents</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab7">
-<div class="block">标记一个方法为图式 AI 代理方法。</div>
+<div class="block">标记一个类或接口对应多个图式 AI 代理（Graph Agent）。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/spring/launcher/AiGraphAgentSpringLauncher.html" title="class in com.aispect.engine.spring.launcher">AiGraphAgentSpringLauncher</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Spring 环境下的 Graph Agent 启动器和路由分发器。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a>&gt;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">AI 代理图（Graph）编排器接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">图任务序列顺利完成回调接口。</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">基础图引擎（Graph Engine）接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiGraphExecutionException.html" title="class in com.aispect.common.exception">AiGraphExecutionException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="block">Graph Agent 在运行阶段执行任务序列抛出的阻断异常。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">图任务序列启动前回调接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">图任务序列超时回调接口。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiGraphValidationException.html" title="class in com.aispect.common.exception">AiGraphValidationException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="block">Graph Agent 在启动和注册阶段校验失败时抛出的异常。</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="com/aispect/api/AiInvocationContext.html" title="type parameter in AiInvocationContext">T</a>&gt;</div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -132,104 +189,151 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation">AiNode</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
-<div class="block">标记一个方法或类作为图（Graph）引擎中的节点。</div>
+<div class="block">标记一个方法、字段或参数作为图（Graph）引擎中的功能性节点资源。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiNodes.html" title="annotation interface in com.aispect.agent.annotation">AiNodes</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab7">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">节点异常处理回调接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiNodes.html" title="annotation interface in com.aispect.agent.annotation">AiNodes</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
 <div class="block">容器注解，用于支持 <a href="com/aispect/agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> 的可重复使用。
  允许一个类或方法同时属于多个 Stream Agent 图节点映射。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">节点状态检测回调接口。</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">暴露给开发者用于手动控制 AI 交互的基础服务门面接口。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/context/AiOperationsWrapper.html" title="class in com.aispect.core.engine.context">AiOperationsWrapper</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;<a href="com/aispect/api/AiOrchestrator.html" title="type parameter in AiOrchestrator">T</a>,<wbr><a href="com/aispect/api/AiOrchestrator.html" title="type parameter in AiOrchestrator">R</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Core orchestrator interface for agents.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;<a href="com/aispect/api/AiPostProcessor.html" title="type parameter in AiPostProcessor">T</a>,<wbr><a href="com/aispect/api/AiPostProcessor.html" title="type parameter in AiPostProcessor">R</a>&gt;</div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">AI 结果后置处理器接口。</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;<a href="com/aispect/api/AiPreProcessor.html" title="type parameter in AiPreProcessor">T</a>,<wbr><a href="com/aispect/api/AiPreProcessor.html" title="type parameter in AiPreProcessor">R</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">AI 请求前置处理器接口。</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/se/AiSpect.html" title="class in com.aispect.engine.se">AiSpect</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/runtime/context/AiOperationsWrapper.html" title="class in com.aispect.core.engine.runtime.context">AiOperationsWrapper</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block"><a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> 包装器，属于<b>运行阶段（Runtime）</b>职责。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;<a href="com/aispect/api/AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">T</a>,<wbr><a href="com/aispect/api/AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">R</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">智能体的执行后编排代理接口。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;<a href="com/aispect/api/AiPreExecutionProxy.html" title="type parameter in AiPreExecutionProxy">T</a>&gt;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">智能体的执行前编排代理接口。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="block">扫描阶段发现一个或多个配置错误时抛出。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">扫描结果接口契约。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/se/AiSpect.html" title="class in com.aispect.engine.se">AiSpect</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">纯 Java SE 环境下编排引擎的初始化与调用入口。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/se/AiSpect.Builder.html" title="class in com.aispect.engine.se">AiSpect.Builder</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/spring/config/AiSpectConfiguration.html" title="class in com.aispect.engine.spring.config">AiSpectConfiguration</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/context/AiSpectContextHolder.html" title="class in com.aispect.common.context">AiSpectContextHolder</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/se/AiSpect.Builder.html" title="class in com.aispect.engine.se">AiSpect.Builder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">AiSpect 的构造器类。
+ 允许在纯 Java SE 环境下手动组装 AiClient 并配置到引擎中。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/engine/spring/config/AiSpectConfiguration.html" title="class in com.aispect.engine.spring.config">AiSpectConfiguration</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">AiSpect Spring 自动配置类。
+ 负责根据环境变量或应用配置初始化 AiOperations 以及相关的 AI 客户端适配器，
+ 并注册 AiAgentBeanPostProcessor 以便在 Spring 容器中自动代理 AI 相关的 Bean。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/context/AiSpectContextHolder.html" title="class in com.aispect.common.context">AiSpectContextHolder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">基于 ThreadLocal 的上下文持有者，用于在整个框架链路中传递隐式参数。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="com/aispect/common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">AiSpect 框架的基础异常类。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
-<div class="block">标记一个方法为独立的单元 AI 代理方法（Skill）。</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab7">
+<div class="block">标记一个方法或类为独立的单元 AI 代理方法（Unit Agent/Skill）。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;<a href="com/aispect/api/AiUnitAgentHandler.html" title="type parameter in AiUnitAgentHandler">T</a>,<wbr><a href="com/aispect/api/AiUnitAgentHandler.html" title="type parameter in AiUnitAgentHandler">R</a>&gt;</div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;<a href="com/aispect/api/AiUnitAgentHandler.html" title="type parameter in AiUnitAgentHandler">T</a>,<wbr><a href="com/aispect/api/AiUnitAgentHandler.html" title="type parameter in AiUnitAgentHandler">R</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">单元代理处理器 (Unit Agent Handler)</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/security/ContentModerationAgent.html" title="class in com.aispect.agents.security">ContentModerationAgent</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Content moderation agent.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/agent/annotation/AiUnitAgents.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgents</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab7">
+<div class="block"><a href="com/aispect/agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> 的容器注解，允许在同一个方法或类上定义多个 <a href="com/aispect/agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> 注解。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/DataCleanAgent.html" title="class in com.aispect.agents.data">DataCleanAgent</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/aispect/api/AiUnitEngine.html" title="interface in com.aispect.api">AiUnitEngine</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">单元代理执行引擎（Unit Engine）接口。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/security/ContentModerationAgent.html" title="class in com.aispect.agents.security">ContentModerationAgent</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Data cleaning agent.</div>
+<div class="block">内容审核 Agent。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a>&lt;<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" title="type parameter in DefaultAiInvocationContext">T</a>&gt;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/DataCleanAgent.html" title="class in com.aispect.agents.data">DataCleanAgent</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">默认的调用上下文实现类。</div>
+<div class="block">数据清理 Agent。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/engine/spring/annotation/EnableAiSpect.html" title="annotation interface in com.aispect.engine.spring.annotation">EnableAiSpect</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab7">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/flow/FallbackAgent.html" title="class in com.aispect.agents.flow">FallbackAgent</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Fallback agent for disaster recovery and graceful degradation.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/runtime/context/DefaultAiInvocationContext.html" title="class in com.aispect.core.engine.runtime.context">DefaultAiInvocationContext</a>&lt;<a href="com/aispect/core/engine/runtime/context/DefaultAiInvocationContext.html" title="type parameter in DefaultAiInvocationContext">T</a>&gt;</div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">默认的调用上下文实现类，属于<b>运行阶段（Runtime）</b>职责。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/graph/DynamicWorkflowGraphAgent.html" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">通用的 Graph Agent 编排引擎。
+ 它利用反射加载所属的 <a href="com/aispect/agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> 元数据，调用大模型生成执行任务序列，
+ 然后在内部循环调度这些任务序列，同时对接各种生命周期与异常 Hook。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/graph/DynamicWorkflowGraphAgent.ExecutionStep.html" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent.ExecutionStep</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">表示大模型规划出的单个执行步骤，对应 JSON 数组中的一个任务对象。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab7"><a href="com/aispect/engine/spring/annotation/EnableAiSpect.html" title="annotation interface in com.aispect.engine.spring.annotation">EnableAiSpect</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab7">
+<div class="block">启用 AiSpect 核心功能的注解。
+ 在 Spring Boot 或 Spring 项目的配置类上使用此注解，
+ 将自动导入 AiSpectConfiguration 配置类，从而初始化并启用 AI 代理功能。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/flow/FallbackAgent.html" title="class in com.aispect.agents.flow">FallbackAgent</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">用于灾备和优雅降级的 Fallback Agent。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">适配 Google Gemini API 的客户端实现。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/graph/GraphEngine.html" title="class in com.aispect.core.engine.graph">GraphEngine</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">基础图引擎（Graph Engine）实现类。</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/ImageProcessAgent.html" title="class in com.aispect.agents.data">ImageProcessAgent</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/runtime/executor/graph/GraphEngine.html" title="class in com.aispect.core.engine.runtime.executor.graph">GraphEngine</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Image processing agent, used to demonstrate multimodal, multi-parameter, and diverse parameter transmission.</div>
+<div class="block">基础图引擎（Graph Engine）实现类，属于<b>运行阶段（Runtime）</b>职责。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/ImageStoryAgent.html" title="class in com.aispect.agents.data">ImageStoryAgent</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/ImageProcessAgent.html" title="class in com.aispect.agents.data">ImageProcessAgent</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Image storytelling agent.</div>
+<div class="block">图像处理 Agent，用于演示多模态、多参数以及多样化的参数传递。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/JsonExtractorAgent.html" title="class in com.aispect.agents.data">JsonExtractorAgent</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/ImageStoryAgent.html" title="class in com.aispect.agents.data">ImageStoryAgent</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">JSON extraction agent.</div>
+<div class="block">看图讲故事 Agent。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/util/JsonUtils.html" title="class in com.aispect.common.util">JsonUtils</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/data/JsonExtractorAgent.html" title="class in com.aispect.agents.data">JsonExtractorAgent</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">JSON 提取 Agent。</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/util/JsonUtils.html" title="class in com.aispect.common.util">JsonUtils</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">基于 Jackson 的 JSON 序列化与反序列化工具类。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/client/adapter/llamacpp/LlamaCppAdapter.html" title="class in com.aispect.core.client.adapter.llamacpp">LlamaCppAdapter</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/client/adapter/llamacpp/LlamaCppAdapter.html" title="class in com.aispect.core.client.adapter.llamacpp">LlamaCppAdapter</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">适配 Llama.cpp 兼容 API 的客户端实现（基于 OkHttp）。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="com/aispect/core/client/model/Message.html" title="class in com.aispect.core.client.model">Message</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="com/aispect/core/client/model/Message.html" title="class in com.aispect.core.client.model">Message</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">抽象对话消息实体。</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="com/aispect/agent/enumeration/NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">图节点运行抛出异常（阻断异常）时的处理策略。</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -247,9 +351,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">当框架为 @AiAgent 创建代理失败时抛出的异常。</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/proxy/ProxyFactory.html" title="class in com.aispect.core.engine.proxy">ProxyFactory</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/bootstrap/proxy/ProxyFactory.html" title="class in com.aispect.core.engine.bootstrap.proxy">ProxyFactory</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">AI 代理工厂类。</div>
+<div class="block">AI 代理工厂类，属于<b>启动阶段（Bootstrap）</b>职责。</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/util/ReflectionUtils.html" title="class in com.aispect.common.util">ReflectionUtils</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -267,9 +371,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">消息发送者的角色定义。</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/agents/graph/StorytellingGraphAgent.html" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/bootstrap/scanner/ScanResult.html" title="class in com.aispect.core.engine.bootstrap.scanner">ScanResult</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Streaming agent example: generates stories or long text in real-time streaming.</div>
+<div class="block"><a href="com/aispect/core/engine/bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> 的扫描结果载体。</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/common/util/StringUtils.html" title="class in com.aispect.common.util">StringUtils</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -281,6 +385,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="com/aispect/core/client/model/ToolCall.FunctionCall.html" title="class in com.aispect.core.client.model">ToolCall.FunctionCall</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/aispect/core/engine/runtime/executor/unit/UnitEngine.html" title="class in com.aispect.core.engine.runtime.executor.unit">UnitEngine</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Unit Agent 执行引擎，属于<b>运行阶段（Runtime）</b>职责。</div>
+</div>
 </div>
 </div>
 </div>

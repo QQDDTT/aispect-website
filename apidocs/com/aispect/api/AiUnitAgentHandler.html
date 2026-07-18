@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code>, <code><a href="AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;</code></dd>
+<dd><code><a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code>, <code><a href="AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;</code>, <code><a href="AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -82,17 +82,17 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiUnitAgentHandler&lt;T,<wbr>R&gt;</span><span class="extends-implements">
-extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, <a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;, <a href="AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;, <a href="AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;, <a href="AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;</span></div>
+extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, <a href="AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;, <a href="AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;, <a href="AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;</span></div>
 <div class="block">单元代理处理器 (Unit Agent Handler)
  <p>
  此接口是单元代理处理逻辑的顶层复合抽象，整合了代理在执行过程中的各个生命周期阶段的核心能力。
  实现该接口的类将同时具备以下能力：
  <ul>
    <li><b>条件过滤 (AiAgentFilter)</b>：决定是否应该执行该代理。</li>
-   <li><b>核心编排 (AiOrchestrator)</b>：代理的实际业务逻辑和调用流程。</li>
-   <li><b>前置处理 (AiPreProcessor)</b>：在核心逻辑执行前，进行参数校验或上下文准备。</li>
-   <li><b>后置处理 (AiPostProcessor)</b>：在核心逻辑执行后，对结果进行封装、转换或清理。</li>
-   <li><b>降级处理 (AiFallbackHandler)</b>：在执行发生异常或失败时，提供备用的处理机制。</li>
+   <li><b>执行前代理 (AiPreExecutionProxy)</b>：在方法执行前触发。</li>
+   <li><b>执行后代理 (AiPostExecutionProxy)</b>：在方法执行后触发。</li>
+   <li><b>异常代理 (AiExceptionProxy)</b>：在方法执行发生异常时触发。</li>
+   <li><b>核心编排 (AiExecutionProxy)</b>：代理的实际业务逻辑，完全替换原生方法。</li>
  </ul>
  </p></div>
 </section>
@@ -104,19 +104,19 @@ extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgen
 <h2>Method Summary</h2>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.aispect.api.AiAgentFilter">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></h3>
-<code><a href="AiAgentFilter.html#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiOrchestrator)">doFilter</a>, <a href="AiAgentFilter.html#shouldProcess(java.lang.Object%5B%5D)">shouldProcess</a></code></div>
+<code><a href="AiAgentFilter.html#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">doFilter</a>, <a href="AiAgentFilter.html#shouldProcess(java.lang.Object%5B%5D)">shouldProcess</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.aispect.api.AiFallbackHandler">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a></h3>
-<code><a href="AiFallbackHandler.html#fallback(java.lang.Throwable,com.aispect.api.AiInvocationContext)">fallback</a></code></div>
+<h3 id="methods-inherited-from-class-com.aispect.api.AiExceptionProxy">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a></h3>
+<code><a href="AiExceptionProxy.html#onException(com.aispect.api.AiInvocationContext,java.lang.Throwable)">onException</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.aispect.api.AiOrchestrator">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a></h3>
-<code><a href="AiOrchestrator.html#orchestrate(com.aispect.api.AiInvocationContext)">orchestrate</a></code></div>
+<h3 id="methods-inherited-from-class-com.aispect.api.AiExecutionProxy">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a></h3>
+<code><a href="AiExecutionProxy.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.aispect.api.AiPostProcessor">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a></h3>
-<code><a href="AiPostProcessor.html#postProcess(T,com.aispect.api.AiInvocationContext)">postProcess</a></code></div>
+<h3 id="methods-inherited-from-class-com.aispect.api.AiPostExecutionProxy">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a></h3>
+<code><a href="AiPostExecutionProxy.html#postExecute(com.aispect.api.AiInvocationContext,R)">postExecute</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.aispect.api.AiPreProcessor">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a></h3>
-<code><a href="AiPreProcessor.html#preProcess(com.aispect.api.AiInvocationContext)">preProcess</a></code></div>
+<h3 id="methods-inherited-from-class-com.aispect.api.AiPreExecutionProxy">Methods inherited from interface&nbsp;com.aispect.api.<a href="AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a></h3>
+<code><a href="AiPreExecutionProxy.html#preExecute(com.aispect.api.AiInvocationContext)">preExecute</a></code></div>
 </section>
 </li>
 </ul>

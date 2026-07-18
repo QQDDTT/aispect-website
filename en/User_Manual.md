@@ -53,5 +53,17 @@ public class OrderValidatorAgentImpl extends AbstractUnitAgent<Object, Order> {
 }
 ```
 
-## 3. Advanced Usage
-By implementing more complex agents, you can execute external tool calls (MCP) within `orchestrate`, or perform DAG graph orchestration (coming soon) for multiple components annotated with `@AiUnitAgent`.
+## 3. Advanced Usage: Graph Agents and Node Orchestration
+
+For more complex business distribution, you can go beyond a single Unit Agent and use Graph Agents to take over the workflow of an entire class.
+
+### Core Annotations
+- **`@AiGraphAgent`**: Annotated at the **class level**, serving as the global entry point for complex workflows.
+- **`@AiNode`**: Annotated at the **method level**, serving as a sub-function node that the LLM can actively schedule (similar to Tool/Skill).
+
+### Strict Troubleshooting and Validation Mechanism
+To ensure the rigor of process orchestration, the AiSpect engine introduces **comprehensive error collection** capabilities during the Bootstrap phase. The scanner will never short-circuit and exit when it encounters the first configuration error. Instead, it collects all configuration defects on the current function and prints all error logs at once.
+
+**Developers must strictly comply with the following troubleshooting constraints, otherwise the application startup will be safely intercepted by the framework**:
+1. **Strong Association Constraint**: For any method annotated with `@AiNode`, its host class must be annotated with `@AiGraphAgent`. The framework refuses to load "orphan nodes" that have no clear entry point affiliation.
+2. **Phase Exclusivity Constraint**: If multiple agent annotations (whether `@AiUnitAgent` or `@AiNode`) are used on the same method, they must have distinct execution phases (`executePhase`). Furthermore, mixing the `ALL` phase with specific partial phases such as `BEFORE`/`AFTER` is strictly prohibited.

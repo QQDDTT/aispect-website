@@ -68,29 +68,36 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.aispect.agent.core</a></div>
-<h1 title="Class AbstractGraphAgent" class="title">Class AbstractGraphAgent&lt;F&gt;</h1>
+<h1 title="Class AbstractGraphAgent" class="title">Class AbstractGraphAgent&lt;T,<wbr>R,<wbr>F&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">com.aispect.agent.core.AbstractGraphAgent&lt;F&gt;</div>
+<div class="inheritance">com.aispect.agent.core.AbstractGraphAgent&lt;T,<wbr>R,<wbr>F&gt;</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>F</code> - 状态或数据类型</dd>
+<dd><code>T</code> - 被代理方法的原始参数及调用上下文的数据类型</dd>
+<dd><code>R</code> - 被代理方法预期的返回结果类型</dd>
+<dd><code>F</code> - 图执行过程中在节点间流转的全局状态或资源数据对象类型（如 Graph State）</dd>
 </dl>
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</code></dd>
+<dd><code><a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code>, <code><a href="../../api/AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;</code>, <code><a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</code>, <code><a href="../../api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a></code>, <code><a href="../../api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a></code>, <code><a href="../../api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a></code>, <code><a href="../../api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a></code>, <code><a href="../../api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../../agents/graph/StorytellingGraphAgent.html" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a></code></dd>
+<dd><code><a href="../../agents/graph/DynamicWorkflowGraphAgent.html" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractGraphAgent&lt;F&gt;</span>
+<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractGraphAgent&lt;T,<wbr>R,<wbr>F&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</span></div>
-<div class="block">抽象的图式智能体处理基类。</div>
+implements <a href="../../api/AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;</span></div>
+<div class="block">抽象的图式智能体 (Graph Agent) 处理基类。
+ <p>
+ 该类实现了 <a href="../../api/AiGraphAgentHandler.html" title="interface in com.aispect.api"><code>AiGraphAgentHandler</code></a> 接口，为基于图结构编排的复杂智能体提供了默认的骨架实现。
+ 开发者可以通过继承该类，实现定制化的多节点工作流（Workflow）、条件分支调度、以及资源/状态的流转。
+ 该类预先提供了各个生命周期钩子（Hook）的默认空实现或保守策略（如异常时中止），以减少子类的样板代码。
+ </p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -118,16 +125,59 @@ implements <a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAiOperations(com.aispect.api.AiInvocationContext)" class="member-name-link">getAiOperations</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T1,<wbr>
+R1&gt;&nbsp;R1</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)" class="member-name-link">doFilter</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T1&gt;&nbsp;ctx,
+ <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T1,<wbr>R1&gt;&nbsp;next)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">获取AI操作接口</div>
+<div class="block">代理调用的拦截与过滤逻辑。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAiOperations(com.aispect.api.AiInvocationContext)" class="member-name-link">getAiOperations</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">从上下文中提取核心的大模型交互 API。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onGraphComplete(com.aispect.api.AiInvocationContext,java.lang.Object)" class="member-name-link">onGraphComplete</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;finalResult)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">触发图执行完成的钩子。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onGraphStart(com.aispect.api.AiInvocationContext)" class="member-name-link">onGraphStart</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">触发图执行开始的钩子。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onGraphTimeout(com.aispect.api.AiInvocationContext,long)" class="member-name-link">onGraphTimeout</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx,
+ long&nbsp;timeoutMs)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">触发整个图执行超时的钩子。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../enumeration/NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onNodeException(java.lang.String,java.lang.Throwable,com.aispect.api.AiInvocationContext)" class="member-name-link">onNodeException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex,
+ <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">触发节点执行发生异常的钩子，并决策异常处理策略。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onNodeStatusChange(java.lang.String,java.lang.String,com.aispect.api.AiInvocationContext)" class="member-name-link">onNodeStatusChange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;status,
+ <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">触发具体节点状态变更的钩子。</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;,<wbr><a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a>&gt;&nbsp;nodeResources,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">协调执行图行为</div>
+<div class="block">核心方法：协调与编排图式行为。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shouldProcess(java.lang.Object%5B%5D)" class="member-name-link">shouldProcess</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">判断当前智能体是否需要对该方法的调用进行拦截与处理。</div>
 </div>
 </div>
 </div>
@@ -161,35 +211,184 @@ implements <a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="shouldProcess(java.lang.Object[])">
+<h3>shouldProcess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">shouldProcess</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</span></div>
+<div class="block">判断当前智能体是否需要对该方法的调用进行拦截与处理。
+ <p>
+ 默认实现为始终处理（返回 true）。子类可根据入参特征或全局配置重写此方法，
+ 从而动态决定是否跳过图执行，直接放行至下一个过滤器或原生方法。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiAgentFilter.html#shouldProcess(java.lang.Object%5B%5D)">shouldProcess</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>args</code> - 目标方法的入参列表</dd>
+<dt>Returns:</dt>
+<dd>如果需要接管并处理，返回 true；否则返回 false</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">
+<h3>doFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T1,<wbr>
+R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element-name">doFilter</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T1&gt;&nbsp;ctx,
+ <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T1,<wbr>R1&gt;&nbsp;next)</span>
+                    throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
+<div class="block">代理调用的拦截与过滤逻辑。
+ <p>
+ 默认实现为直接放行至执行代理。由于图式智能体通常在拦截器中会有专门的处理分支直接调用 <a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)"><code>orchestrateGraph(java.util.Map&lt;java.lang.String, java.lang.Object&gt;, com.aispect.api.AiInvocationContext&lt;?&gt;)</code></a>，
+ 该方法的实现主要为了兼容底层统一的 <a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api"><code>AiAgentFilter</code></a> 接口规范。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiAgentFilter.html#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">doFilter</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code></dd>
+<dt>Type Parameters:</dt>
+<dd><code>T1</code> - 方法入参的泛型</dd>
+<dd><code>R1</code> - 方法返回结果的泛型</dd>
+<dt>Parameters:</dt>
+<dd><code>ctx</code> - 当前方法调用的上下文</dd>
+<dd><code>next</code> - 用于继续执行链条的代理对象</dd>
+<dt>Returns:</dt>
+<dd>最终的执行结果</dd>
+<dt>Throws:</dt>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 执行过程中发生异常</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getAiOperations(com.aispect.api.AiInvocationContext)">
 <h3>getAiOperations</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></span>&nbsp;<span class="element-name">getAiOperations</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
-<div class="block">获取AI操作接口</div>
+<div class="block">从上下文中提取核心的大模型交互 API。
+ <p>
+ 提供一个便利方法，供子类在各节点中方便地获取执行 AI 生成任务或对话能力的工具类。
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 调用上下文</dd>
+<dd><code>ctx</code> - 当前代理方法调用的上下文对象</dd>
 <dt>Returns:</dt>
-<dd>AI操作实例</dd>
+<dd>提供统一模型请求操作的 <a href="../../api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> 实例</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">
 <h3>orchestrateGraph</h3>
-<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;,<wbr><a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a>&gt;&nbsp;nodeResources,
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
                             throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">协调执行图行为</div>
+<div class="block">核心方法：协调与编排图式行为。
+ <p>
+ 子类必须实现此方法以定义具体的图工作流。在这里可以调度多个节点（Node）、连接边（Edge），
+ 并管理图状态资源 <code>&lt;F&gt;</code> 在整个生命周期内的传递与变更。
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../api/AiGraphBehaviorOrchestrator.html#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">orchestrateGraph</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;<a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">F</a>&gt;</code></dd>
+<dd><code><a href="../../api/AiGraphBehaviorOrchestrator.html#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">orchestrateGraph</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;<a href="AbstractGraphAgent.html" title="type parameter in AbstractGraphAgent">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>nodeResources</code> - 节点资源</dd>
-<dd><code>ctx</code> - 上下文</dd>
+<dd><code>nodeResources</code> - 提供给图调度的可用节点资源，Key 为节点的标识名称，Value 为具体的功能函数或对象</dd>
+<dd><code>ctx</code> - 当前代理方法调用的上下文</dd>
 <dt>Returns:</dt>
-<dd>处理结果</dd>
+<dd>图执行完毕后的最终状态/处理结果，类型为 <code>&lt;F&gt;</code></dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 编排过程中发生的异常</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onGraphStart(com.aispect.api.AiInvocationContext)">
+<h3>onGraphStart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onGraphStart</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
+<div class="block">触发图执行开始的钩子。
+ <p>
+ 在 <a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)"><code>orchestrateGraph(java.util.Map&lt;java.lang.String, java.lang.Object&gt;, com.aispect.api.AiInvocationContext&lt;?&gt;)</code></a> 即将开始处理前被框架调用。可用于初始化监控指标、记录启动日志等操作。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiGraphStartHook.html#onGraphStart(com.aispect.api.AiInvocationContext)">onGraphStart</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>ctx</code> - 当前方法的调用上下文</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onGraphComplete(com.aispect.api.AiInvocationContext,java.lang.Object)">
+<h3>onGraphComplete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onGraphComplete</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;finalResult)</span></div>
+<div class="block">触发图执行完成的钩子。
+ <p>
+ 在整个图调度完成，即将退出拦截阶段前被框架调用。可用于资源清理、指标上报或记录总结日志。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiGraphCompleteHook.html#onGraphComplete(com.aispect.api.AiInvocationContext,java.lang.Object)">onGraphComplete</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>ctx</code> - 当前方法的调用上下文</dd>
+<dd><code>finalResult</code> - 图执行产出的最终结果或状态</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onNodeStatusChange(java.lang.String,java.lang.String,com.aispect.api.AiInvocationContext)">
+<h3>onNodeStatusChange</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onNodeStatusChange</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;status,
+ <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
+<div class="block">触发具体节点状态变更的钩子。
+ <p>
+ 当图中某个特定的节点（Node）开始、结束、挂起或被跳过时，可由编排引擎主动触发，以便监控图运转的明细进度。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiNodeStatusHook.html#onNodeStatusChange(java.lang.String,java.lang.String,com.aispect.api.AiInvocationContext)">onNodeStatusChange</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>nodeName</code> - 发生状态变更的节点名称或标识</dd>
+<dd><code>status</code> - 该节点当前的新状态（如：STARTING, COMPLETED, SKIPPED）</dd>
+<dd><code>ctx</code> - 当前方法的调用上下文</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onNodeException(java.lang.String,java.lang.Throwable,com.aispect.api.AiInvocationContext)">
+<h3>onNodeException</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../enumeration/NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">onNodeException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex,
+ <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
+<div class="block">触发节点执行发生异常的钩子，并决策异常处理策略。
+ <p>
+ 默认策略为 <code>ABORT</code>（中止整个图的执行）。
+ 子类可覆盖此方法，根据不同的节点重试策略（RETRY）、忽略并跳过（SKIP）等进行动态决策。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiNodeExceptionHook.html#onNodeException(java.lang.String,java.lang.Throwable,com.aispect.api.AiInvocationContext)">onNodeException</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>nodeName</code> - 抛出异常的节点名称</dd>
+<dd><code>ex</code> - 具体的异常对象</dd>
+<dd><code>ctx</code> - 当前方法的调用上下文</dd>
+<dt>Returns:</dt>
+<dd><a href="../enumeration/NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration"><code>NodeExceptionStrategy</code></a> 返回期望的异常后续处理策略</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onGraphTimeout(com.aispect.api.AiInvocationContext,long)">
+<h3>onGraphTimeout</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onGraphTimeout</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx,
+ long&nbsp;timeoutMs)</span></div>
+<div class="block">触发整个图执行超时的钩子。
+ <p>
+ 当图运行的时间超出了系统或注解设置的最大限制时间时被调用。可用于进行超时后的优雅降级（Fallback）或强制清理工作。
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../api/AiGraphTimeoutHook.html#onGraphTimeout(com.aispect.api.AiInvocationContext,long)">onGraphTimeout</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>ctx</code> - 当前方法的调用上下文</dd>
+<dd><code>timeoutMs</code> - 配置或触发超时的阈值（毫秒）</dd>
 </dl>
 </section>
 </li>

@@ -52,6 +52,7 @@ loadScripts(document, 'script');</script>
 <ul class="horizontal">
 <li><a href="com/aispect/agent/annotation/package-tree.html">com.aispect.agent.annotation</a>, </li>
 <li><a href="com/aispect/agent/core/package-tree.html">com.aispect.agent.core</a>, </li>
+<li><a href="com/aispect/agent/enumeration/package-tree.html">com.aispect.agent.enumeration</a>, </li>
 <li><a href="com/aispect/agents/data/package-tree.html">com.aispect.agents.data</a>, </li>
 <li><a href="com/aispect/agents/flow/package-tree.html">com.aispect.agents.flow</a>, </li>
 <li><a href="com/aispect/agents/graph/package-tree.html">com.aispect.agents.graph</a>, </li>
@@ -66,15 +67,19 @@ loadScripts(document, 'script');</script>
 <li><a href="com/aispect/core/client/adapter/openai/package-tree.html">com.aispect.core.client.adapter.openai</a>, </li>
 <li><a href="com/aispect/core/client/config/package-tree.html">com.aispect.core.client.config</a>, </li>
 <li><a href="com/aispect/core/client/model/package-tree.html">com.aispect.core.client.model</a>, </li>
-<li><a href="com/aispect/core/engine/context/package-tree.html">com.aispect.core.engine.context</a>, </li>
-<li><a href="com/aispect/core/engine/graph/package-tree.html">com.aispect.core.engine.graph</a>, </li>
-<li><a href="com/aispect/core/engine/interceptor/package-tree.html">com.aispect.core.engine.interceptor</a>, </li>
-<li><a href="com/aispect/core/engine/proxy/package-tree.html">com.aispect.core.engine.proxy</a>, </li>
+<li><a href="com/aispect/core/engine/bootstrap/proxy/package-tree.html">com.aispect.core.engine.bootstrap.proxy</a>, </li>
+<li><a href="com/aispect/core/engine/bootstrap/registry/package-tree.html">com.aispect.core.engine.bootstrap.registry</a>, </li>
+<li><a href="com/aispect/core/engine/bootstrap/scanner/package-tree.html">com.aispect.core.engine.bootstrap.scanner</a>, </li>
+<li><a href="com/aispect/core/engine/runtime/context/package-tree.html">com.aispect.core.engine.runtime.context</a>, </li>
+<li><a href="com/aispect/core/engine/runtime/executor/graph/package-tree.html">com.aispect.core.engine.runtime.executor.graph</a>, </li>
+<li><a href="com/aispect/core/engine/runtime/executor/unit/package-tree.html">com.aispect.core.engine.runtime.executor.unit</a>, </li>
+<li><a href="com/aispect/core/engine/runtime/interceptor/package-tree.html">com.aispect.core.engine.runtime.interceptor</a>, </li>
 <li><a href="com/aispect/engine/quarkus/package-tree.html">com.aispect.engine.quarkus</a>, </li>
 <li><a href="com/aispect/engine/se/package-tree.html">com.aispect.engine.se</a>, </li>
 <li><a href="com/aispect/engine/spring/package-tree.html">com.aispect.engine.spring</a>, </li>
 <li><a href="com/aispect/engine/spring/annotation/package-tree.html">com.aispect.engine.spring.annotation</a>, </li>
-<li><a href="com/aispect/engine/spring/config/package-tree.html">com.aispect.engine.spring.config</a></li>
+<li><a href="com/aispect/engine/spring/config/package-tree.html">com.aispect.engine.spring.config</a>, </li>
+<li><a href="com/aispect/engine/spring/launcher/package-tree.html">com.aispect.engine.spring.launcher</a></li>
 </ul>
 </div>
 <section class="hierarchy">
@@ -82,9 +87,9 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
 <ul>
-<li class="circle">com.aispect.agent.core.<a href="com/aispect/agent/core/AbstractGraphAgent.html" class="type-name-link" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;F&gt; (implements com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;)
+<li class="circle">com.aispect.agent.core.<a href="com/aispect/agent/core/AbstractGraphAgent.html" class="type-name-link" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;T,<wbr>R,<wbr>F&gt; (implements com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;)
 <ul>
-<li class="circle">com.aispect.agents.graph.<a href="com/aispect/agents/graph/StorytellingGraphAgent.html" class="type-name-link" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a></li>
+<li class="circle">com.aispect.agents.graph.<a href="com/aispect/agents/graph/DynamicWorkflowGraphAgent.html" class="type-name-link" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent</a></li>
 </ul>
 </li>
 <li class="circle">com.aispect.agent.core.<a href="com/aispect/agent/core/AbstractUnitAgent.html" class="type-name-link" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;T,<wbr>R&gt; (implements com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt;)
@@ -97,23 +102,28 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.aispect.agents.data.<a href="com/aispect/agents/data/JsonExtractorAgent.html" class="type-name-link" title="class in com.aispect.agents.data">JsonExtractorAgent</a></li>
 </ul>
 </li>
-<li class="circle">com.aispect.core.engine.interceptor.<a href="com/aispect/core/engine/interceptor/AgentInterceptor.html" class="type-name-link" title="class in com.aispect.core.engine.interceptor">AgentInterceptor</a> (implements java.lang.reflect.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/InvocationHandler.html" title="class or interface in java.lang.reflect" class="external-link">InvocationHandler</a>)</li>
-<li class="circle">com.aispect.agent.core.<a href="com/aispect/agent/core/AgentPreResponse.html" class="type-name-link" title="class in com.aispect.agent.core">AgentPreResponse</a>&lt;R&gt;</li>
+<li class="circle">com.aispect.core.engine.runtime.interceptor.<a href="com/aispect/core/engine/runtime/interceptor/AgentInterceptor.html" class="type-name-link" title="class in com.aispect.core.engine.runtime.interceptor">AgentInterceptor</a> (implements java.lang.reflect.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/InvocationHandler.html" title="class or interface in java.lang.reflect" class="external-link">InvocationHandler</a>)</li>
+<li class="circle">com.aispect.core.engine.bootstrap.registry.<a href="com/aispect/core/engine/bootstrap/registry/AgentInvocationCacheImpl.html" class="type-name-link" title="class in com.aispect.core.engine.bootstrap.registry">AgentInvocationCacheImpl</a>&lt;H&gt; (implements com.aispect.api.<a href="com/aispect/api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;V&gt;)</li>
 <li class="circle">com.aispect.engine.spring.<a href="com/aispect/engine/spring/AiAgentBeanPostProcessor.html" class="type-name-link" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a> (implements org.springframework.beans.factory.config.BeanPostProcessor)</li>
 <li class="circle">com.aispect.engine.quarkus.<a href="com/aispect/engine/quarkus/AiAgentCdiInterceptor.html" class="type-name-link" title="class in com.aispect.engine.quarkus">AiAgentCdiInterceptor</a></li>
-<li class="circle">com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/AiOperationsWrapper.html" class="type-name-link" title="class in com.aispect.core.engine.context">AiOperationsWrapper</a> (implements com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>)</li>
+<li class="circle">com.aispect.common.util.<a href="com/aispect/common/util/AiAnnotationUtils.html" class="type-name-link" title="class in com.aispect.common.util">AiAnnotationUtils</a></li>
+<li class="circle">com.aispect.core.engine.bootstrap.scanner.<a href="com/aispect/core/engine/bootstrap/scanner/AiComponentScanner.html" class="type-name-link" title="class in com.aispect.core.engine.bootstrap.scanner">AiComponentScanner</a></li>
+<li class="circle">com.aispect.engine.se.<a href="com/aispect/engine/se/AiGraphAgentConsoleLauncher.html" class="type-name-link" title="class in com.aispect.engine.se">AiGraphAgentConsoleLauncher</a></li>
+<li class="circle">com.aispect.engine.spring.launcher.<a href="com/aispect/engine/spring/launcher/AiGraphAgentSpringLauncher.html" class="type-name-link" title="class in com.aispect.engine.spring.launcher">AiGraphAgentSpringLauncher</a> (implements org.springframework.context.ApplicationContextAware, org.springframework.context.ApplicationListener&lt;E&gt;)</li>
+<li class="circle">com.aispect.core.engine.runtime.context.<a href="com/aispect/core/engine/runtime/context/AiOperationsWrapper.html" class="type-name-link" title="class in com.aispect.core.engine.runtime.context">AiOperationsWrapper</a> (implements com.aispect.api.<a href="com/aispect/api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>)</li>
 <li class="circle">com.aispect.engine.se.<a href="com/aispect/engine/se/AiSpect.html" class="type-name-link" title="class in com.aispect.engine.se">AiSpect</a></li>
 <li class="circle">com.aispect.engine.se.<a href="com/aispect/engine/se/AiSpect.Builder.html" class="type-name-link" title="class in com.aispect.engine.se">AiSpect.Builder</a></li>
 <li class="circle">com.aispect.engine.spring.config.<a href="com/aispect/engine/spring/config/AiSpectConfiguration.html" class="type-name-link" title="class in com.aispect.engine.spring.config">AiSpectConfiguration</a></li>
 <li class="circle">com.aispect.common.context.<a href="com/aispect/common/context/AiSpectContextHolder.html" class="type-name-link" title="class in com.aispect.common.context">AiSpectContextHolder</a></li>
-<li class="circle">com.aispect.core.engine.context.<a href="com/aispect/core/engine/context/DefaultAiInvocationContext.html" class="type-name-link" title="class in com.aispect.core.engine.context">DefaultAiInvocationContext</a>&lt;T&gt; (implements com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;)</li>
+<li class="circle">com.aispect.core.engine.runtime.context.<a href="com/aispect/core/engine/runtime/context/DefaultAiInvocationContext.html" class="type-name-link" title="class in com.aispect.core.engine.runtime.context">DefaultAiInvocationContext</a>&lt;T&gt; (implements com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;)</li>
+<li class="circle">com.aispect.agents.graph.<a href="com/aispect/agents/graph/DynamicWorkflowGraphAgent.ExecutionStep.html" class="type-name-link" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent.ExecutionStep</a></li>
 <li class="circle">com.aispect.core.client.adapter.gemini.<a href="com/aispect/core/client/adapter/gemini/GeminiAdapter.html" class="type-name-link" title="class in com.aispect.core.client.adapter.gemini">GeminiAdapter</a> (implements com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a>)</li>
-<li class="circle">com.aispect.core.engine.graph.<a href="com/aispect/core/engine/graph/GraphEngine.html" class="type-name-link" title="class in com.aispect.core.engine.graph">GraphEngine</a> (implements com.aispect.api.<a href="com/aispect/api/AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a>)</li>
+<li class="circle">com.aispect.core.engine.runtime.executor.graph.<a href="com/aispect/core/engine/runtime/executor/graph/GraphEngine.html" class="type-name-link" title="class in com.aispect.core.engine.runtime.executor.graph">GraphEngine</a> (implements com.aispect.api.<a href="com/aispect/api/AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a>)</li>
 <li class="circle">com.aispect.common.util.<a href="com/aispect/common/util/JsonUtils.html" class="type-name-link" title="class in com.aispect.common.util">JsonUtils</a></li>
 <li class="circle">com.aispect.core.client.adapter.llamacpp.<a href="com/aispect/core/client/adapter/llamacpp/LlamaCppAdapter.html" class="type-name-link" title="class in com.aispect.core.client.adapter.llamacpp">LlamaCppAdapter</a> (implements com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a>)</li>
 <li class="circle">com.aispect.core.client.adapter.ollama.<a href="com/aispect/core/client/adapter/ollama/OllamaAdapter.html" class="type-name-link" title="class in com.aispect.core.client.adapter.ollama">OllamaAdapter</a> (implements com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a>)</li>
 <li class="circle">com.aispect.core.client.adapter.openai.<a href="com/aispect/core/client/adapter/openai/OpenAiAdapter.html" class="type-name-link" title="class in com.aispect.core.client.adapter.openai">OpenAiAdapter</a> (implements com.aispect.api.<a href="com/aispect/api/AiClient.html" title="interface in com.aispect.api">AiClient</a>)</li>
-<li class="circle">com.aispect.core.engine.proxy.<a href="com/aispect/core/engine/proxy/ProxyFactory.html" class="type-name-link" title="class in com.aispect.core.engine.proxy">ProxyFactory</a></li>
+<li class="circle">com.aispect.core.engine.bootstrap.proxy.<a href="com/aispect/core/engine/bootstrap/proxy/ProxyFactory.html" class="type-name-link" title="class in com.aispect.core.engine.bootstrap.proxy">ProxyFactory</a></li>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" class="type-name-link external-link" title="class or interface in java.lang">Record</a>
 <ul>
 <li class="circle">com.aispect.core.client.config.<a href="com/aispect/core/client/config/AiClientConfig.html" class="type-name-link" title="class in com.aispect.core.client.config">AiClientConfig</a></li>
@@ -126,6 +136,7 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.aispect.common.util.<a href="com/aispect/common/util/ReflectionUtils.html" class="type-name-link" title="class in com.aispect.common.util">ReflectionUtils</a></li>
+<li class="circle">com.aispect.core.engine.bootstrap.scanner.<a href="com/aispect/core/engine/bootstrap/scanner/ScanResult.html" class="type-name-link" title="class in com.aispect.core.engine.bootstrap.scanner">ScanResult</a> (implements com.aispect.api.<a href="com/aispect/api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a>)</li>
 <li class="circle">com.aispect.common.util.<a href="com/aispect/common/util/StringUtils.html" class="type-name-link" title="class in com.aispect.common.util">StringUtils</a></li>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" class="type-name-link external-link" title="class or interface in java.lang">Throwable</a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
@@ -134,7 +145,10 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiSpectException.html" class="type-name-link" title="class in com.aispect.common.exception">AiSpectException</a>
 <ul>
 <li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiAgentExecutionException.html" class="type-name-link" title="class in com.aispect.common.exception">AiAgentExecutionException</a></li>
+<li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiGraphExecutionException.html" class="type-name-link" title="class in com.aispect.common.exception">AiGraphExecutionException</a></li>
+<li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiGraphValidationException.html" class="type-name-link" title="class in com.aispect.common.exception">AiGraphValidationException</a></li>
 <li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiNetworkException.html" class="type-name-link" title="class in com.aispect.common.exception">AiNetworkException</a></li>
+<li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/AiScanException.html" class="type-name-link" title="class in com.aispect.common.exception">AiScanException</a></li>
 <li class="circle">com.aispect.common.exception.<a href="com/aispect/common/exception/ProxyCreationException.html" class="type-name-link" title="class in com.aispect.common.exception">ProxyCreationException</a></li>
 </ul>
 </li>
@@ -142,6 +156,7 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
+<li class="circle">com.aispect.core.engine.runtime.executor.unit.<a href="com/aispect/core/engine/runtime/executor/unit/UnitEngine.html" class="type-name-link" title="class in com.aispect.core.engine.runtime.executor.unit">UnitEngine</a> (implements com.aispect.api.<a href="com/aispect/api/AiUnitEngine.html" title="interface in com.aispect.api">AiUnitEngine</a>)</li>
 </ul>
 </li>
 </ul>
@@ -149,36 +164,69 @@ loadScripts(document, 'script');</script>
 <section class="hierarchy">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AgentInvocationCache.html" class="type-name-link" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;V&gt;</li>
 <li class="circle">com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" class="type-name-link" title="interface in com.aispect.api">AiAgentFilter</a>
 <ul>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;)</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;)</li>
 </ul>
 </li>
 <li class="circle">com.aispect.api.<a href="com/aispect/api/AiClient.html" class="type-name-link" title="interface in com.aispect.api">AiClient</a></li>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiFallbackHandler.html" class="type-name-link" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiExceptionProxy.html" class="type-name-link" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;
 <ul>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;)</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;)</li>
 </ul>
 </li>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" class="type-name-link" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiExecutionProxy.html" class="type-name-link" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;)</li>
+</ul>
+</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" class="type-name-link" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+</ul>
+</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" class="type-name-link" title="interface in com.aispect.api">AiGraphCompleteHook</a>
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+</ul>
+</li>
 <li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphEngine.html" class="type-name-link" title="interface in com.aispect.api">AiGraphEngine</a></li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" class="type-name-link" title="interface in com.aispect.api">AiGraphStartHook</a>
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+</ul>
+</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" class="type-name-link" title="interface in com.aispect.api">AiGraphTimeoutHook</a>
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+</ul>
+</li>
 <li class="circle">com.aispect.api.<a href="com/aispect/api/AiInvocationContext.html" class="type-name-link" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" class="type-name-link" title="interface in com.aispect.api">AiNodeExceptionHook</a>
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>)</li>
+</ul>
+</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiNodeStatusHook.html" class="type-name-link" title="interface in com.aispect.api">AiNodeStatusHook</a>
+<ul>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiGraphAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, com.aispect.api.<a href="com/aispect/api/AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, com.aispect.api.<a href="com/aispect/api/AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a>, com.aispect.api.<a href="com/aispect/api/AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>)</li>
+</ul>
+</li>
 <li class="circle">com.aispect.api.<a href="com/aispect/api/AiOperations.html" class="type-name-link" title="interface in com.aispect.api">AiOperations</a></li>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" class="type-name-link" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiPostExecutionProxy.html" class="type-name-link" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;
 <ul>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;)</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;)</li>
 </ul>
 </li>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiPostProcessor.html" class="type-name-link" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiPreExecutionProxy.html" class="type-name-link" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;
 <ul>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;)</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;)</li>
 </ul>
 </li>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiPreProcessor.html" class="type-name-link" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;
-<ul>
-<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitAgentHandler.html" class="type-name-link" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt; (also extends com.aispect.api.<a href="com/aispect/api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, com.aispect.api.<a href="com/aispect/api/AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;, com.aispect.api.<a href="com/aispect/api/AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;)</li>
-</ul>
-</li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiScanResult.html" class="type-name-link" title="interface in com.aispect.api">AiScanResult</a></li>
+<li class="circle">com.aispect.api.<a href="com/aispect/api/AiUnitEngine.html" class="type-name-link" title="interface in com.aispect.api">AiUnitEngine</a></li>
 </ul>
 </section>
 <section class="hierarchy">
@@ -186,9 +234,11 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.aispect.engine.quarkus.<a href="com/aispect/engine/quarkus/AiAgentInterceptorBinding.html" class="type-name-link" title="annotation interface in com.aispect.engine.quarkus">AiAgentInterceptorBinding</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 <li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiGraphAgent.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiGraphAgent</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
+<li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiGraphAgents.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiGraphAgents</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 <li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiNode.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiNode</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 <li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiNodes.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiNodes</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 <li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiUnitAgent.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
+<li class="circle">com.aispect.agent.annotation.<a href="com/aispect/agent/annotation/AiUnitAgents.html" class="type-name-link" title="annotation interface in com.aispect.agent.annotation">AiUnitAgents</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 <li class="circle">com.aispect.engine.spring.annotation.<a href="com/aispect/engine/spring/annotation/EnableAiSpect.html" class="type-name-link" title="annotation interface in com.aispect.engine.spring.annotation">EnableAiSpect</a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
 </ul>
 </section>
@@ -199,6 +249,8 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" class="type-name-link external-link" title="class or interface in java.lang">Enum</a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
+<li class="circle">com.aispect.agent.enumeration.<a href="com/aispect/agent/enumeration/AiExecutePhase.html" class="type-name-link" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></li>
+<li class="circle">com.aispect.agent.enumeration.<a href="com/aispect/agent/enumeration/NodeExceptionStrategy.html" class="type-name-link" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></li>
 <li class="circle">com.aispect.core.client.model.<a href="com/aispect/core/client/model/Role.html" class="type-name-link" title="enum class in com.aispect.core.client.model">Role</a></li>
 </ul>
 </li>

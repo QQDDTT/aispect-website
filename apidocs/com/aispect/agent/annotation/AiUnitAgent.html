@@ -69,11 +69,13 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#METHOD" title="class or interface in java.lang.annotation" class="external-link">METHOD</a>,<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE" title="class or interface in java.lang.annotation" class="external-link">TYPE</a>})
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Retention.html" title="class or interface in java.lang.annotation" class="external-link">@Retention</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/RetentionPolicy.html#RUNTIME" title="class or interface in java.lang.annotation" class="external-link">RUNTIME</a>)
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Documented.html" title="class or interface in java.lang.annotation" class="external-link">@Documented</a>
+<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="AiUnitAgents.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgents.class</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">AiUnitAgent</span></div>
-<div class="block">标记一个方法为独立的单元 AI 代理方法（Skill）。
+<div class="block">标记一个方法或类为独立的单元 AI 代理方法（Unit Agent/Skill）。
  <p>
- 框架会自动拦截被此注解修饰的方法。在方法执行时，将请求上下文转发给具体的 <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> 实现类处理。
- 这是一个典型的单步、单逻辑节点的 Agent。
+ <code>Unit Agent</code> 的核心职责是协同 Java 程序，并且维持现有的设计和代码逻辑。
+ 它不对整体流程结构进行破坏，仅在局部方法执行期间进行智能协同增强。
+ 框架会自动拦截被此注解修饰的方法，并将上下文转发给具体的 <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> 处理。
  </p></div>
 </section>
 <section class="summary">
@@ -88,7 +90,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Required Element</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;?,<wbr>?&gt;&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-second even-row-color"><code><a href="#value()" class="member-name-link">value</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -105,12 +107,15 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#description()" class="member-name-link">description</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#fallback()" class="member-name-link">fallback</a></code></div>
+<div class="col-first odd-row-color"><code><a href="../enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#executePhase()" class="member-name-link">executePhase</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#modelName()" class="member-name-link">modelName</a></code></div>
+<div class="col-second even-row-color"><code><a href="#fallback()" class="member-name-link">fallback</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#modelName()" class="member-name-link">modelName</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -124,9 +129,9 @@ loadScripts(document, 'script');</script>
 <h2>Element Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="name()">
-<h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">name</span></div>
+<section class="detail" id="value()">
+<h3>value</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">value</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>负责处理该执行单元的具体代理类（如自定义的 AbstractUnitAgent 子类）。</dd>
@@ -165,6 +170,20 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Default:</dt>
 <dd>""</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="executePhase()">
+<h3>executePhase</h3>
+<div class="member-signature"><span class="return-type"><a href="../enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">executePhase</span></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>该 AI 代理在目标方法生命周期中的介入时机</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>ALL</dd>
 </dl>
 </section>
 </li>

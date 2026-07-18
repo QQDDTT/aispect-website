@@ -73,11 +73,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt;</code></dd>
+<dd><code><a href="AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;</code>, <code><a href="AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a></code>, <code><a href="../agents/security/ContentModerationAgent.html" title="class in com.aispect.agents.security">ContentModerationAgent</a></code>, <code><a href="../agents/data/DataCleanAgent.html" title="class in com.aispect.agents.data">DataCleanAgent</a></code>, <code><a href="../agents/flow/FallbackAgent.html" title="class in com.aispect.agents.flow">FallbackAgent</a></code>, <code><a href="../agents/data/ImageProcessAgent.html" title="class in com.aispect.agents.data">ImageProcessAgent</a></code>, <code><a href="../agents/data/ImageStoryAgent.html" title="class in com.aispect.agents.data">ImageStoryAgent</a></code>, <code><a href="../agents/data/JsonExtractorAgent.html" title="class in com.aispect.agents.data">JsonExtractorAgent</a></code></dd>
+<dd><code><a href="../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a></code>, <code><a href="../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a></code>, <code><a href="../agents/security/ContentModerationAgent.html" title="class in com.aispect.agents.security">ContentModerationAgent</a></code>, <code><a href="../agents/data/DataCleanAgent.html" title="class in com.aispect.agents.data">DataCleanAgent</a></code>, <code><a href="../agents/graph/DynamicWorkflowGraphAgent.html" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent</a></code>, <code><a href="../agents/flow/FallbackAgent.html" title="class in com.aispect.agents.flow">FallbackAgent</a></code>, <code><a href="../agents/data/ImageProcessAgent.html" title="class in com.aispect.agents.data">ImageProcessAgent</a></code>, <code><a href="../agents/data/ImageStoryAgent.html" title="class in com.aispect.agents.data">ImageStoryAgent</a></code>, <code><a href="../agents/data/JsonExtractorAgent.html" title="class in com.aispect.agents.data">JsonExtractorAgent</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Functional Interface:</dt>
@@ -108,8 +108,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T,<wbr>
 R&gt;&nbsp;R</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiOrchestrator)" class="member-name-link">doFilter</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;&nbsp;ctx,
- <a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;&nbsp;next)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)" class="member-name-link">doFilter</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;&nbsp;ctx,
+ <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;&nbsp;next)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">过滤/拦截当前的 AI 代理请求。</div>
 </div>
@@ -133,11 +133,11 @@ R&gt;&nbsp;R</code></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiOrchestrator)">
+<section class="detail" id="doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">
 <h3>doFilter</h3>
 <div class="member-signature"><span class="type-parameters">&lt;T,<wbr>
 R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">doFilter</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;&nbsp;ctx,
- <a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;&nbsp;next)</span>
+ <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;&nbsp;next)</span>
           throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block">过滤/拦截当前的 AI 代理请求。</div>
 <dl class="notes">
@@ -146,7 +146,7 @@ R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-n
 <dd><code>R</code> - 期待的最终处理结果类型</dd>
 <dt>Parameters:</dt>
 <dd><code>ctx</code> - 当前方法调用的上下文</dd>
-<dd><code>next</code> - 用于推进过滤器链，执行下一个过滤器或最终的 <a href="AiOrchestrator.html" title="interface in com.aispect.api"><code>AiOrchestrator</code></a></dd>
+<dd><code>next</code> - 用于推进过滤器链，执行下一个过滤器或最终的 <a href="AiExecutionProxy.html" title="interface in com.aispect.api"><code>AiExecutionProxy</code></a></dd>
 <dt>Returns:</dt>
 <dd>执行过滤器链及代理后的最终结果</dd>
 <dt>Throws:</dt>

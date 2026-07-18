@@ -92,7 +92,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="AiSpect.Builder.html" class="type-name-link" title="class in com.aispect.engine.se">AiSpect.Builder</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">AiSpect 的构造器类。
+ 允许在纯 Java SE 环境下手动组装 AiClient 并配置到引擎中。</div>
+</div>
 </div>
 </section>
 </li>
@@ -109,11 +112,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AiSpect.Builder.html" title="class in com.aispect.engine.se">AiSpect.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#builder()" class="member-name-link">builder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">创建用于初始化 AiSpect 的 Builder 实例。</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;T</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#proxy(T,java.lang.Class)" class="member-name-link">proxy</a><wbr>(T&nbsp;target,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;interfaceClass)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">为给定的目标对象创建代理，处理其方法上的 AI 注解。</div>
+</div>
 </div>
 </div>
 </div>
@@ -135,13 +142,31 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="builder()">
 <h3>builder</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AiSpect.Builder.html" title="class in com.aispect.engine.se">AiSpect.Builder</a></span>&nbsp;<span class="element-name">builder</span>()</div>
+<div class="block">创建用于初始化 AiSpect 的 Builder 实例。</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Builder 实例</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="proxy(T,java.lang.Class)">
 <h3 id="proxy(java.lang.Object,java.lang.Class)">proxy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">proxy</span><wbr><span class="parameters">(T&nbsp;target,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;interfaceClass)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;interfaceClass)</span>
+            throws <span class="exceptions"><a href="../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></span></div>
+<div class="block">为给定的目标对象创建代理，处理其方法上的 AI 注解。</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - 目标对象类型</dd>
+<dt>Parameters:</dt>
+<dd><code>target</code> - 被代理的目标对象实例</dd>
+<dd><code>interfaceClass</code> - 需要代理的接口类</dd>
+<dt>Returns:</dt>
+<dd>增强后的代理对象</dd>
+<dt>Throws:</dt>
+<dd><code><a href="../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></code> - 若组件扫描阶段发现配置错误</dd>
+</dl>
 </section>
 </li>
 </ul>

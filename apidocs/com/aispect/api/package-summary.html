@@ -67,49 +67,85 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;V extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">代理与节点资源的全局调度缓存接口</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">AI 代理执行流程的全局拦截器/过滤器。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiClient.html" title="interface in com.aispect.api">AiClient</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">AI Client adapter interface.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiFallbackHandler.html" title="interface in com.aispect.api">AiFallbackHandler</a>&lt;T,<wbr>R&gt;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiClient.html" title="interface in com.aispect.api">AiClient</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">AI 异常降级处理接口。</div>
+<div class="block">AI 客户端适配器接口。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;</div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">智能体的异常编排代理接口。</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">智能体的核心编排代理接口。</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">图代理处理器 (Graph Agent Handler)</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">AI 代理图（Graph）编排器接口。</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">图任务序列顺利完成回调接口。</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">基础图引擎（Graph Engine）接口。</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">图任务序列启动前回调接口。</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">图任务序列超时回调接口。</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;</div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">AI 方法代理调用的上下文接口。</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">节点异常处理回调接口。</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">节点状态检测回调接口。</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiOperations.html" title="interface in com.aispect.api">AiOperations</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">暴露给开发者用于手动控制 AI 交互的基础服务门面接口。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiOrchestrator.html" title="interface in com.aispect.api">AiOrchestrator</a>&lt;T,<wbr>R&gt;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;</div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Core orchestrator interface for agents.</div>
+<div class="block">智能体的执行后编排代理接口。</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiPostProcessor.html" title="interface in com.aispect.api">AiPostProcessor</a>&lt;T,<wbr>R&gt;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">AI 结果后置处理器接口。</div>
+<div class="block">智能体的执行前编排代理接口。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiPreProcessor.html" title="interface in com.aispect.api">AiPreProcessor</a>&lt;T,<wbr>R&gt;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">AI 请求前置处理器接口。</div>
+<div class="block">扫描结果接口契约。</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt;</div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">单元代理处理器 (Unit Agent Handler)</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="AiUnitEngine.html" title="interface in com.aispect.api">AiUnitEngine</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">单元代理执行引擎（Unit Engine）接口。</div>
 </div>
 </div>
 </div>

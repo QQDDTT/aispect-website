@@ -1,5 +1,6 @@
 com.aispect.agent.annotation
 com.aispect.agent.core
+com.aispect.agent.enumeration
 com.aispect.agents.data
 com.aispect.agents.flow
 com.aispect.agents.graph
@@ -14,12 +15,16 @@ com.aispect.core.client.adapter.ollama
 com.aispect.core.client.adapter.openai
 com.aispect.core.client.config
 com.aispect.core.client.model
-com.aispect.core.engine.context
-com.aispect.core.engine.graph
-com.aispect.core.engine.interceptor
-com.aispect.core.engine.proxy
+com.aispect.core.engine.bootstrap.proxy
+com.aispect.core.engine.bootstrap.registry
+com.aispect.core.engine.bootstrap.scanner
+com.aispect.core.engine.runtime.context
+com.aispect.core.engine.runtime.executor.graph
+com.aispect.core.engine.runtime.executor.unit
+com.aispect.core.engine.runtime.interceptor
 com.aispect.engine.quarkus
 com.aispect.engine.se
 com.aispect.engine.spring
 com.aispect.engine.spring.annotation
 com.aispect.engine.spring.config
+com.aispect.engine.spring.launcher

@@ -76,8 +76,12 @@ loadScripts(document, 'script');</script>
 <dd><code>F</code> - 图结构流转时的资源对象类型（例如状态对象、消息列表等）</dd>
 </dl>
 <dl class="notes">
+<dt>All Known Subinterfaces:</dt>
+<dd><code><a href="AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;T,<wbr>R,<wbr>F&gt;</code></dd>
+</dl>
+<dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a></code>, <code><a href="../agents/graph/StorytellingGraphAgent.html" title="class in com.aispect.agents.graph">StorytellingGraphAgent</a></code></dd>
+<dd><code><a href="../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a></code>, <code><a href="../agents/graph/DynamicWorkflowGraphAgent.html" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Functional Interface:</dt>
@@ -107,7 +111,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;,<wbr><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a>&gt;&nbsp;nodeResources,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">对图内的代理节点资源进行编排与调度。</div>
@@ -129,13 +133,13 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">
 <h3>orchestrateGraph</h3>
-<div class="member-signature"><span class="return-type"><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;,<wbr><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a>&gt;&nbsp;nodeResources,
+<div class="member-signature"><span class="return-type"><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
             throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block">对图内的代理节点资源进行编排与调度。</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>nodeResources</code> - 当前图中注册的各节点依赖注入和状态资源集合</dd>
+<dd><code>nodeResources</code> - 当前图中注册的各节点功能性函数资源集合，Key 为节点名称 (标识)</dd>
 <dd><code>ctx</code> - 触发图引擎调用的上下文</dd>
 <dt>Returns:</dt>
 <dd>图流程运行结束后的最终输出资源</dd>

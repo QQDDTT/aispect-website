@@ -69,20 +69,28 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab7"><a href="AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgent</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab7">
-<div class="block">标记一个方法为图式 AI 代理方法。</div>
+<div class="block">标记一个主干路由或主进程方法作为图式 AI 代理（Graph Agent）的入口。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab7"><a href="AiNode.html" title="annotation interface in com.aispect.agent.annotation">AiNode</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab7"><a href="AiGraphAgents.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgents</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab7">
-<div class="block">标记一个方法或类作为图（Graph）引擎中的节点。</div>
+<div class="block">标记一个类或接口对应多个图式 AI 代理（Graph Agent）。</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab7"><a href="AiNodes.html" title="annotation interface in com.aispect.agent.annotation">AiNodes</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab7"><a href="AiNode.html" title="annotation interface in com.aispect.agent.annotation">AiNode</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab7">
+<div class="block">标记一个方法、字段或参数作为图（Graph）引擎中的功能性节点资源。</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab7"><a href="AiNodes.html" title="annotation interface in com.aispect.agent.annotation">AiNodes</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab7">
 <div class="block">容器注解，用于支持 <a href="AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> 的可重复使用。
  允许一个类或方法同时属于多个 Stream Agent 图节点映射。</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab7"><a href="AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab7"><a href="AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgent</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab7">
+<div class="block">标记一个方法或类为独立的单元 AI 代理方法（Unit Agent/Skill）。</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab7"><a href="AiUnitAgents.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgents</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab7">
-<div class="block">标记一个方法为独立的单元 AI 代理方法（Skill）。</div>
+<div class="block"><a href="AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> 的容器注解，允许在同一个方法或类上定义多个 <a href="AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> 注解。</div>
 </div>
 </div>
 </div>

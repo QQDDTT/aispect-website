@@ -78,6 +78,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="annotations">@Configuration
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">AiSpectConfiguration</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">AiSpect Spring 自动配置类。
+ 负责根据环境变量或应用配置初始化 AiOperations 以及相关的 AI 客户端适配器，
+ 并注册 AiAgentBeanPostProcessor 以便在 Spring 容器中自动代理 AI 相关的 Bean。</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -99,15 +102,20 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../AiAgentBeanPostProcessor.html" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#aiAgentBeanPostProcessor(org.springframework.core.env.Environment)" class="member-name-link">aiAgentBeanPostProcessor</a><wbr>(org.springframework.core.env.Environment&nbsp;env)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#aiAgentBeanPostProcessor(org.springframework.beans.factory.ObjectProvider)" class="member-name-link">aiAgentBeanPostProcessor</a><wbr>(org.springframework.beans.factory.ObjectProvider&lt;<a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&gt;&nbsp;aiOperationsProvider)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">注册 AiAgentBeanPostProcessor 实例。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#aiOperations(org.springframework.core.env.Environment)" class="member-name-link">aiOperations</a><wbr>(org.springframework.core.env.Environment&nbsp;env)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -140,10 +148,24 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="aiAgentBeanPostProcessor(org.springframework.core.env.Environment)">
+<section class="detail" id="aiOperations(org.springframework.core.env.Environment)">
+<h3>aiOperations</h3>
+<div class="member-signature"><span class="annotations">@Bean
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></span>&nbsp;<span class="element-name">aiOperations</span><wbr><span class="parameters">(org.springframework.core.env.Environment&nbsp;env)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="aiAgentBeanPostProcessor(org.springframework.beans.factory.ObjectProvider)">
 <h3>aiAgentBeanPostProcessor</h3>
 <div class="member-signature"><span class="annotations">@Bean
-</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../AiAgentBeanPostProcessor.html" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a></span>&nbsp;<span class="element-name">aiAgentBeanPostProcessor</span><wbr><span class="parameters">(org.springframework.core.env.Environment&nbsp;env)</span></div>
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../AiAgentBeanPostProcessor.html" title="class in com.aispect.engine.spring">AiAgentBeanPostProcessor</a></span>&nbsp;<span class="element-name">aiAgentBeanPostProcessor</span><wbr><span class="parameters">(org.springframework.beans.factory.ObjectProvider&lt;<a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&gt;&nbsp;aiOperationsProvider)</span></div>
+<div class="block">注册 AiAgentBeanPostProcessor 实例。</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>aiOperationsProvider</code> - The ObjectProvider for AiOperations bean</dd>
+<dt>Returns:</dt>
+<dd>初始化的 AiAgentBeanPostProcessor 实例</dd>
+</dl>
 </section>
 </li>
 </ul>
