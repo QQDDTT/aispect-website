@@ -6,7 +6,19 @@ This example (located in the `examples/example-java-se` directory) demonstrates 
 
 ---
 
-## 1. Engine Initialization
+## 1. Example Architecture
+
+Here is a complete list of all code files included in this example and their purposes:
+
+- **Application Entry & Core Logic**
+  - `Main.java`: Contains the complete example in a single file. It includes the `PhaseTestService` and `DataTypeTestService` interfaces, their stub implementations, custom agents like `SummaryAfterAgent` and `CollectionClassifierAgent`, a `MockAiClient` for demonstration without API keys, and the `main` method that orchestrates everything by manually building the `AiSpect` engine and creating proxies.
+
+- **Resources**
+  - `simplelogger.properties`: Configuration file for the SLF4J simple logger.
+
+---
+
+## 2. Engine Initialization
 
 In a pure Java SE environment, you use `AiSpect.builder()` to build the engine, and then use the `proxy` method to create proxies for your interfaces.
 

@@ -8,9 +8,38 @@ This example (located in the `examples/example-spring-boot` directory) demonstra
 
 ## 1. Example Architecture
 
-- **Controller (`TestController`)**: Provides REST/Web endpoints, including all Phase and Data Type testing interfaces.
-- **Contract Interface (`PhaseTestService` & `DataTypeTestService`)**: The core of the business logic. No complex calling logic is needed; methods annotated with `@AiUnitAgent` dynamically proxy to corresponding Agents.
-- **Frontend Page (`index.html`)**: Provides a modern, dark-themed interactive API dashboard. The left sidebar allows selecting tests, and the right side configures requests and previews results (with support for JSON formatting and SSE streaming).
+Here is a complete list of all code files included in this example and their purposes:
+
+- **Application Entry**
+  - `Application.java`: The Spring Boot startup class.
+
+- **Controllers**
+  - `TestController.java`: Provides REST/Web endpoints, including all Phase, Data Type, and Graph testing interfaces.
+
+- **Contract Interfaces (Services)**
+  - `PhaseTestService.java`: Interfaces for testing different interceptor phases (Before, After, Exception, All).
+  - `DataTypeTestService.java`: Interfaces for testing different data types (String, POJO, Collection, Audio, Video).
+  - `GraphTestService.java`: Interfaces for testing Agent Graph orchestrations.
+  - `AiSpectErrorTestService.java`: Interfaces for testing error handling and fallbacks.
+
+- **Service Implementations**
+  - `PhaseTestServiceImpl.java`, `DataTypeTestServiceImpl.java`, `GraphTestServiceImpl.java`, `AiSpectErrorTestServiceImpl.java`: The native implementations (fallback/stub logic) for the respective services.
+
+- **Agents**
+  - `SummaryAfterAgent.java`: An agent to summarize text after a method execution.
+  - `CollectionProcessAgent.java`: An agent to categorize items in a collection.
+  - `PojoProcessAgent.java`: An agent to process complex POJO structures.
+  - `AudioProcessAgent.java`, `VideoProcessAgent.java`, `TextToSpeechAgent.java`, `VideoStoryAgent.java`: Agents for handling multi-modal tasks like audio and video processing.
+
+- **Configuration & DTOs**
+  - `AiGraphConfig.java`: Configuration class for defining Agent Graph workflows.
+  - `User.java`: A DTO used to demonstrate POJO binding.
+
+- **Resources & Frontend**
+  - `application.properties`: Spring Boot application configuration.
+  - `index.html`: Provides a modern, dark-themed interactive API dashboard.
+  - `app.js`: Frontend logic for configuring requests and previewing results (JSON formatting, SSE streaming).
+  - `style.css`: Styles for the frontend dashboard.
 
 ---
 

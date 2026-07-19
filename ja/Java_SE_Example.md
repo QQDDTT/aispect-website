@@ -6,7 +6,19 @@ AiSpect は、Spring や Quarkus のような依存性の注入（DI）コンテ
 
 ---
 
-## 1. エンジンの初期化
+## 1. 構成アーキテクチャ
+
+この例に含まれるすべてのコードファイルとその目的の完全なリストは以下の通りです：
+
+- **アプリケーションエントリとコアロジック**
+  - `Main.java`: 単一のファイルに完全な例が含まれています。これには、`PhaseTestService` と `DataTypeTestService` インターフェース、そのスタブ実装、`SummaryAfterAgent` や `CollectionClassifierAgent` などのカスタムエージェント、API キーなしのデモンストレーション用の `MockAiClient`、および `AiSpect` エンジンを手動で構築してプロキシを作成する `main` メソッドが含まれます。
+
+- **リソース**
+  - `simplelogger.properties`: SLF4J simple logger の設定ファイル。
+
+---
+
+## 2. エンジンの初期化
 
 純粋な Java SE 環境では、`AiSpect.builder()` を使用してエンジンを構築し、次に `proxy` メソッドを使用してインターフェースのプロキシを作成します。
 

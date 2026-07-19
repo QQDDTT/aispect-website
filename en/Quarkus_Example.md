@@ -6,7 +6,29 @@ This example (located in the `examples/example-quarkus` directory) demonstrates 
 
 ---
 
-## 1. Engine Configuration
+## 1. Example Architecture
+
+Here is a complete list of all code files included in this example and their purposes:
+
+- **Configuration**
+  - `AiSpectConfig.java`: CDI configuration class that produces the `AiClient` and `AiOperations` beans.
+
+- **Controllers (Resources)**
+  - `CodeReviewResource.java`: REST endpoint for handling code review webhooks.
+  - `PhaseTestResource.java`: REST endpoint for testing different interceptor phases.
+  - `DataTypeTestResource.java`: REST endpoint for testing various data types.
+
+- **Services**
+  - `CodeReviewService.java`: Business logic and `@AiUnitAgent` definitions for code reviews.
+  - `PhaseTestService.java`: Business logic and `@AiUnitAgent` definitions for phase testing.
+  - `DataTypeTestService.java`: Business logic and `@AiUnitAgent` definitions for data type handling.
+
+- **Resources**
+  - `application.properties`: Quarkus application configuration.
+
+---
+
+## 2. Engine Configuration
 
 In Quarkus, you provide the `AiClient` and `AiOperations` beans via a CDI configuration class.
 
@@ -37,7 +59,7 @@ public class AiSpectConfig {
 }
 ```
 
-## 2. Using Annotations
+## 3. Using Annotations
 
 Simply annotate your CDI bean methods with `@AiUnitAgent`. The Quarkus interceptor will automatically handle the AI logic.
 
@@ -58,7 +80,7 @@ public class CodeReviewService {
 }
 ```
 
-## 3. Injecting into Resources
+## 4. Injecting into Resources
 
 You can then inject this service into your REST endpoints using standard JAX-RS.
 
@@ -83,7 +105,7 @@ public class CodeReviewResource {
 
 ---
 
-## 4. Running the Experience
+## 5. Running the Experience
 
 ### Step 1: Configure API Key
 Set your API key as an environment variable:

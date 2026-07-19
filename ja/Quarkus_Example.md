@@ -6,7 +6,29 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
 
 ---
 
-## 1. エンジンの設定
+## 1. 構成アーキテクチャ
+
+この例に含まれるすべてのコードファイルとその目的の完全なリストは以下の通りです：
+
+- **設定**
+  - `AiSpectConfig.java`: `AiClient` と `AiOperations` Bean を生成する CDI 設定クラス。
+
+- **コントローラー (Resources)**
+  - `CodeReviewResource.java`: コードレビュー Webhook を処理するための REST エンドポイント。
+  - `PhaseTestResource.java`: 異なるインターセプターフェーズをテストするための REST エンドポイント。
+  - `DataTypeTestResource.java`: さまざまなデータ型をテストするための REST エンドポイント。
+
+- **サービス (Services)**
+  - `CodeReviewService.java`: コードレビューのためのビジネスロジックと `@AiUnitAgent` 定義。
+  - `PhaseTestService.java`: フェーズテストのためのビジネスロジックと `@AiUnitAgent` 定義。
+  - `DataTypeTestService.java`: データ型処理のためのビジネスロジックと `@AiUnitAgent` 定義。
+
+- **リソース**
+  - `application.properties`: Quarkus アプリケーションの設定ファイル。
+
+---
+
+## 2. エンジンの設定
 
 Quarkus では、CDI 構成クラスを介して `AiClient` および `AiOperations` Bean を提供します。
 
@@ -37,7 +59,7 @@ public class AiSpectConfig {
 }
 ```
 
-## 2. アノテーションの使用
+## 3. アノテーションの使用
 
 CDI Bean のメソッドに `@AiUnitAgent` をアノテーションするだけです。Quarkus インターセプターが自動的に AI ロジックを処理します。
 
@@ -58,7 +80,7 @@ public class CodeReviewService {
 }
 ```
 
-## 3. リソースへの注入
+## 4. リソースへの注入
 
 その後、標準の JAX-RS を使用してこのサービスを REST エンドポイントに注入できます。
 
@@ -83,7 +105,7 @@ public class CodeReviewResource {
 
 ---
 
-## 4. 実行体験
+## 5. 実行体験
 
 ### ステップ 1: API キーの設定
 API キーを環境変数として設定します：
