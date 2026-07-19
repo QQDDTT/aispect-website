@@ -1,0 +1,65 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Override minimal theme layout to provide more space for code blocks */
+.wrapper {
+  width: 95%; /* Use almost full width */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  width: 270px;
+  float: left;
+  position: fixed;
+}
+
+section {
+  width: calc(100% - 320px); /* Fill remaining space minus gap */
+  float: right;
+  padding-bottom: 50px;
+}
+
+/* Adjust for medium screens */
+@media print, screen and (max-width: 1024px) {
+  .wrapper {
+    width: 95%;
+  }
+  header {
+    width: 240px;
+  }
+  section {
+    width: calc(100% - 280px);
+  }
+}
+
+/* Adjust for smaller screens */
+@media print, screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
+  header {
+    float: none;
+    position: static;
+    width: auto;
+    padding-bottom: 20px;
+  }
+  section {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Improve code block scrolling and styling */
+pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+pre code {
+  white-space: pre;
+  word-wrap: normal;
+}
