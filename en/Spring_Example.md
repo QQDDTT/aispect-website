@@ -13,8 +13,6 @@ Here is a complete list of all code files included in this example and their pur
 - **Application Entry**
   - `Application.java`: The Spring Boot startup class.
 
-    <details><summary>View <code>Application.java</code></summary>
-
     ```java
     package com.aispect.example.spring;
 
@@ -36,13 +34,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Controllers**
   - `TestController.java`: Provides REST/Web endpoints, including all Phase, Data Type, and Graph testing interfaces.
-
-    <details><summary>View <code>TestController.java</code></summary>
 
     ```java
     package com.aispect.example.spring.controller;
@@ -228,13 +221,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Contract Interfaces (Services)**
   - `PhaseTestService.java`: Interfaces for testing different interceptor phases (Before, After, Exception, All).
-
-    <details><summary>View <code>PhaseTestService.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -309,11 +297,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `DataTypeTestService.java`: Interfaces for testing different data types (String, POJO, Collection, Audio, Video).
-
-    <details><summary>View <code>DataTypeTestService.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -477,11 +461,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `GraphTestService.java`: Interfaces for testing Agent Graph orchestrations.
-
-    <details><summary>View <code>GraphTestService.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -544,11 +524,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `AiSpectErrorTestService.java`: Interfaces for testing error handling and fallbacks.
-
-    <details><summary>View <code>AiSpectErrorTestService.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -626,13 +602,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Service Implementations**
   - `PhaseTestServiceImpl.java`, `DataTypeTestServiceImpl.java`, `GraphTestServiceImpl.java`, `AiSpectErrorTestServiceImpl.java`: The native implementations (fallback/stub logic) for the respective services.
-
-    <details><summary>View <code>PhaseTestServiceImpl.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -673,11 +644,6 @@ Here is a complete list of all code files included in this example and their pur
         }
     }
     ```
-
-    </details>
-
-
-    <details><summary>View <code>DataTypeTestServiceImpl.java</code></summary>
 
     ```java
     package com.aispect.example.spring.service;
@@ -758,11 +724,6 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
-    <details><summary>View <code>GraphTestServiceImpl.java</code></summary>
-
     ```java
     package com.aispect.example.spring.service;
 
@@ -807,11 +768,6 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
-    <details><summary>View <code>AiSpectErrorTestServiceImpl.java</code></summary>
-
     ```java
     package com.aispect.example.spring.service;
 
@@ -843,13 +799,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Agents**
   - `SummaryAfterAgent.java`: An agent to summarize text after a method execution.
-
-    <details><summary>View <code>SummaryAfterAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -883,11 +834,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `CollectionProcessAgent.java`: An agent to categorize items in a collection.
-
-    <details><summary>View <code>CollectionProcessAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -928,11 +875,7 @@ Here is a complete list of all code files included in this example and their pur
             String result = response.message().content().replace("
     ```
 
-    </details>
-
   - `PojoProcessAgent.java`: An agent to process complex POJO structures.
-
-    <details><summary>View <code>PojoProcessAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -986,11 +929,7 @@ Here is a complete list of all code files included in this example and their pur
             String aiResult = response.message().content().replace("
     ```
 
-    </details>
-
   - `AudioProcessAgent.java`, `VideoProcessAgent.java`, `TextToSpeechAgent.java`, `VideoStoryAgent.java`: Agents for handling multi-modal tasks like audio and video processing.
-
-    <details><summary>View <code>AudioProcessAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -1027,11 +966,6 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
-    <details><summary>View <code>VideoProcessAgent.java</code></summary>
-
     ```java
     package com.aispect.example.spring.agents;
 
@@ -1066,11 +1000,6 @@ Here is a complete list of all code files included in this example and their pur
         }
     }
     ```
-
-    </details>
-
-
-    <details><summary>View <code>TextToSpeechAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -1111,11 +1040,6 @@ Here is a complete list of all code files included in this example and their pur
         }
     }
     ```
-
-    </details>
-
-
-    <details><summary>View <code>VideoStoryAgent.java</code></summary>
 
     ```java
     package com.aispect.example.spring.agents;
@@ -1161,13 +1085,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Configuration & DTOs**
   - `AiGraphConfig.java`: Configuration class for defining Agent Graph workflows.
-
-    <details><summary>View <code>AiGraphConfig.java</code></summary>
 
     ```java
     package com.aispect.example.spring.config;
@@ -1226,11 +1145,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `User.java`: A DTO used to demonstrate POJO binding.
-
-    <details><summary>View <code>User.java</code></summary>
 
     ```java
     package com.aispect.example.spring.dto;
@@ -1261,13 +1176,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Resources & Frontend**
   - `application.properties`: Spring Boot application configuration.
-
-    <details><summary>View <code>application.properties</code></summary>
 
     ```properties
     logging.level.com.aispect=DEBUG
@@ -1279,11 +1189,7 @@ Here is a complete list of all code files included in this example and their pur
     aispect.api-key=${GEMINI_API_KEY:}
     ```
 
-    </details>
-
   - `index.html`: Provides a modern, dark-themed interactive API dashboard.
-
-    <details><summary>View <code>index.html</code></summary>
 
     ```html
     <!DOCTYPE html>
@@ -1383,11 +1289,7 @@ Here is a complete list of all code files included in this example and their pur
     </html>
     ```
 
-    </details>
-
   - `app.js`: Frontend logic for configuring requests and previewing results (JSON formatting, SSE streaming).
-
-    <details><summary>View <code>app.js</code></summary>
 
     ```javascript
     /**
@@ -1831,11 +1733,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `style.css`: Styles for the frontend dashboard.
-
-    <details><summary>View <code>style.css</code></summary>
 
     ```css
     :root {
@@ -2242,9 +2140,6 @@ Here is a complete list of all code files included in this example and their pur
         animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
     ```
-
-    </details>
-
 
 ---
 

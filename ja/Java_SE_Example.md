@@ -13,8 +13,6 @@ AiSpect は、Spring や Quarkus のような依存性の注入（DI）コンテ
 - **アプリケーションエントリとコアロジック**
   - `Main.java`: 単一のファイルに完全な例が含まれています。これには、`PhaseTestService` と `DataTypeTestService` インターフェース、そのスタブ実装、`SummaryAfterAgent` や `CollectionClassifierAgent` などのカスタムエージェント、API キーなしのデモンストレーション用の `MockAiClient`、および `AiSpect` エンジンを手動で構築してプロキシを作成する `main` メソッドが含まれます。
 
-    <details><summary>View <code>Main.java</code></summary>
-
     ```java
     package com.aispect.example.se;
 
@@ -317,13 +315,8 @@ AiSpect は、Spring や Quarkus のような依存性の注入（DI）コンテ
                 String result = response.message().content().replace("
     ```
 
-    </details>
-
-
 - **リソース**
   - `simplelogger.properties`: SLF4J simple logger の設定ファイル。
-
-    <details><summary>View <code>simplelogger.properties</code></summary>
 
     ```properties
     org.slf4j.simpleLogger.defaultLogLevel=debug
@@ -331,9 +324,6 @@ AiSpect は、Spring や Quarkus のような依存性の注入（DI）コンテ
     org.slf4j.simpleLogger.showDateTime=true
     org.slf4j.simpleLogger.dateTimeFormat=yyyy-MM-dd HH:mm:ss:SSS Z
     ```
-
-    </details>
-
 
 ---
 

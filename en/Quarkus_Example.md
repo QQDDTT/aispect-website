@@ -13,8 +13,6 @@ Here is a complete list of all code files included in this example and their pur
 - **Configuration**
   - `AiSpectConfig.java`: CDI configuration class that produces the `AiClient` and `AiOperations` beans.
 
-    <details><summary>View <code>AiSpectConfig.java</code></summary>
-
     ```java
     package com.aispect.example.quarkus;
 
@@ -125,13 +123,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Controllers (Resources)**
   - `CodeReviewResource.java`: REST endpoint for handling code review webhooks.
-
-    <details><summary>View <code>CodeReviewResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -171,11 +164,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `PhaseTestResource.java`: REST endpoint for testing different interceptor phases.
-
-    <details><summary>View <code>PhaseTestResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -225,11 +214,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `DataTypeTestResource.java`: REST endpoint for testing various data types.
-
-    <details><summary>View <code>DataTypeTestResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -257,13 +242,8 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Services**
   - `CodeReviewService.java`: Business logic and `@AiUnitAgent` definitions for code reviews.
-
-    <details><summary>View <code>CodeReviewService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -288,11 +268,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `PhaseTestService.java`: Business logic and `@AiUnitAgent` definitions for phase testing.
-
-    <details><summary>View <code>PhaseTestService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -333,11 +309,7 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
   - `DataTypeTestService.java`: Business logic and `@AiUnitAgent` definitions for data type handling.
-
-    <details><summary>View <code>DataTypeTestService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -366,21 +338,13 @@ Here is a complete list of all code files included in this example and their pur
     }
     ```
 
-    </details>
-
-
 - **Resources**
   - `application.properties`: Quarkus application configuration.
-
-    <details><summary>View <code>application.properties</code></summary>
 
     ```properties
     quarkus.http.port=8081
     quarkus.log.category."com.aispect".level=DEBUG
     ```
-
-    </details>
-
 
 ---
 

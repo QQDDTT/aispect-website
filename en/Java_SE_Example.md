@@ -13,8 +13,6 @@ Here is a complete list of all code files included in this example and their pur
 - **Application Entry & Core Logic**
   - `Main.java`: Contains the complete example in a single file. It includes the `PhaseTestService` and `DataTypeTestService` interfaces, their stub implementations, custom agents like `SummaryAfterAgent` and `CollectionClassifierAgent`, a `MockAiClient` for demonstration without API keys, and the `main` method that orchestrates everything by manually building the `AiSpect` engine and creating proxies.
 
-    <details><summary>View <code>Main.java</code></summary>
-
     ```java
     package com.aispect.example.se;
 
@@ -317,13 +315,8 @@ Here is a complete list of all code files included in this example and their pur
                 String result = response.message().content().replace("
     ```
 
-    </details>
-
-
 - **Resources**
   - `simplelogger.properties`: Configuration file for the SLF4J simple logger.
-
-    <details><summary>View <code>simplelogger.properties</code></summary>
 
     ```properties
     org.slf4j.simpleLogger.defaultLogLevel=debug
@@ -331,9 +324,6 @@ Here is a complete list of all code files included in this example and their pur
     org.slf4j.simpleLogger.showDateTime=true
     org.slf4j.simpleLogger.dateTimeFormat=yyyy-MM-dd HH:mm:ss:SSS Z
     ```
-
-    </details>
-
 
 ---
 

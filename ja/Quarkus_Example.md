@@ -13,8 +13,6 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
 - **設定**
   - `AiSpectConfig.java`: `AiClient` と `AiOperations` Bean を生成する CDI 設定クラス。
 
-    <details><summary>View <code>AiSpectConfig.java</code></summary>
-
     ```java
     package com.aispect.example.quarkus;
 
@@ -125,13 +123,8 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
-
 - **コントローラー (Resources)**
   - `CodeReviewResource.java`: コードレビュー Webhook を処理するための REST エンドポイント。
-
-    <details><summary>View <code>CodeReviewResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -171,11 +164,7 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
   - `PhaseTestResource.java`: 異なるインターセプターフェーズをテストするための REST エンドポイント。
-
-    <details><summary>View <code>PhaseTestResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -225,11 +214,7 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
   - `DataTypeTestResource.java`: さまざまなデータ型をテストするための REST エンドポイント。
-
-    <details><summary>View <code>DataTypeTestResource.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -257,13 +242,8 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
-
 - **サービス (Services)**
   - `CodeReviewService.java`: コードレビューのためのビジネスロジックと `@AiUnitAgent` 定義。
-
-    <details><summary>View <code>CodeReviewService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -288,11 +268,7 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
   - `PhaseTestService.java`: フェーズテストのためのビジネスロジックと `@AiUnitAgent` 定義。
-
-    <details><summary>View <code>PhaseTestService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -333,11 +309,7 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
   - `DataTypeTestService.java`: データ型処理のためのビジネスロジックと `@AiUnitAgent` 定義。
-
-    <details><summary>View <code>DataTypeTestService.java</code></summary>
 
     ```java
     package com.aispect.example.quarkus;
@@ -366,21 +338,13 @@ AiSpect は CDI（コンテキストと依存性の注入）を通じて Quarkus
     }
     ```
 
-    </details>
-
-
 - **リソース**
   - `application.properties`: Quarkus アプリケーションの設定ファイル。
-
-    <details><summary>View <code>application.properties</code></summary>
 
     ```properties
     quarkus.http.port=8081
     quarkus.log.category."com.aispect".level=DEBUG
     ```
-
-    </details>
-
 
 ---
 
