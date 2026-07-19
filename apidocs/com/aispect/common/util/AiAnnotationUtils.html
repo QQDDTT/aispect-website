@@ -77,8 +77,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiAnnotationUtils</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">AI 框架内部专用的注解检索工具。
- 支持在无 Spring 环境下处理接口继承和元注解（多重注解）查找。</div>
+<div class="block">AI A dedicated annotation retrieval tool within the framework.
+ Support without Spring The environment handles interface inheritance and meta-annotation (multiple annotation) lookups.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -110,13 +110,13 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#findAnnotation(java.lang.Class,java.lang.Class)" class="member-name-link">findAnnotation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;clazz,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;A&gt;&nbsp;annotationType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">查找类上的特定注解（支持从接口和父类继承，支持简单元注解）</div>
+<div class="block">Find specific annotations on a class (supports inheritance from interfaces and parent classes, supports simple meta-annotations)</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;A extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;<br>A</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#findAnnotation(java.lang.reflect.Method,java.lang.Class)" class="member-name-link">findAnnotation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;A&gt;&nbsp;annotationType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">查找方法上的特定注解（支持从接口和父类的方法继承，支持简单元注解）</div>
+<div class="block">Find specific annotations on methods (supports inheritance from methods of interfaces and parent classes, supports simple meta-annotations)</div>
 </div>
 </div>
 </div>
@@ -154,15 +154,15 @@ loadScripts(document, 'script');</script>
 <h3>findAnnotation</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;A extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;</span>&nbsp;<span class="return-type">A</span>&nbsp;<span class="element-name">findAnnotation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;clazz,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;A&gt;&nbsp;annotationType)</span></div>
-<div class="block">查找类上的特定注解（支持从接口和父类继承，支持简单元注解）</div>
+<div class="block">Find specific annotations on a class (supports inheritance from interfaces and parent classes, supports simple meta-annotations)</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>A</code> - 注解范型</dd>
+<dd><code>A</code> - Annotation paradigm</dd>
 <dt>Parameters:</dt>
-<dd><code>clazz</code> - 目标类</dd>
-<dd><code>annotationType</code> - 目标注解类型</dd>
+<dd><code>clazz</code> - target class</dd>
+<dd><code>annotationType</code> - Target annotation type</dd>
 <dt>Returns:</dt>
-<dd>找到的注解实例，未找到返回 null</dd>
+<dd>Annotation instance found, returned if not found null</dd>
 </dl>
 </section>
 </li>
@@ -171,15 +171,15 @@ loadScripts(document, 'script');</script>
 <h3>findAnnotation</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;A extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;</span>&nbsp;<span class="return-type">A</span>&nbsp;<span class="element-name">findAnnotation</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;A&gt;&nbsp;annotationType)</span></div>
-<div class="block">查找方法上的特定注解（支持从接口和父类的方法继承，支持简单元注解）</div>
+<div class="block">Find specific annotations on methods (supports inheritance from methods of interfaces and parent classes, supports simple meta-annotations)</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>A</code> - 注解范型</dd>
+<dd><code>A</code> - Annotation paradigm</dd>
 <dt>Parameters:</dt>
-<dd><code>method</code> - 目标方法</dd>
-<dd><code>annotationType</code> - 目标注解类型</dd>
+<dd><code>method</code> - target method</dd>
+<dd><code>annotationType</code> - Target annotation type</dd>
 <dt>Returns:</dt>
-<dd>找到的注解实例，未找到返回 null</dd>
+<dd>Annotation instance found, returned if not found null</dd>
 </dl>
 </section>
 </li>

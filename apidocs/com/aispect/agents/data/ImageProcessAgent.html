@@ -83,10 +83,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ImageProcessAgent</span>
 <span class="extends-implements">extends <a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span></div>
-<div class="block">图像处理 Agent，用于演示多模态、多参数以及多样化的参数传递。
+<div class="block">image processing Agent，Used to demonstrate multi-modality, multi-parameters and diverse parameter transfer.
  <p>
- 接收：模型名称 (String)、图像 (Base64 String 或字节数组)、指令 (String)。
- 该 Agent 通过拦截用户的方法，将图像数据与指令一并发送给多模态大模型进行处理。
+ Receive: model name (String)、image (Base64 String or byte array)、instruction (String)。
+ Should Agent By intercepting the user, the image data and instructions are sent to the multi-modal large model for processing.
  </p></div>
 </section>
 <section class="summary">
@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute(com.aispect.api.AiInvocationContext)" class="member-name-link">execute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">执行图像处理的核心逻辑。</div>
+<div class="block">Execute the core logic of image processing.</div>
 </div>
 </div>
 </div>
@@ -159,18 +159,18 @@ loadScripts(document, 'script');</script>
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</span>
                throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">执行图像处理的核心逻辑。</div>
+<div class="block">Execute the core logic of image processing.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiExecutionProxy.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="../../agent/core/AbstractUnitAgent.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code>&nbsp;in class&nbsp;<code><a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - AI 执行上下文，期望参数中包含图像字节数组和用户的具体处理指令</dd>
+<dd><code>ctx</code> - AI Execution context, the expected parameters include the image byte array and the user's specific processing instructions</dd>
 <dt>Returns:</dt>
-<dd>大模型对图像处理后的结果描述或内容</dd>
+<dd>The description or content of the image processing results of the large model</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 如果处理过程中发生错误或 AI 接口调用异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - If an error occurs during processing or AI Interface call exception</dd>
 </dl>
 </section>
 </li>

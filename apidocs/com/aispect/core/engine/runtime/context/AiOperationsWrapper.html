@@ -82,11 +82,11 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiOperationsWrapper</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></span></div>
-<div class="block"><a href="../../../../api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> 包装器，属于<b>运行阶段（Runtime）</b>职责。
+<div class="block"><a href="../../../../api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> wrapper, belongs to<b>running phase (Runtime）</b>Responsibilities.
  <p>
- 在方法调用时，若 Agent 注解上配置了 <code>modelName</code>，
- 则通过此包装器将模型名称注入到后续的 AI 调用中，
- 实现方法级别的模型覆盖，而无需修改原始 <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> 实现。
+ When calling a method, if Agent Configured on the annotation <code>modelName</code>，
+ then inject the model name into subsequent AI Calling,
+ Implement method-level model overrides without modifying the original <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api"><code>AiOperations</code></a> accomplish.
  </p></div>
 </section>
 <section class="summary">
@@ -119,21 +119,21 @@ implements <a href="../../../../api/AiOperations.html" title="interface in com.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../api/AiClient.html" title="interface in com.aispect.api">AiClient</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClient()" class="member-name-link">getClient</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">暴露底层绑定的 <a href="../../../../api/AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> 客户端适配器实例。</div>
+<div class="block">Expose underlying bindings <a href="../../../../api/AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> Client adapter instance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;overrideModel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../../../client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">手动发起一次同步的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with model name override.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../../../client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;overrideModel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../../../client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">手动发起一次流式的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with model name override.</div>
 </div>
 </div>
 </div>
@@ -178,18 +178,18 @@ implements <a href="../../../../api/AiOperations.html" title="interface in com.a
  <a href="../../../client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                 throws <span class="exceptions"><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiOperations.html#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)">AiOperations</a></code></span></div>
-<div class="block">手动发起一次同步的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with model name override.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiOperations.html#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)">prompt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>overrideModel</code> - 优先使用的模型名称（覆盖全局默认配置）</dd>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>overrideModel</code> - Preferred model name (overrides global default configuration)</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回 AI 模型的非流式响应结果</dd>
+<dd>return AI Non-streaming response results for the model</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -201,18 +201,18 @@ implements <a href="../../../../api/AiOperations.html" title="interface in com.a
  <a href="../../../client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                               throws <span class="exceptions"><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiOperations.html#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)">AiOperations</a></code></span></div>
-<div class="block">手动发起一次流式的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with model name override.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiOperations.html#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)">promptStream</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>overrideModel</code> - 优先使用的模型名称（覆盖全局默认配置）</dd>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>overrideModel</code> - Preferred model name (overrides global default configuration)</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回响应流</dd>
+<dd>Return response stream</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -221,15 +221,15 @@ implements <a href="../../../../api/AiOperations.html" title="interface in com.a
 <h3>getClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../api/AiClient.html" title="interface in com.aispect.api">AiClient</a></span>&nbsp;<span class="element-name">getClient</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiOperations.html#getClient()">AiOperations</a></code></span></div>
-<div class="block">暴露底层绑定的 <a href="../../../../api/AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> 客户端适配器实例。
+<div class="block">Expose underlying bindings <a href="../../../../api/AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> Client adapter instance.
  <p>
- 供高级开发者直接进行一些平台专属的高阶 API 操作（如特定模型的 fine-tuning 请求等）。
+ For advanced developers to directly perform some platform-specific high-level API operations (such as model-specific fine-tuning request, etc.).
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiOperations.html#getClient()">getClient</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></dd>
 <dt>Returns:</dt>
-<dd>底层注入的统一适配客户端</dd>
+<dd>Unified adaptation client injected by the bottom layer</dd>
 </dl>
 </section>
 </li>

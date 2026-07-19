@@ -78,17 +78,17 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Record Components:</dt>
-<dd><code><span id="param-role">role</span></code> - 消息产生的角色（如用户、助手、系统或工具）</dd>
-<dd><code><span id="param-content">content</span></code> - 具体的文本内容</dd>
-<dd><code><span id="param-toolCalls">toolCalls</span></code> - 工具调用列表</dd>
-<dd><code><span id="param-toolCallId">toolCallId</span></code> - 工具调用ID</dd>
+<dd><code><span id="param-role">role</span></code> - The role from which the message originated (e.g. user, assistant, system or tool)</dd>
+<dd><code><span id="param-content">content</span></code> - specific text content</dd>
+<dd><code><span id="param-toolCalls">toolCalls</span></code> - Tool call list</dd>
+<dd><code><span id="param-toolCallId">toolCallId</span></code> - Tool callID</dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Message</span>(<a href="Role.html" title="enum class in com.aispect.core.client.model">Role</a>&nbsp;role, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ToolCall.html" title="class in com.aispect.core.client.model">ToolCall</a>&gt;&nbsp;toolCalls, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;toolCallId, byte[]&nbsp;inlineData, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;mimeType)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">抽象对话消息实体。
+<div class="block">Abstract conversation message entity.
  <p>
- 用于在客户端和 AI 模型之间传递结构化的对话文本段。每条消息拥有自己的发言角色。
+ used on the client side and AI Pass structured dialogue text segments between models. Each message has its own speaking role.
  </p></div>
 </section>
 <section class="summary">

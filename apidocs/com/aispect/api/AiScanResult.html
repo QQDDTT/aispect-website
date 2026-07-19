@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiScanResult</span></div>
-<div class="block">扫描结果接口契约。
+<div class="block">Scan results interface contract.
  <p>
- 承载启动阶段扫描组件的最终或部分成功结果，以及任何由于配置问题收集到的异常信息。
- 允许调用方自行决定是否针对所包含的错误进行打断，或者在无视异常的情况下使用扫描出来的部分核心资产。
+ Hosts the final or partially successful results of components scanned during the startup phase, as well as any abnormal information collected due to configuration issues.
+ Allows the caller to decide whether to interrupt for contained errors or to use some of the scanned core assets regardless of the exception.
  </p></div>
 </section>
 <section class="summary">
@@ -99,17 +99,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getErrors()" class="member-name-link">getErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取扫描过程中收集到的完整的错误列表信息。</div>
+<div class="block">Get the complete error list information collected during the scan.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInvocationCache()" class="member-name-link">getInvocationCache</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取统一的 Agent 缓存注册表。</div>
+<div class="block">get unified Agent Cache the registry.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasErrors()" class="member-name-link">hasErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">判断扫描过程中是否发现了任何配置或解析错误。</div>
+<div class="block">Determine whether any configuration or parsing errors were found during the scan.</div>
 </div>
 </div>
 </div>
@@ -129,14 +129,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getInvocationCache()">
 <h3>getInvocationCache</h3>
 <div class="member-signature"><span class="return-type"><a href="AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</span>&nbsp;<span class="element-name">getInvocationCache</span>()</div>
-<div class="block">获取统一的 Agent 缓存注册表。
+<div class="block">get unified Agent Cache the registry.
  <p>
- 这是 aispect-core 扫描后对外提交的核心资产之一。
- 承载所有被扫描方法与对应的代理处理器（如 Unit / Graph）的映射关系。
+ This is aispect-core One of the core assets submitted to the outside world after scanning.
+ Hosts all scanned methods and corresponding proxy handlers (e.g. Unit / Graph）mapping relationship.
  </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>代理与节点资源的全局调度缓存</dd>
+<dd>Global scheduling cache of agent and node resources</dd>
 </dl>
 </section>
 </li>
@@ -144,10 +144,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="hasErrors()">
 <h3>hasErrors</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasErrors</span>()</div>
-<div class="block">判断扫描过程中是否发现了任何配置或解析错误。</div>
+<div class="block">Determine whether any configuration or parsing errors were found during the scan.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>若存在至少一条错误时返回 <code>true</code></dd>
+<dd>Returns if there is at least one error <code>true</code></dd>
 </dl>
 </section>
 </li>
@@ -155,10 +155,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getErrors()">
 <h3>getErrors</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getErrors</span>()</div>
-<div class="block">获取扫描过程中收集到的完整的错误列表信息。</div>
+<div class="block">Get the complete error list information collected during the scan.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>错误信息列表</dd>
+<dd>Error message list</dd>
 </dl>
 </section>
 </li>

@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ReflectionUtils</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">封装反射操作的工具类。</div>
+<div class="block">Utility class that encapsulates reflection operations.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -96,14 +96,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#findAnnotatedMethods(java.lang.Class,java.lang.Class)" class="member-name-link">findAnnotatedMethods</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;clazz,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;&nbsp;annotationClass)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">查找类中所有标记了特定注解的方法。</div>
+<div class="block">Find all methods in a class that are marked with a specific annotation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#invokeMethod(java.lang.reflect.Method,java.lang.Object,java.lang.Object...)" class="member-name-link">invokeMethod</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;target,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">安全地反射执行方法。</div>
+<div class="block">Safely execute methods reflectively.</div>
 </div>
 </div>
 </div>
@@ -127,13 +127,13 @@ loadScripts(document, 'script');</script>
 <h3>findAnnotatedMethods</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&gt;</span>&nbsp;<span class="element-name">findAnnotatedMethods</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;clazz,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>&gt;&nbsp;annotationClass)</span></div>
-<div class="block">查找类中所有标记了特定注解的方法。</div>
+<div class="block">Find all methods in a class that are marked with a specific annotation.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>clazz</code> - 目标类</dd>
-<dd><code>annotationClass</code> - 注解类</dd>
+<dd><code>clazz</code> - target class</dd>
+<dd><code>annotationClass</code> - Annotation class</dd>
 <dt>Returns:</dt>
-<dd>标记了该注解的方法列表</dd>
+<dd>List of methods marked with this annotation</dd>
 </dl>
 </section>
 </li>
@@ -144,16 +144,16 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;target,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span>
                            throws <span class="exceptions"><a href="../exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">安全地反射执行方法。</div>
+<div class="block">Safely execute methods reflectively.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>method</code> - 方法</dd>
-<dd><code>target</code> - 目标对象</dd>
-<dd><code>args</code> - 参数列表</dd>
+<dd><code>method</code> - method</dd>
+<dd><code>target</code> - target audience</dd>
+<dd><code>args</code> - Parameter list</dd>
 <dt>Returns:</dt>
-<dd>执行结果</dd>
+<dd>Execution result</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 反射执行异常</dd>
+<dd><code><a href="../exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Reflection execution exception</dd>
 </dl>
 </section>
 </li>

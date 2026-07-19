@@ -82,13 +82,13 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiGraphAgentSpringLauncher</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements org.springframework.context.ApplicationContextAware, org.springframework.context.ApplicationListener&lt;org.springframework.context.event.ContextRefreshedEvent&gt;</span></div>
-<div class="block">Spring 环境下的 Graph Agent 启动器和路由分发器。
+<div class="block">Spring environment Graph Agent Initiators and route distributors.
  <p>
- 该组件在 Spring 框架中扮演了以下核心角色：
- 1. 代理自动注册：监听 Spring 容器刷新事件，自动扫描并注册所有打上 <a href="../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> 注解的 Bean。
- 2. 状态检查：检查类路径中是否包含带有 <a href="../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> 注解但未注册为 Spring Bean 的类，从而在开发阶段提前抛出警告，防止开发者遗漏 @Service 或 @Component 注解。
- 3. 核心执行：提供 <code>executeAgent</code> 方法，交由用户在业务侧自行决定如何通过 HTTP (如 RouterFunction 或 Controller)、消息队列等途径触发工作流。
- 4. 资源调度：在触发时解析传入的参数，构建 AI 执行上下文 (<a href="../../../api/AiInvocationContext.html" title="interface in com.aispect.api"><code>AiInvocationContext</code></a>)，并通过对应的 Agent Orchestrator 实例调度执行 Graph 工作流。</div>
+ This component is in Spring The framework plays the following core roles:
+ 1. Agent automatic registration: listening Spring Container refresh events, automatically scan and register all marked <a href="../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> annotated Bean。
+ 2. Status check: Check whether the classpath contains <a href="../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> Annotated but not registered as Spring Bean class, thereby throwing warnings in advance during the development stage to prevent developers from missing @Service or @Component annotation.
+ 3. Core Execution: Provide <code>executeAgent</code> method, leaving it to the user to decide on the business side how to pass HTTP (like RouterFunction or Controller)、Workflows are triggered through message queues and other channels.
+ 4. Resource scheduling: parse the incoming parameters when triggered, build AI execution context (<a href="../../../api/AiInvocationContext.html" title="interface in com.aispect.api"><code>AiInvocationContext</code></a>)，and pass the corresponding Agent Orchestrator Instance scheduling execution Graph Workflow.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -102,7 +102,7 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.aispect.api.AiOperations)" class="member-name-link">AiGraphAgentSpringLauncher</a><wbr>(<a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</code></div>
 <div class="col-last even-row-color">
-<div class="block">构造函数，由 Spring 自动注入依赖的 AiOperations。</div>
+<div class="block">Constructor, given by Spring Automatically inject dependencies AiOperations。</div>
 </div>
 </div>
 </section>
@@ -122,18 +122,18 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#executeAgent(java.lang.String,java.lang.String)" class="member-name-link">executeAgent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;initialTopic)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">触发指定 Graph Agent 的执行流程。
- 用户可以自行在 Controller 或 RouterFunction 中接收 HTTP 请求，然后调用此方法。</div>
+<div class="block">Trigger designation Graph Agent execution process.
+ Users can Controller or RouterFunction Receive in HTTP request and then call this method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onApplicationEvent(org.springframework.context.event.ContextRefreshedEvent)" class="member-name-link">onApplicationEvent</a><wbr>(org.springframework.context.event.ContextRefreshedEvent&nbsp;event)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">监听 Spring 容器刷新完成的事件，进行扫描和初始化工作。</div>
+<div class="block">monitor Spring The container refreshes the completed event and performs scanning and initialization work.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApplicationContext(org.springframework.context.ApplicationContext)" class="member-name-link">setApplicationContext</a><wbr>(org.springframework.context.ApplicationContext&nbsp;applicationContext)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">实现 <code>ApplicationContextAware</code>，获取当前的 Spring 应用上下文。</div>
+<div class="block">accomplish <code>ApplicationContextAware</code>，Get the current Spring Application context.</div>
 </div>
 </div>
 </div>
@@ -159,10 +159,10 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <section class="detail" id="&lt;init&gt;(com.aispect.api.AiOperations)">
 <h3>AiGraphAgentSpringLauncher</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AiGraphAgentSpringLauncher</span><wbr><span class="parameters">(<a href="../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</span></div>
-<div class="block">构造函数，由 Spring 自动注入依赖的 AiOperations。</div>
+<div class="block">Constructor, given by Spring Automatically inject dependencies AiOperations。</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>aiOperations</code> - 执行 AI 调用的客户端接口实现。</dd>
+<dd><code>aiOperations</code> - implement AI The client interface implementation called.</dd>
 </dl>
 </section>
 </li>
@@ -180,14 +180,14 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setApplicationContext</span><wbr><span class="parameters">(@NonNull
  org.springframework.context.ApplicationContext&nbsp;applicationContext)</span>
                            throws <span class="exceptions">org.springframework.beans.BeansException</span></div>
-<div class="block">实现 <code>ApplicationContextAware</code>，获取当前的 Spring 应用上下文。</div>
+<div class="block">accomplish <code>ApplicationContextAware</code>，Get the current Spring Application context.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>setApplicationContext</code>&nbsp;in interface&nbsp;<code>org.springframework.context.ApplicationContextAware</code></dd>
 <dt>Parameters:</dt>
-<dd><code>applicationContext</code> - 注入的上下文对象。</dd>
+<dd><code>applicationContext</code> - The injected context object.</dd>
 <dt>Throws:</dt>
-<dd><code>org.springframework.beans.BeansException</code> - 当上下文配置异常时抛出。</dd>
+<dd><code>org.springframework.beans.BeansException</code> - Thrown when the context configuration exception occurs.</dd>
 </dl>
 </section>
 </li>
@@ -196,12 +196,12 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <h3>onApplicationEvent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onApplicationEvent</span><wbr><span class="parameters">(@NonNull
  org.springframework.context.event.ContextRefreshedEvent&nbsp;event)</span></div>
-<div class="block">监听 Spring 容器刷新完成的事件，进行扫描和初始化工作。</div>
+<div class="block">monitor Spring The container refreshes the completed event and performs scanning and initialization work.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>onApplicationEvent</code>&nbsp;in interface&nbsp;<code>org.springframework.context.ApplicationListener&lt;org.springframework.context.event.ContextRefreshedEvent&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>event</code> - 上下文刷新事件。</dd>
+<dd><code>event</code> - Context refresh event.</dd>
 </dl>
 </section>
 </li>
@@ -211,16 +211,16 @@ implements org.springframework.context.ApplicationContextAware, org.springframew
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">executeAgent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;initialTopic)</span>
                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<div class="block">触发指定 Graph Agent 的执行流程。
- 用户可以自行在 Controller 或 RouterFunction 中接收 HTTP 请求，然后调用此方法。</div>
+<div class="block">Trigger designation Graph Agent execution process.
+ Users can Controller or RouterFunction Receive in HTTP request and then call this method.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>agentName</code> - 目标 Agent 名称</dd>
-<dd><code>initialTopic</code> - 初始输入上下文</dd>
+<dd><code>agentName</code> - Target Agent name</dd>
+<dd><code>initialTopic</code> - initial input context</dd>
 <dt>Returns:</dt>
-<dd>执行结果</dd>
+<dd>Execution result</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - 当 Agent 不存在或执行异常时抛出</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - when Agent Does not exist or is thrown when an exception is executed.</dd>
 </dl>
 </section>
 </li>

@@ -77,11 +77,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiGraphEngine</span></div>
-<div class="block">基础图引擎（Graph Engine）接口。
+<div class="block">Basic graph engine (Graph Engine）interface.
  <p>
- 负责针对有向无环图（DAG）或者状态机节点的工作流进行调度和编排。
- 通过结合 AI 推理逻辑和当前的数据状态，能够动态确定复杂的处理链路中的下一个执行节点。
- 这是实现多智能体协作（Multi-Agent Collaboration）和复杂链式调用的核心引擎组件。
+ Responsible for directed acyclic graph (DAG）Or the workflow of state machine nodes can be scheduled and orchestrated.
+ by combining AI Inference logic and the current data state can dynamically determine the next execution node in complex processing links.
+ This is to achieve multi-agent collaboration (Multi-Agent Collaboration）and core engine components of complex chain calls.
  </p></div>
 </section>
 <section class="summary">
@@ -102,7 +102,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>?&gt;&nbsp;availableNodes,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">根据当前的状态及 AI 推理结果，决定下一个应当执行的节点。</div>
+<div class="block">According to the current status and AI The inference results determine the next node that should be executed.</div>
 </div>
 </div>
 </div>
@@ -125,14 +125,14 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>?&gt;&nbsp;availableNodes,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
                   throws <span class="exceptions"><a href="../common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></span></div>
-<div class="block">根据当前的状态及 AI 推理结果，决定下一个应当执行的节点。</div>
+<div class="block">According to the current status and AI The inference results determine the next node that should be executed.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>currentState</code> - 当前系统或代理运行的数据及状态上下文</dd>
-<dd><code>availableNodes</code> - 当前图中注册且可用的功能节点集合</dd>
-<dd><code>ctx</code> - 全局的方法代理调用上下文</dd>
+<dd><code>currentState</code> - The data and state context of the current system or agent operation</dd>
+<dd><code>availableNodes</code> - The set of registered and available function nodes in the current graph</dd>
+<dd><code>ctx</code> - Global method proxy calling context</dd>
 <dt>Returns:</dt>
-<dd>决定的下一个将要执行的节点标识（ID或名称）</dd>
+<dd>The determined node ID that will be executed next (IDor name)</dd>
 <dt>Throws:</dt>
 <dd><code><a href="../common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></code></dd>
 </dl>

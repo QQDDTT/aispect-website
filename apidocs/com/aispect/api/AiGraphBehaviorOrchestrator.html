@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>F</code> - 图结构流转时的资源对象类型（例如状态对象、消息列表等）</dd>
+<dd><code>F</code> - Resource object type when graph structure is transferred (such as state object, message list, etc.)</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -90,11 +90,11 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiGraphBehaviorOrchestrator&lt;F&gt;</span></div>
-<div class="block">AI 代理图（Graph）编排器接口。
+<div class="block">AI Agent graph (Graph）Orchestrator interface.
  <p>
- 对于具有复杂工作流（多节点、有向无环图、或多智能体协同）的复合型 Agent，
- 该编排器负责管理各个图节点之间的资源共享和流转逻辑。
- 它能够将多个子任务通过编排器组合成一个复杂的解决方案。
+ For complex workflows (multiple nodes, directed acyclic graphs, or multi-agent collaboration) Agent，
+ The orchestrator is responsible for managing resource sharing and flow logic between various graph nodes.
+ It is able to combine multiple subtasks into a complex solution through an orchestrator.
  </p></div>
 </section>
 <section class="summary">
@@ -114,7 +114,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">对图内的代理节点资源进行编排与调度。</div>
+<div class="block">Arrange and schedule agent node resources in the graph.</div>
 </div>
 </div>
 </div>
@@ -136,15 +136,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="AiGraphBehaviorOrchestrator.html" title="type parameter in AiGraphBehaviorOrchestrator">F</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
             throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">对图内的代理节点资源进行编排与调度。</div>
+<div class="block">Arrange and schedule agent node resources in the graph.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>nodeResources</code> - 当前图中注册的各节点功能性函数资源集合，Key 为节点名称 (标识)</dd>
-<dd><code>ctx</code> - 触发图引擎调用的上下文</dd>
+<dd><code>nodeResources</code> - A collection of functional function resources for each node registered in the current graph,Key is the node name (logo)</dd>
+<dd><code>ctx</code> - The context that triggers the graph engine call</dd>
 <dt>Returns:</dt>
-<dd>图流程运行结束后的最终输出资源</dd>
+<dd>The final output resource after the graph process runs</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 编排死循环、节点执行失败等异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Orchestration infinite loops, node execution failures and other exceptions</dd>
 </dl>
 </section>
 </li>

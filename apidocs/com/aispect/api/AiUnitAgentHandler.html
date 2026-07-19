@@ -69,8 +69,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 代理处理时的输入参数类型 (Input parameter type)</dd>
-<dd><code>R</code> - 代理执行后的返回结果类型 (Return result type)</dd>
+<dd><code>T</code> - Input parameter types during agent processing (Input parameter type)</dd>
+<dd><code>R</code> - Return result type after agent execution (Return result type)</dd>
 </dl>
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
@@ -83,16 +83,16 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiUnitAgentHandler&lt;T,<wbr>R&gt;</span><span class="extends-implements">
 extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, <a href="AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;T&gt;, <a href="AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;T,<wbr>R&gt;, <a href="AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;T,<wbr>R&gt;, <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;</span></div>
-<div class="block">单元代理处理器 (Unit Agent Handler)
+<div class="block">unit agent processor (Unit Agent Handler)
  <p>
- 此接口是单元代理处理逻辑的顶层复合抽象，整合了代理在执行过程中的各个生命周期阶段的核心能力。
- 实现该接口的类将同时具备以下能力：
+ This interface is the top-level composite abstraction of the unit agent's processing logic, integrating the core capabilities of the agent at each life cycle stage during execution.
+ Classes that implement this interface will also have the following capabilities:
  <ul>
-   <li><b>条件过滤 (AiAgentFilter)</b>：决定是否应该执行该代理。</li>
-   <li><b>执行前代理 (AiPreExecutionProxy)</b>：在方法执行前触发。</li>
-   <li><b>执行后代理 (AiPostExecutionProxy)</b>：在方法执行后触发。</li>
-   <li><b>异常代理 (AiExceptionProxy)</b>：在方法执行发生异常时触发。</li>
-   <li><b>核心编排 (AiExecutionProxy)</b>：代理的实际业务逻辑，完全替换原生方法。</li>
+   <li><b>Conditional filtering (AiAgentFilter)</b>：Determine whether the agent should be executed.</li>
+   <li><b>pre-execution agent (AiPreExecutionProxy)</b>：Triggered before method execution.</li>
+   <li><b>post-execution agent (AiPostExecutionProxy)</b>：Triggered after method execution.</li>
+   <li><b>exception agent (AiExceptionProxy)</b>：Triggered when an exception occurs during method execution.</li>
+   <li><b>core orchestration (AiExecutionProxy)</b>：The actual business logic of the agent completely replaces the native method.</li>
  </ul>
  </p></div>
 </section>

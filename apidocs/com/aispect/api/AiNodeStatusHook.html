@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiNodeStatusHook</span></div>
-<div class="block">节点状态检测回调接口。</div>
+<div class="block">Node status detection callback interface.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,7 +106,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;status,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">当 Node 的状态发生变化时（如从 PENDING 变为 RUNNING，或 SUCCESS/FAILED）触发。</div>
+<div class="block">when Node When the status of PENDING become RUNNING，or SUCCESS/FAILED）trigger.</div>
 </div>
 </div>
 </div>
@@ -128,12 +128,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onNodeStatusChange</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;status,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
-<div class="block">当 Node 的状态发生变化时（如从 PENDING 变为 RUNNING，或 SUCCESS/FAILED）触发。</div>
+<div class="block">when Node When the status of PENDING become RUNNING，or SUCCESS/FAILED）trigger.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>nodeName</code> - 节点名称</dd>
-<dd><code>status</code> - 节点的新状态</dd>
-<dd><code>ctx</code> - 当前执行上下文</dd>
+<dd><code>nodeName</code> - Node name</dd>
+<dd><code>status</code> - The new state of the node</dd>
+<dd><code>ctx</code> - current execution context</dd>
 </dl>
 </section>
 </li>

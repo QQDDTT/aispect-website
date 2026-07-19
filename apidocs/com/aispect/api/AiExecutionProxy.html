@@ -73,8 +73,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法调用的输入参数类型</dd>
-<dd><code>R</code> - 预期返回的结果类型</dd>
+<dd><code>T</code> - Input parameter types for method calls</dd>
+<dd><code>R</code> - Expected result type returned</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -91,9 +91,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiExecutionProxy&lt;T,<wbr>R&gt;</span></div>
-<div class="block">智能体的核心编排代理接口。
+<div class="block">The core orchestration agent interface for agents.
  <p>
- 默认在方法调用时触发的 AI 拦截器核心代理逻辑，取代原生方法执行。
+ Triggered by default when method is called AI The core proxy logic of the interceptor replaces native method execution.
  </p></div>
 </section>
 <section class="summary">
@@ -112,7 +112,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiExecutionProxy.html" title="type parameter in AiExecutionProxy">R</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#execute(com.aispect.api.AiInvocationContext)" class="member-name-link">execute</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiExecutionProxy.html" title="type parameter in AiExecutionProxy">T</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">编排整个 AI 调用流程，完全替代原生方法的执行。</div>
+<div class="block">Arrange the entire AI The calling process completely replaces the execution of native methods.</div>
 </div>
 </div>
 </div>
@@ -133,14 +133,14 @@ loadScripts(document, 'script');</script>
 <h3>execute</h3>
 <div class="member-signature"><span class="return-type"><a href="AiExecutionProxy.html" title="type parameter in AiExecutionProxy">R</a></span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiExecutionProxy.html" title="type parameter in AiExecutionProxy">T</a>&gt;&nbsp;ctx)</span>
    throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">编排整个 AI 调用流程，完全替代原生方法的执行。</div>
+<div class="block">Arrange the entire AI The calling process completely replaces the execution of native methods.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
 <dt>Returns:</dt>
-<dd>AI 处理完毕后的结果</dd>
+<dd>AI The result after processing</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>

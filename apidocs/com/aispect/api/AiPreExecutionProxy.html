@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法调用的输入参数类型</dd>
+<dd><code>T</code> - Input parameter types for method calls</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -90,9 +90,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiPreExecutionProxy&lt;T&gt;</span></div>
-<div class="block">智能体的执行前编排代理接口。
+<div class="block">Pre-execution orchestration agent interface for agents.
  <p>
- 在方法执行前触发的 AI 拦截器代理逻辑。
+ Triggered before method execution AI Interceptor proxy logic.
  </p></div>
 </section>
 <section class="summary">
@@ -111,7 +111,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#preExecute(com.aispect.api.AiInvocationContext)" class="member-name-link">preExecute</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiPreExecutionProxy.html" title="type parameter in AiPreExecutionProxy">T</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">在原始方法执行前被调用，用于进行内容审查或前置预处理。</div>
+<div class="block">Called before the original method is executed, it is used for content review or pre-processing.</div>
 </div>
 </div>
 </div>
@@ -132,12 +132,12 @@ loadScripts(document, 'script');</script>
 <h3>preExecute</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">preExecute</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiPreExecutionProxy.html" title="type parameter in AiPreExecutionProxy">T</a>&gt;&nbsp;ctx)</span>
          throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">在原始方法执行前被调用，用于进行内容审查或前置预处理。</div>
+<div class="block">Called before the original method is executed, it is used for content review or pre-processing.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>

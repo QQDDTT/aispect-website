@@ -82,10 +82,10 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">UnitEngine</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../api/AiUnitEngine.html" title="interface in com.aispect.api">AiUnitEngine</a></span></div>
-<div class="block">Unit Agent 执行引擎，属于<b>运行阶段（Runtime）</b>职责。
+<div class="block">Unit Agent Execution engine, belonging to<b>running phase (Runtime）</b>Responsibilities.
  <p>
- 从 <a href="../../../bootstrap/registry/AgentInvocationCacheImpl.html" title="class in com.aispect.core.engine.bootstrap.registry"><code>AgentInvocationCacheImpl</code></a> 中
- 获取的 Handler 列表，按照注解配置的 <a href="../../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration"><code>AiExecutePhase</code></a> 路由到对应的执行逻辑
+ from <a href="../../../bootstrap/registry/AgentInvocationCacheImpl.html" title="class in com.aispect.core.engine.bootstrap.registry"><code>AgentInvocationCacheImpl</code></a> middle
+ obtained Handler List, configured according to annotations <a href="../../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration"><code>AiExecutePhase</code></a> Route to the corresponding execution logic
  （preExecute / postExecute / onException / execute）。
  </p></div>
 </section>
@@ -122,7 +122,7 @@ implements <a href="../../../../../api/AiUnitEngine.html" title="interface in co
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args,
  <a href="../../../../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">执行单元代理逻辑</div>
+<div class="block">execution unit agent logic</div>
 </div>
 </div>
 </div>
@@ -165,20 +165,20 @@ implements <a href="../../../../../api/AiUnitEngine.html" title="interface in co
  <a href="../../../../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</span>
                          throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/AiUnitEngine.html#executeUnitAgents(com.aispect.api.AiUnitAgentHandler%5B%5D,java.lang.Object,java.lang.reflect.Method,java.lang.Object%5B%5D,com.aispect.api.AiInvocationContext)">AiUnitEngine</a></code></span></div>
-<div class="block">执行单元代理逻辑</div>
+<div class="block">execution unit agent logic</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../api/AiUnitEngine.html#executeUnitAgents(com.aispect.api.AiUnitAgentHandler%5B%5D,java.lang.Object,java.lang.reflect.Method,java.lang.Object%5B%5D,com.aispect.api.AiInvocationContext)">executeUnitAgents</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/AiUnitEngine.html" title="interface in com.aispect.api">AiUnitEngine</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>handlers</code> - 预先实例化的代理处理器数组</dd>
-<dd><code>target</code> - 目标对象实例</dd>
-<dd><code>method</code> - 被调用的原始方法</dd>
-<dd><code>args</code> - 方法参数</dd>
-<dd><code>ctx</code> - 当前代理调用的上下文信息</dd>
+<dd><code>handlers</code> - Array of pre-instantiated proxy processors</dd>
+<dd><code>target</code> - target object instance</dd>
+<dd><code>method</code> - The original method that was called</dd>
+<dd><code>args</code> - method parameters</dd>
+<dd><code>ctx</code> - Context information for the current proxy call</dd>
 <dt>Returns:</dt>
-<dd>编排执行后的最终返回结果</dd>
+<dd>The final return result after orchestration execution</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></code> - 执行过程中抛出的任何异常</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></code> - Any exceptions thrown during execution</dd>
 </dl>
 </section>
 </li>

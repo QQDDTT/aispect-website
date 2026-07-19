@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">NodeExceptionStrategy</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a>&gt;</span></div>
-<div class="block">图节点运行抛出异常（阻断异常）时的处理策略。</div>
+<div class="block">The handling strategy when an exception (blocking exception) is thrown when the graph node runs.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,19 +106,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#ABORT" class="member-name-link">ABORT</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">终止整个 Graph 的执行。</div>
+<div class="block">Terminate the entire Graph execution.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#FALLBACK" class="member-name-link">FALLBACK</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">执行降级节点或备选路由。</div>
+<div class="block">Perform downgraded nodes or alternative routes.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#RETRY" class="member-name-link">RETRY</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">重新执行当前节点（可结合重试次数限制）。</div>
+<div class="block">Re-execute the current node (can be combined with the retry limit).</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#SKIP" class="member-name-link">SKIP</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">跳过该节点，继续向下执行（如果流程允许）。</div>
+<div class="block">Skip this node and continue downward (if the process allows).</div>
 </div>
 </div>
 </section>
@@ -169,28 +169,28 @@ the order they are declared.</div>
 <section class="detail" id="RETRY">
 <h3>RETRY</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">RETRY</span></div>
-<div class="block">重新执行当前节点（可结合重试次数限制）。</div>
+<div class="block">Re-execute the current node (can be combined with the retry limit).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ABORT">
 <h3>ABORT</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">ABORT</span></div>
-<div class="block">终止整个 Graph 的执行。</div>
+<div class="block">Terminate the entire Graph execution.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="SKIP">
 <h3>SKIP</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">SKIP</span></div>
-<div class="block">跳过该节点，继续向下执行（如果流程允许）。</div>
+<div class="block">Skip this node and continue downward (if the process allows).</div>
 </section>
 </li>
 <li>
 <section class="detail" id="FALLBACK">
 <h3>FALLBACK</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">FALLBACK</span></div>
-<div class="block">执行降级节点或备选路由。</div>
+<div class="block">Perform downgraded nodes or alternative routes.</div>
 </section>
 </li>
 </ul>

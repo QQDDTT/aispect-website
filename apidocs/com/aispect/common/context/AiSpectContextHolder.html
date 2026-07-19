@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiSpectContextHolder</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">基于 ThreadLocal 的上下文持有者，用于在整个框架链路中传递隐式参数。</div>
+<div class="block">based on ThreadLocal A context holder for passing implicit parameters throughout the framework chain.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,29 +95,29 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">清理当前线程的上下文。
- 必须在 finally 块中调用，以防在使用线程池时发生内存泄漏。</div>
+<div class="block">Clean up the context of the current thread.
+ must be in finally block to prevent memory leaks when using the thread pool.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#get(java.lang.String)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">从当前上下文中获取值。</div>
+<div class="block">Gets the value from the current context.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getContext()" class="member-name-link">getContext</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">获取整个上下文映射字典。</div>
+<div class="block">Get the entire context mapping dictionary.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#set(java.lang.String,java.lang.Object)" class="member-name-link">set</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">在当前上下文中设置键值对。</div>
+<div class="block">Sets a key-value pair in the current context.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setContext(java.util.Map)" class="member-name-link">setContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;map)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">覆盖整个上下文映射字典。</div>
+<div class="block">Override the entire context mapping dictionary.</div>
 </div>
 </div>
 </div>
@@ -141,11 +141,11 @@ loadScripts(document, 'script');</script>
 <h3>set</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">set</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block">在当前上下文中设置键值对。</div>
+<div class="block">Sets a key-value pair in the current context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - 键</dd>
-<dd><code>value</code> - 值</dd>
+<dd><code>key</code> - key</dd>
+<dd><code>value</code> - value</dd>
 </dl>
 </section>
 </li>
@@ -153,12 +153,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="get(java.lang.String)">
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">从当前上下文中获取值。</div>
+<div class="block">Gets the value from the current context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - 键</dd>
+<dd><code>key</code> - key</dd>
 <dt>Returns:</dt>
-<dd>对应的值，如果未找到则返回 null</dd>
+<dd>The corresponding value, returned if not found null</dd>
 </dl>
 </section>
 </li>
@@ -166,10 +166,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getContext()">
 <h3>getContext</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getContext</span>()</div>
-<div class="block">获取整个上下文映射字典。</div>
+<div class="block">Get the entire context mapping dictionary.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>上下文映射</dd>
+<dd>context mapping</dd>
 </dl>
 </section>
 </li>
@@ -177,10 +177,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setContext(java.util.Map)">
 <h3>setContext</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;map)</span></div>
-<div class="block">覆盖整个上下文映射字典。</div>
+<div class="block">Override the entire context mapping dictionary.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>map</code> - 新的上下文映射</dd>
+<dd><code>map</code> - new context mapping</dd>
 </dl>
 </section>
 </li>
@@ -188,8 +188,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
-<div class="block">清理当前线程的上下文。
- 必须在 finally 块中调用，以防在使用线程池时发生内存泄漏。</div>
+<div class="block">Clean up the context of the current thread.
+ must be in finally block to prevent memory leaks when using the thread pool.</div>
 </section>
 </li>
 </ul>

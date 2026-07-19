@@ -77,19 +77,19 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiComponentScanner</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">AI 组件扫描器，属于<b>启动阶段（Bootstrap）</b>职责。
+<div class="block">AI Component scanner, belonging to<b>startup phase (Bootstrap）</b>Responsibilities.
  <p>
- 在代理对象实例化时被调用，负责：
+ Called when the proxy object is instantiated, responsible for:
  <ul>
-   <li>扫描目标接口及其实现类上的 <a href="../../../../agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> 和 <a href="../../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> 注解</li>
-   <li>校验注解配置的合法性（如阶段冲突检测）</li>
-   <li>实例化对应的 Agent Handler，并统一存入 <code>ScanResult.invocationCache</code> 缓存注册表</li>
+   <li>Scan the target interface and its implementation class for <a href="../../../../agent/annotation/AiUnitAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiUnitAgent</code></a> and <a href="../../../../agent/annotation/AiGraphAgent.html" title="annotation interface in com.aispect.agent.annotation"><code>AiGraphAgent</code></a> annotation</li>
+   <li>Verify the legality of annotation configuration (such as phase conflict detection)</li>
+   <li>Instantiate the corresponding Agent Handler，and deposit them uniformly <code>ScanResult.invocationCache</code> cache registry</li>
  </ul>
  </p>
  <p>
- 扫描结果通过 <a href="ScanResult.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>ScanResult</code></a> 返回给调用方，供运行阶段使用。
- 扫描器采用<b>部分成功</b>语义：即使遇到错误也会继续扫描，所有错误被收集到
- <a href="ScanResult.html#getErrors()"><code>ScanResult.getErrors()</code></a> 中，由调用方决定如何处理。
+ Scan result passed <a href="ScanResult.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>ScanResult</code></a> Returned to the caller for use by the runtime phase.
+ The scanner uses<b>Partially successful</b>Semantics: Scan continues even if errors are encountered, all errors are collected
+ <a href="ScanResult.html#getErrors()"><code>ScanResult.getErrors()</code></a> , it is up to the caller to decide how to handle it.
  </p></div>
 </section>
 <section class="summary">
@@ -122,7 +122,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#scan(java.lang.Object,java.lang.Class)" class="member-name-link">scan</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;target,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;interfaceClass)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">扫描目标接口，将所有 Agent 资源统一注册到 <code>ScanResult.invocationCache</code> 并返回扫描结果。</div>
+<div class="block">Scan the target interface and remove all Agent Resources are uniformly registered to <code>ScanResult.invocationCache</code> and return scan results.</div>
 </div>
 </div>
 </div>
@@ -160,22 +160,22 @@ loadScripts(document, 'script');</script>
 <h3>scan</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></span>&nbsp;<span class="element-name">scan</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;target,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;interfaceClass)</span></div>
-<div class="block">扫描目标接口，将所有 Agent 资源统一注册到 <code>ScanResult.invocationCache</code> 并返回扫描结果。
+<div class="block">Scan the target interface and remove all Agent Resources are uniformly registered to <code>ScanResult.invocationCache</code> and return scan results.
  <p>
- 本方法不抛出异常。扫描过程中遇到的配置错误（反射失败、阶段冲突等）
- 均被收集在 <a href="ScanResult.html#getErrors()"><code>ScanResult.getErrors()</code></a> 中，由调用方通过
- <a href="ScanResult.html#hasErrors()"><code>ScanResult.hasErrors()</code></a> 判断并决定后续处理方式。
+ This method does not throw exceptions. Configuration errors encountered during scanning (reflection failure, phase conflicts, etc.)
+ are collected in <a href="ScanResult.html#getErrors()"><code>ScanResult.getErrors()</code></a> , passed by the caller
+ <a href="ScanResult.html#hasErrors()"><code>ScanResult.hasErrors()</code></a> Judge and decide how to proceed.
  </p>
  <p>
- <b>Graph Agent 注册约定</b>：Graph Agent 以接口的每个方法为 key、
- <a href="../../../../agent/enumeration/AiExecutePhase.html#ALL"><code>AiExecutePhase.ALL</code></a> 为 phase 存入缓存，供运行阶段通过 <code>instanceof</code> 区分类型。
+ <b>Graph Agent Registration agreement</b>：Graph Agent Take each method of the interface as key、
+ <a href="../../../../agent/enumeration/AiExecutePhase.html#ALL"><code>AiExecutePhase.ALL</code></a> for phase Stored in the cache for passing during the running phase <code>instanceof</code> Distinguish between types.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>target</code> - 目标对象（实现类实例），可为 null</dd>
-<dd><code>interfaceClass</code> - 被代理的接口</dd>
+<dd><code>target</code> - Target object (implementation class instance), which can be null</dd>
+<dd><code>interfaceClass</code> - Proxied interface</dd>
 <dt>Returns:</dt>
-<dd>扫描结果（含统一的 Agent 缓存注册表及错误列表）</dd>
+<dd>Scan results (including unified Agent Caching registry and error list)</dd>
 </dl>
 </section>
 </li>

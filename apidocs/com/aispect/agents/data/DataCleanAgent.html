@@ -83,10 +83,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DataCleanAgent</span>
 <span class="extends-implements">extends <a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span></div>
-<div class="block">数据清理 Agent。
+<div class="block">Data cleaning Agent。
  <p>
- 拦截方法调用，并将第一个参数作为输入文本传递给 AI 进行清理、错别字纠正和格式化。
- 它会短路原始方法执行，直接返回由 AI 处理后的干净文本。
+ Intercept the method call and pass the first argument as input text to AI Clean up, correct typos, and format.
+ It will short-circuit the original method execution and return directly to the AI Processed clean text.
  </p></div>
 </section>
 <section class="summary">
@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute(com.aispect.api.AiInvocationContext)" class="member-name-link">execute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">执行数据清理的拦截逻辑。</div>
+<div class="block">Execute interception logic for data cleaning.</div>
 </div>
 </div>
 </div>
@@ -159,18 +159,18 @@ loadScripts(document, 'script');</script>
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</span>
                throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">执行数据清理的拦截逻辑。</div>
+<div class="block">Execute interception logic for data cleaning.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiExecutionProxy.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="../../agent/core/AbstractUnitAgent.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code>&nbsp;in class&nbsp;<code><a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - AI 执行上下文，包含待清理的原始数据参数</dd>
+<dd><code>ctx</code> - AI Execution context, containing raw data parameters to be cleaned</dd>
 <dt>Returns:</dt>
-<dd>经过 AI 模型纠正和清理后的纯文本结果</dd>
+<dd>go through AI Plain text results after model correction and cleaning</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 如果 AI 调用失败</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - if AI call failed</dd>
 </dl>
 </section>
 </li>

@@ -73,8 +73,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法调用的输入参数类型</dd>
-<dd><code>R</code> - 方法调用的返回结果类型</dd>
+<dd><code>T</code> - Input parameter types for method calls</dd>
+<dd><code>R</code> - Return result type of method call</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -91,9 +91,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiPostExecutionProxy&lt;T,<wbr>R&gt;</span></div>
-<div class="block">智能体的执行后编排代理接口。
+<div class="block">Post-execution orchestration agent interface for agents.
  <p>
- 在方法执行后触发的 AI 拦截器代理逻辑。
+ Triggered after method execution AI Interceptor proxy logic.
  </p></div>
 </section>
 <section class="summary">
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#postExecute(com.aispect.api.AiInvocationContext,R)" class="member-name-link">postExecute</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">T</a>&gt;&nbsp;ctx,
  <a href="AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">R</a>&nbsp;result)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">在原始方法执行后被调用，用于后置处理、总结或格式转换等。</div>
+<div class="block">Called after the original method is executed, it is used for post-processing, summarization or format conversion, etc.</div>
 </div>
 </div>
 </div>
@@ -135,15 +135,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">R</a></span>&nbsp;<span class="element-name">postExecute</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">T</a>&gt;&nbsp;ctx,
  <a href="AiPostExecutionProxy.html" title="type parameter in AiPostExecutionProxy">R</a>&nbsp;result)</span>
        throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">在原始方法执行后被调用，用于后置处理、总结或格式转换等。</div>
+<div class="block">Called after the original method is executed, it is used for post-processing, summarization or format conversion, etc.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
-<dd><code>result</code> - 原生方法的执行结果</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
+<dd><code>result</code> - The execution result of the native method</dd>
 <dt>Returns:</dt>
-<dd>AI 处理后的最终结果</dd>
+<dd>AI The final result after processing</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>

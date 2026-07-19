@@ -77,11 +77,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiOperations</span></div>
-<div class="block">暴露给开发者用于手动控制 AI 交互的基础服务门面接口。
+<div class="block">Exposed to developers for manual control AI Interactive basic service facade interface.
  <p>
- 尽管框架主推通过注解和 AOP 进行无侵入式编程，但在某些场景下（如编排器内部、
- 定制化代码中），开发者依然需要直接调用底层的 LLM 或获取当前系统挂载的客户端，
- 这时可以通过此接口进行操作。
+ Although the framework mainly promotes the use of annotations and AOP Perform non-intrusive programming, but in some scenarios (such as inside the orchestrator,
+ in customized code), developers still need to directly call the underlying LLM Or get the client currently mounted on the system,
+ At this time, you can operate through this interface.
  </p></div>
 </section>
 <section class="summary">
@@ -100,43 +100,43 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiClient.html" title="interface in com.aispect.api">AiClient</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClient()" class="member-name-link">getClient</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">暴露底层绑定的 <a href="AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> 客户端适配器实例。</div>
+<div class="block">Expose underlying bindings <a href="AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> Client adapter instance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#prompt(com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt</a><wbr>(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">手动发起一次同步的 AI 提示词调用。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#prompt(java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">手动发起一次同步的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with Agent Name so that the underlying layer can configure routing.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#prompt(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">prompt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;modelName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">手动发起一次同步的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with model name override.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#promptStream(com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream</a><wbr>(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">手动发起一次流式的 AI 提示词调用。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#promptStream(java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">手动发起一次流式的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with Agent Name so that the underlying layer can configure routing.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#promptStream(java.lang.String,java.lang.String,com.aispect.core.client.model.PromptContext)" class="member-name-link">promptStream</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;modelName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">手动发起一次流式的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with model name override.</div>
 </div>
 </div>
 </div>
@@ -159,16 +159,16 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
          throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次同步的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with model name override.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>modelName</code> - 优先使用的模型名称（覆盖全局默认配置）</dd>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>modelName</code> - Preferred model name (overrides global default configuration)</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回 AI 模型的非流式响应结果</dd>
+<dd>return AI Non-streaming response results for the model</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -177,14 +177,14 @@ loadScripts(document, 'script');</script>
 <h3>prompt</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></span>&nbsp;<span class="element-name">prompt</span><wbr><span class="parameters">(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                  throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次同步的 AI 提示词调用。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回 AI 模型的非流式响应结果</dd>
+<dd>return AI Non-streaming response results for the model</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -194,15 +194,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a></span>&nbsp;<span class="element-name">prompt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                  throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次同步的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
+<div class="block">Manually initiate a synchronization AI Prompt word call with Agent Name so that the underlying layer can configure routing.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回 AI 模型的非流式响应结果</dd>
+<dd>return AI Non-streaming response results for the model</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -213,16 +213,16 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                        throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次流式的 AI 提示词调用，带有模型名称覆盖。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with model name override.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>modelName</code> - 优先使用的模型名称（覆盖全局默认配置）</dd>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>modelName</code> - Preferred model name (overrides global default configuration)</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回响应流</dd>
+<dd>Return response stream</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -231,14 +231,14 @@ loadScripts(document, 'script');</script>
 <h3>promptStream</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</span>&nbsp;<span class="element-name">promptStream</span><wbr><span class="parameters">(<a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                                throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次流式的 AI 提示词调用。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回响应流，流会在全部生成完毕时自动关闭</dd>
+<dd>Returns the response stream, which will be automatically closed when all is generated.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -248,15 +248,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../core/client/model/Response.html" title="class in com.aispect.core.client.model">Response</a>&gt;</span>&nbsp;<span class="element-name">promptStream</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;agentName,
  <a href="../core/client/model/PromptContext.html" title="class in com.aispect.core.client.model">PromptContext</a>&nbsp;context)</span>
                                throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">手动发起一次流式的 AI 提示词调用，带有 Agent 名称以便底层进行配置路由。</div>
+<div class="block">Manually initiate a streaming AI Prompt word call with Agent Name so that the underlying layer can configure routing.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>agentName</code> - Agent名称</dd>
-<dd><code>context</code> - 本次请求的提示上下文</dd>
+<dd><code>agentName</code> - Agentname</dd>
+<dd><code>context</code> - Prompt context for this request</dd>
 <dt>Returns:</dt>
-<dd>返回响应流，流会在全部生成完毕时自动关闭</dd>
+<dd>Returns the response stream, which will be automatically closed when all is generated.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 模型调用期间的任何异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Any exception during model call</dd>
 </dl>
 </section>
 </li>
@@ -264,13 +264,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getClient()">
 <h3>getClient</h3>
 <div class="member-signature"><span class="return-type"><a href="AiClient.html" title="interface in com.aispect.api">AiClient</a></span>&nbsp;<span class="element-name">getClient</span>()</div>
-<div class="block">暴露底层绑定的 <a href="AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> 客户端适配器实例。
+<div class="block">Expose underlying bindings <a href="AiClient.html" title="interface in com.aispect.api"><code>AiClient</code></a> Client adapter instance.
  <p>
- 供高级开发者直接进行一些平台专属的高阶 API 操作（如特定模型的 fine-tuning 请求等）。
+ For advanced developers to directly perform some platform-specific high-level API operations (such as model-specific fine-tuning request, etc.).
  </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>底层注入的统一适配客户端</dd>
+<dd>Unified adaptation client injected by the bottom layer</dd>
 </dl>
 </section>
 </li>

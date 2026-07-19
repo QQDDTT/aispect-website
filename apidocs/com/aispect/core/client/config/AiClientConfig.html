@@ -78,19 +78,19 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Record Components:</dt>
-<dd><code><span id="param-apiKey">apiKey</span></code> - 访问 AI 接口的鉴权秘钥</dd>
-<dd><code><span id="param-endpoint">endpoint</span></code> - AI 服务的接口地址（Base URL 或完整 Endpoint）</dd>
-<dd><code><span id="param-modelName">modelName</span></code> - 本次调用期望使用的模型名称（如 gpt-4o, llama3）</dd>
-<dd><code><span id="param-temperature">temperature</span></code> - 采样温度值，控制生成结果的随机性（值越大越随机）</dd>
-<dd><code><span id="param-maxTokens">maxTokens</span></code> - 本次请求允许模型生成的最大 Token 数量</dd>
+<dd><code><span id="param-apiKey">apiKey</span></code> - access AI Interface authentication key</dd>
+<dd><code><span id="param-endpoint">endpoint</span></code> - AI The interface address of the service (Base URL or complete Endpoint）</dd>
+<dd><code><span id="param-modelName">modelName</span></code> - The model name expected to be used in this call (such as gpt-4o, llama3）</dd>
+<dd><code><span id="param-temperature">temperature</span></code> - Sampling temperature value to control the randomness of generated results (the larger the value, the more random it is)</dd>
+<dd><code><span id="param-maxTokens">maxTokens</span></code> - The maximum allowed model generation for this request is Token quantity</dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">AiClientConfig</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;endpoint, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiKey, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;modelName, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;temperature, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxTokens)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">AI 客户端配置参数实体。
+<div class="block">AI Client configuration parameter entity.
  <p>
- 封装了在发起单次 AI 请求时所需的关键参数。这些参数可用于覆盖全局配置，
- 从而为不同的 Agent 代理或者方法提供定制化的模型体验。
+ Encapsulated when initiating a single AI Key parameters required when requesting. These parameters can be used to override the global configuration,
+ thereby providing different Agent Agents or methods provide customized model experiences.
  </p></div>
 </section>
 <section class="summary">

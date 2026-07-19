@@ -69,9 +69,9 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 代理处理时的输入参数类型 (Input parameter type)</dd>
-<dd><code>R</code> - 代理执行后的返回结果类型 (Return result type)</dd>
-<dd><code>F</code> - 图结构流转时的资源对象类型（例如状态对象、消息列表等）</dd>
+<dd><code>T</code> - Input parameter types during agent processing (Input parameter type)</dd>
+<dd><code>R</code> - Return result type after agent execution (Return result type)</dd>
+<dd><code>F</code> - Resource object type when graph structure is transferred (such as state object, message list, etc.)</dd>
 </dl>
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
@@ -84,18 +84,18 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiGraphAgentHandler&lt;T,<wbr>R,<wbr>F&gt;</span><span class="extends-implements">
 extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>, <a href="AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;F&gt;, <a href="AiGraphStartHook.html" title="interface in com.aispect.api">AiGraphStartHook</a>, <a href="AiGraphCompleteHook.html" title="interface in com.aispect.api">AiGraphCompleteHook</a>, <a href="AiNodeStatusHook.html" title="interface in com.aispect.api">AiNodeStatusHook</a>, <a href="AiNodeExceptionHook.html" title="interface in com.aispect.api">AiNodeExceptionHook</a>, <a href="AiGraphTimeoutHook.html" title="interface in com.aispect.api">AiGraphTimeoutHook</a></span></div>
-<div class="block">图代理处理器 (Graph Agent Handler)
+<div class="block">graph agent processor (Graph Agent Handler)
  <p>
- 此接口是图代理处理逻辑的顶层复合抽象，整合了代理在执行过程中的各个生命周期阶段的核心能力。
- 实现该接口的类将同时具备以下能力：
+ This interface is a top-level composite abstraction of the graph agent processing logic, integrating the core capabilities of the agent at each life cycle stage during execution.
+ Classes that implement this interface will also have the following capabilities:
  <ul>
-   <li><b>条件过滤 (AiAgentFilter)</b>：决定是否应该执行该代理。</li>
-   <li><b>核心编排 (AiGraphBehaviorOrchestrator)</b>：图内各个节点的协同调度和资源流转逻辑。</li>
-   <li><b>启动钩子 (AiGraphStartHook)</b>：在图代理开始调度前触发，可用于日志记录或初始化操作。</li>
-   <li><b>完成钩子 (AiGraphCompleteHook)</b>：在图代理所有节点执行完毕后触发，可用于处理最终结果或资源清理。</li>
-   <li><b>节点状态钩子 (AiNodeStatusHook)</b>：在具体节点开始、成功或失败等状态变更时触发。</li>
-   <li><b>节点异常钩子 (AiNodeExceptionHook)</b>：在节点执行发生异常时触发，返回后续处理策略（如重试、跳过、中止）。</li>
-   <li><b>超时钩子 (AiGraphTimeoutHook)</b>：在图代理整体执行超时时触发，用于超时处理逻辑。</li>
+   <li><b>Conditional filtering (AiAgentFilter)</b>：Determine whether the agent should be executed.</li>
+   <li><b>core orchestration (AiGraphBehaviorOrchestrator)</b>：The collaborative scheduling and resource transfer logic of each node in the graph.</li>
+   <li><b>start hook (AiGraphStartHook)</b>：Triggered before the graph agent starts scheduling and can be used for logging or initialization operations.</li>
+   <li><b>completion hook (AiGraphCompleteHook)</b>：Triggered after all nodes of the graph agent have completed execution, and can be used to process final results or resource cleanup.</li>
+   <li><b>Node status hook (AiNodeStatusHook)</b>：Triggered when a specific node starts, succeeds or fails, etc. and changes status.</li>
+   <li><b>Node exception hook (AiNodeExceptionHook)</b>：Triggered when an exception occurs in node execution, and returns the subsequent processing strategy (such as retry, skip, abort).</li>
+   <li><b>timeout hook (AiGraphTimeoutHook)</b>：Triggered when the overall execution of the graph agent times out, used for timeout processing logic.</li>
  </ul>
  </p></div>
 </section>

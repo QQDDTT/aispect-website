@@ -83,9 +83,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DynamicWorkflowGraphAgent</span>
 <span class="extends-implements">extends <a href="../../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span></div>
-<div class="block">通用的 Graph Agent 编排引擎。
- 它利用反射加载所属的 <a href="../../agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> 元数据，调用大模型生成执行任务序列，
- 然后在内部循环调度这些任务序列，同时对接各种生命周期与异常 Hook。</div>
+<div class="block">Universal Graph Agent Orchestration engine.
+ It uses reflection to load the <a href="../../agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a> Metadata, call the large model to generate execution task sequence,
+ Then schedule these task sequences in an internal loop, while connecting various life cycles and exceptions. Hook。</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,7 +101,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="DynamicWorkflowGraphAgent.ExecutionStep.html" class="type-name-link" title="class in com.aispect.agents.graph">DynamicWorkflowGraphAgent.ExecutionStep</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">表示大模型规划出的单个执行步骤，对应 JSON 数组中的一个任务对象。</div>
+<div class="block">Represents a single execution step planned by the large model, corresponding to JSON A task object in the array.</div>
 </div>
 </div>
 </section>
@@ -134,9 +134,9 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)" class="member-name-link">orchestrateGraph</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">执行图代理的编排逻辑。
- 该方法负责解析可用的节点资源，调用大模型生成执行计划，并按照计划依次调度执行图中的各个节点，
- 同时在不同阶段触发相应的生命周期钩子（Hook）以及处理异常策略。</div>
+<div class="block">Execute the orchestration logic of the graph agent.
+ This method is responsible for parsing the available node resources, calling the large model to generate an execution plan, and scheduling each node in the execution graph in sequence according to the plan.
+ At the same time, corresponding life cycle hooks are triggered at different stages (Hook）and exception handling strategies.</div>
 </div>
 </div>
 </div>
@@ -178,21 +178,21 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">orchestrateGraph</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;nodeResources,
  <a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
                         throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">执行图代理的编排逻辑。
- 该方法负责解析可用的节点资源，调用大模型生成执行计划，并按照计划依次调度执行图中的各个节点，
- 同时在不同阶段触发相应的生命周期钩子（Hook）以及处理异常策略。</div>
+<div class="block">Execute the orchestration logic of the graph agent.
+ This method is responsible for parsing the available node resources, calling the large model to generate an execution plan, and scheduling each node in the execution graph in sequence according to the plan.
+ At the same time, corresponding life cycle hooks are triggered at different stages (Hook）and exception handling strategies.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiGraphBehaviorOrchestrator.html#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">orchestrateGraph</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiGraphBehaviorOrchestrator.html" title="interface in com.aispect.api">AiGraphBehaviorOrchestrator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../../agent/core/AbstractGraphAgent.html#orchestrateGraph(java.util.Map,com.aispect.api.AiInvocationContext)">orchestrateGraph</a></code>&nbsp;in class&nbsp;<code><a href="../../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core">AbstractGraphAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>nodeResources</code> - 包含图中可用节点的资源集合，键为 Bean 的名称，值为 Bean 实例</dd>
-<dd><code>ctx</code> - 当前 AI 调用的上下文信息，包含模型配置、参数等</dd>
+<dd><code>nodeResources</code> - A collection of resources containing nodes available in the graph, with keys Bean The name of Bean Example</dd>
+<dd><code>ctx</code> - current AI Context information of the call, including model configuration, parameters, etc.</dd>
 <dt>Returns:</dt>
-<dd>整个图执行完毕后的最终结果</dd>
+<dd>The final result after the entire graph is executed</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当图执行失败或模型调用异常时抛出</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Thrown when graph execution fails or model call exception occurs</dd>
 </dl>
 </section>
 </li>

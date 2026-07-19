@@ -82,14 +82,14 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ScanResult</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></span></div>
-<div class="block"><a href="AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> 的扫描结果载体。
+<div class="block"><a href="AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> Scan result carrier.
  <p>
- 实现 <a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api"><code>AiScanResult</code></a> 契约。
- 同时承载两类信息：
+ accomplish <a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api"><code>AiScanResult</code></a> contract.
+ Carrying two types of information at the same time:
  <ul>
-   <li><b>成功结果</b>：<code>invocationCache</code> — 统一的 Agent 缓存注册表，
-       存放所有已扫描到的 Unit Agent Handler 及 Graph Agent Orchestrator（核心内容）。</li>
-   <li><b>错误信息</b>：扫描过程中收集到的所有配置错误（反射失败、阶段冲突等）。</li>
+   <li><b>successful result</b>：<code>invocationCache</code> — unified Agent cache registry,
+       Store all scanned Unit Agent Handler and Graph Agent Orchestrator（core content).</li>
+   <li><b>error message</b>：All configuration errors collected during the scan (reflection failures, phase conflicts, etc.).</li>
  </ul>
  </p></div>
 </section>
@@ -122,17 +122,17 @@ implements <a href="../../../../api/AiScanResult.html" title="interface in com.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrors()" class="member-name-link">getErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">获取扫描过程中收集到的完整的错误列表信息。</div>
+<div class="block">Get the complete error list information collected during the scan.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInvocationCache()" class="member-name-link">getInvocationCache</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">获取统一的 Agent 缓存注册表。</div>
+<div class="block">get unified Agent Cache the registry.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasErrors()" class="member-name-link">hasErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">判断扫描过程中是否发现了任何配置或解析错误。</div>
+<div class="block">Determine whether any configuration or parsing errors were found during the scan.</div>
 </div>
 </div>
 </div>
@@ -170,16 +170,16 @@ implements <a href="../../../../api/AiScanResult.html" title="interface in com.a
 <h3>getInvocationCache</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</span>&nbsp;<span class="element-name">getInvocationCache</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiScanResult.html#getInvocationCache()">AiScanResult</a></code></span></div>
-<div class="block">获取统一的 Agent 缓存注册表。
+<div class="block">get unified Agent Cache the registry.
  <p>
- 这是 aispect-core 扫描后对外提交的核心资产之一。
- 承载所有被扫描方法与对应的代理处理器（如 Unit / Graph）的映射关系。
+ This is aispect-core One of the core assets submitted to the outside world after scanning.
+ Hosts all scanned methods and corresponding proxy handlers (e.g. Unit / Graph）mapping relationship.
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiScanResult.html#getInvocationCache()">getInvocationCache</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></code></dd>
 <dt>Returns:</dt>
-<dd>代理与节点资源的全局调度缓存</dd>
+<dd>Global scheduling cache of agent and node resources</dd>
 </dl>
 </section>
 </li>
@@ -188,12 +188,12 @@ implements <a href="../../../../api/AiScanResult.html" title="interface in com.a
 <h3>hasErrors</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasErrors</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiScanResult.html#hasErrors()">AiScanResult</a></code></span></div>
-<div class="block">判断扫描过程中是否发现了任何配置或解析错误。</div>
+<div class="block">Determine whether any configuration or parsing errors were found during the scan.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiScanResult.html#hasErrors()">hasErrors</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></code></dd>
 <dt>Returns:</dt>
-<dd>若存在至少一条错误时返回 <code>true</code></dd>
+<dd>Returns if there is at least one error <code>true</code></dd>
 </dl>
 </section>
 </li>
@@ -202,12 +202,12 @@ implements <a href="../../../../api/AiScanResult.html" title="interface in com.a
 <h3>getErrors</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getErrors</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/AiScanResult.html#getErrors()">AiScanResult</a></code></span></div>
-<div class="block">获取扫描过程中收集到的完整的错误列表信息。</div>
+<div class="block">Get the complete error list information collected during the scan.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AiScanResult.html#getErrors()">getErrors</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AiScanResult.html" title="interface in com.aispect.api">AiScanResult</a></code></dd>
 <dt>Returns:</dt>
-<dd>错误信息列表</dd>
+<dd>Error message list</dd>
 </dl>
 </section>
 </li>

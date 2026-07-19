@@ -87,11 +87,11 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiScanException</span>
 <span class="extends-implements">extends <a href="AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">扫描阶段发现一个或多个配置错误时抛出。
+<div class="block">Thrown when one or more configuration errors are found during the scanning phase.
  <p>
- 由 <a href="../../core/engine/bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> 在
- 完成全量扫描后统一抛出，以支持延迟（deferred）异常报告：即扫描器尽可能收集
- 所有错误，而不是在第一个错误处立即中断。
+ Depend on <a href="../../core/engine/bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> exist
+ Throws uniformly after completing full scan to support delay (deferred）Exception reporting: that is, the scanner collects as much as possible
+ all errors instead of breaking immediately on the first error.
  </p></div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -131,7 +131,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrors()" class="member-name-link">getErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">返回所有扫描错误的详细信息列表（不可变）。</div>
+<div class="block">Returns a detailed list of all scan errors (immutable).</div>
 </div>
 </div>
 </div>
@@ -171,7 +171,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getErrors()">
 <h3>getErrors</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getErrors</span>()</div>
-<div class="block">返回所有扫描错误的详细信息列表（不可变）。</div>
+<div class="block">Returns a detailed list of all scan errors (immutable).</div>
 </section>
 </li>
 </ul>

@@ -71,11 +71,11 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Documented.html" title="class or interface in java.lang.annotation" class="external-link">@Documented</a>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="AiNodes.html" title="annotation interface in com.aispect.agent.annotation">AiNodes.class</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">AiNode</span></div>
-<div class="block">标记一个方法、字段或参数作为图（Graph）引擎中的功能性节点资源。
+<div class="block">Mark a method, field or parameter as a diagram (Graph）Functional node resources in the engine.
  <p>
- <code>@AiNode</code> 充当 Graph Agent 动态调配的底层资源。
- 这些资源通常是接口或类中的独立功能性函数，通过特定的名称标识注册给图引擎，
- 供其在复杂的工作流执行期间进行依赖查找与调度组织。
+ <code>@AiNode</code> act as Graph Agent Dynamically allocated underlying resources.
+ These resources are usually independent functional functions in interfaces or classes, registered to the graph engine through specific name identifiers.
+ It is used for dependency search and scheduling organization during the execution of complex workflows.
  </p></div>
 </section>
 <section class="summary">
@@ -122,7 +122,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>标识该节点资源的全局名称或标识，供 Graph Agent 进行依赖查找与流转调度。</dd>
+<dd>A global name or ID that identifies this node resource for Graph Agent Perform dependency search and transfer scheduling.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -136,7 +136,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">description</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>该功能性节点资源的详细描述，可用于辅助模型理解该资源的作用。</dd>
+<dd>A detailed description of the functional node resource can be used to assist the model in understanding the role of the resource.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">modelName</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>节点专属的模型名称。在 Graph Agent 场景中，该设置优先级高于 Graph 级别的模型设置。</dd>
+<dd>The node-specific model name. exist Graph Agent In the scenario, this setting has higher priority than Graph Level model settings.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -164,7 +164,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">belongTo</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>指定该节点归属于当前类上的哪几个 Graph Agent。在类上使用多重注解时，此属性必填。</dd>
+<dd>Specify which of the current classes the node belongs to Graph Agent。This attribute is required when using multiple annotations on a class.</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -178,7 +178,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="../enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">executePhase</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>该 AI 代理在目标方法生命周期中的介入时机</dd>
+<dd>Should AI The timing of agent intervention in the life cycle of the target method</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

@@ -86,11 +86,11 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiAgentFilter</span></div>
-<div class="block">AI 代理执行流程的全局拦截器/过滤器。
+<div class="block">AI Global interceptor for agent execution flow/filter.
  <p>
- 与特定的前置/后置处理器不同，AiAgentFilter 作用于更宏观的编排链路上。
- 可以用来实现全局视角的日志记录、调用链路追踪、指标埋点、安全拦截鉴权、
- 速率限制（Rate Limiting）等跨切面逻辑。
+ with specific prefixes/The post-processor is different,AiAgentFilter Acts on a more macro orchestration link.
+ It can be used to achieve global perspective logging, call link tracking, indicator burying, security interception and authentication,
+ rate limit (Rate Limiting）Cross-cutting logic.
  </p></div>
 </section>
 <section class="summary">
@@ -111,12 +111,12 @@ R&gt;&nbsp;R</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)" class="member-name-link">doFilter</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;&nbsp;ctx,
  <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;&nbsp;next)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">过滤/拦截当前的 AI 代理请求。</div>
+<div class="block">filter/intercept the current AI Proxy request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#shouldProcess(java.lang.Object%5B%5D)" class="member-name-link">shouldProcess</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">断言过滤器：根据原生方法的入参，决定当前调用是否需要经过 AI 代理处理。</div>
+<div class="block">Assertion filter: Based on the input parameters of the native method, determine whether the current call needs to go through AI Agent processing.</div>
 </div>
 </div>
 </div>
@@ -139,18 +139,18 @@ R&gt;&nbsp;R</code></div>
 R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">doFilter</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T&gt;&nbsp;ctx,
  <a href="AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T,<wbr>R&gt;&nbsp;next)</span>
           throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">过滤/拦截当前的 AI 代理请求。</div>
+<div class="block">filter/intercept the current AI Proxy request.</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法原始返回值类型</dd>
-<dd><code>R</code> - 期待的最终处理结果类型</dd>
+<dd><code>T</code> - Method original return value type</dd>
+<dd><code>R</code> - The type of final processing result expected</dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的上下文</dd>
-<dd><code>next</code> - 用于推进过滤器链，执行下一个过滤器或最终的 <a href="AiExecutionProxy.html" title="interface in com.aispect.api"><code>AiExecutionProxy</code></a></dd>
+<dd><code>ctx</code> - The context of the current method call</dd>
+<dd><code>next</code> - Used to advance the filter chain, executing the next filter or the final <a href="AiExecutionProxy.html" title="interface in com.aispect.api"><code>AiExecutionProxy</code></a></dd>
 <dt>Returns:</dt>
-<dd>执行过滤器链及代理后的最终结果</dd>
+<dd>The final result after executing the filter chain and proxy</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当拦截逻辑拒绝请求或后续调用链抛出异常时触发</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Triggered when the interception logic rejects the request or a subsequent call chain throws an exception</dd>
 </dl>
 </section>
 </li>
@@ -158,12 +158,12 @@ R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-n
 <section class="detail" id="shouldProcess(java.lang.Object[])">
 <h3>shouldProcess</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">shouldProcess</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</span></div>
-<div class="block">断言过滤器：根据原生方法的入参，决定当前调用是否需要经过 AI 代理处理。</div>
+<div class="block">Assertion filter: Based on the input parameters of the native method, determine whether the current call needs to go through AI Agent processing.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>args</code> - 方法参数</dd>
+<dd><code>args</code> - method parameters</dd>
 <dt>Returns:</dt>
-<dd>是否需要处理</dd>
+<dd>Does it need to be processed?</dd>
 </dl>
 </section>
 </li>

@@ -78,17 +78,17 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Record Components:</dt>
-<dd><code><span id="param-id">id</span></code> - 唯一标识此次工具调用的 ID</dd>
-<dd><code><span id="param-type">type</span></code> - 工具类型</dd>
-<dd><code><span id="param-function">function</span></code> - 函数调用详情</dd>
+<dd><code><span id="param-id">id</span></code> - Uniquely identifies this tool call ID</dd>
+<dd><code><span id="param-type">type</span></code> - Tool type</dd>
+<dd><code><span id="param-function">function</span></code> - Function call details</dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ToolCall</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type, <a href="ToolCall.FunctionCall.html" title="class in com.aispect.core.client.model">ToolCall.FunctionCall</a>&nbsp;function)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">AI 模型发起的工具调用请求。
+<div class="block">AI A tool call request initiated by the model.
  <p>
- 当模型在处理请求时，若判断需要调用外部函数，则会在响应中返回该对象，
- 其中包含了工具的名称及其运行所需的 JSON 格式参数。
+ When the model is processing the request, if it determines that an external function needs to be called, the object will be returned in the response.
+ It contains the name of the tool and what it needs to run JSON Format parameters.
  </p></div>
 </section>
 <section class="summary">

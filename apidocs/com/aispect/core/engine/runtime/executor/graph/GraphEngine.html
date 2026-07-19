@@ -82,10 +82,10 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GraphEngine</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../api/AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a></span></div>
-<div class="block">基础图引擎（Graph Engine）实现类，属于<b>运行阶段（Runtime）</b>职责。
+<div class="block">Basic graph engine (Graph Engine）Implementation class, belonging to<b>running phase (Runtime）</b>Responsibilities.
  <p>
- 实现了 <a href="../../../../../api/AiGraphEngine.html" title="interface in com.aispect.api"><code>AiGraphEngine</code></a> 接口，在运行时对有向无环图（DAG）或状态机节点
- 的工作流进行调度和编排。通过调用 AI 大模型来决策下一个要执行的节点。
+ Realized <a href="../../../../../api/AiGraphEngine.html" title="interface in com.aispect.api"><code>AiGraphEngine</code></a> interface, at runtime for directed acyclic graphs (DAG）or state machine node
+ Workflow scheduling and orchestration. By calling AI Large model to decide the next node to be executed.
  </p></div>
 </section>
 <section class="summary">
@@ -119,7 +119,7 @@ implements <a href="../../../../../api/AiGraphEngine.html" title="interface in c
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>?&gt;&nbsp;availableNodes,
  <a href="../../../../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">根据当前的状态及 AI 推理结果，决定下一个应当执行的节点。</div>
+<div class="block">According to the current status and AI The inference results determine the next node that should be executed.</div>
 </div>
 </div>
 </div>
@@ -160,16 +160,16 @@ implements <a href="../../../../../api/AiGraphEngine.html" title="interface in c
  <a href="../../../../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span>
                          throws <span class="exceptions"><a href="../../../../../common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../api/AiGraphEngine.html#determineNextNode(java.lang.Object,java.util.Map,com.aispect.api.AiInvocationContext)">AiGraphEngine</a></code></span></div>
-<div class="block">根据当前的状态及 AI 推理结果，决定下一个应当执行的节点。</div>
+<div class="block">According to the current status and AI The inference results determine the next node that should be executed.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../api/AiGraphEngine.html#determineNextNode(java.lang.Object,java.util.Map,com.aispect.api.AiInvocationContext)">determineNextNode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/AiGraphEngine.html" title="interface in com.aispect.api">AiGraphEngine</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>currentState</code> - 当前系统或代理运行的数据及状态上下文</dd>
-<dd><code>availableNodes</code> - 当前图中注册且可用的功能节点集合</dd>
-<dd><code>ctx</code> - 全局的方法代理调用上下文</dd>
+<dd><code>currentState</code> - The data and state context of the current system or agent operation</dd>
+<dd><code>availableNodes</code> - The set of registered and available function nodes in the current graph</dd>
+<dd><code>ctx</code> - Global method proxy calling context</dd>
 <dt>Returns:</dt>
-<dd>决定的下一个将要执行的节点标识（ID或名称）</dd>
+<dd>The determined node ID that will be executed next (IDor name)</dd>
 <dt>Throws:</dt>
 <dd><code><a href="../../../../../common/exception/AiAgentExecutionException.html" title="class in com.aispect.common.exception">AiAgentExecutionException</a></code></dd>
 </dl>

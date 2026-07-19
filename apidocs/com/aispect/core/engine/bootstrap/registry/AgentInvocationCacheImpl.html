@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>H</code> - 继承自 <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api"><code>AiAgentFilter</code></a> 的过滤器类型</dd>
+<dd><code>H</code> - Inherited from <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api"><code>AiAgentFilter</code></a> filter type</dd>
 </dl>
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
@@ -86,13 +86,13 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AgentInvocationCacheImpl&lt;H extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;H&gt;</span></div>
-<div class="block">代理调用缓存的默认实现类。
+<div class="block">The default implementation class for proxy call caching.
  <p>
- 属于<b>启动阶段（Bootstrap）</b>的核心注册表。
- 在应用启动时，由 <code>AiComponentScanner</code> 扫描目标接口上的注解，
- 校验后将实例化好的 <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api"><code>AiAgentFilter</code></a> 资源存入此表，建立方法与 Handler 的映射关系。
+ belong<b>startup phase (Bootstrap）</b>core registry.
+ When the application starts, it is <code>AiComponentScanner</code> Scan for annotations on the target interface,
+ Will be instantiated after verification <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api"><code>AiAgentFilter</code></a> Resources are stored in this table, and the creation method is the same as Handler mapping relationship.
  </p>
- 使用 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html" title="class or interface in java.util.concurrent" class="external-link"><code>ConcurrentHashMap</code></a> 来保证线程安全的缓存存取操作。</div>
+ use <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html" title="class or interface in java.util.concurrent" class="external-link"><code>ConcurrentHashMap</code></a> To ensure thread-safe cache access operations.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,33 +123,33 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">清空缓存中的所有数据。</div>
+<div class="block">Clear all data in cache.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#computeHash(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">computeHash</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">根据方法和执行阶段计算缓存的唯一哈希值（键）。</div>
+<div class="block">Computes a cache's unique hash value (key) based on method and execution phase.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">从缓存中获取指定方法和阶段的过滤器资源。</div>
+<div class="block">Gets the filter resource for the specified method and stage from the cache.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#put(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase,H)" class="member-name-link">put</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase,
  <a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">将过滤器资源放入缓存中。
- 如果缓存中已经存在相同的键，则会抛出异常，防止覆盖。</div>
+<div class="block">Put the filter resource into cache.
+ If the same key already exists in the cache, an exception will be thrown to prevent overwriting.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remove(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">从缓存中移除指定方法和阶段的过滤器资源。</div>
+<div class="block">Removes the filter resource for the specified method and stage from the cache.</div>
 </div>
 </div>
 </div>
@@ -187,15 +187,15 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
 <h3>computeHash</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">computeHash</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">根据方法和执行阶段计算缓存的唯一哈希值（键）。</div>
+<div class="block">Computes a cache's unique hash value (key) based on method and execution phase.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AgentInvocationCache.html#computeHash(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)">computeHash</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>method</code> - 目标方法</dd>
-<dd><code>phase</code> - AI 执行阶段</dd>
+<dd><code>method</code> - target method</dd>
+<dd><code>phase</code> - AI Execution phase</dd>
 <dt>Returns:</dt>
-<dd>格式为 "阶段名称@方法名" 的哈希字符串</dd>
+<dd>The format is "Stage name@method name" hash string</dd>
 </dl>
 </section>
 </li>
@@ -206,17 +206,17 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase,
  <a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a>&nbsp;resource)</span>
          throws <span class="exceptions"><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">将过滤器资源放入缓存中。
- 如果缓存中已经存在相同的键，则会抛出异常，防止覆盖。</div>
+<div class="block">Put the filter resource into cache.
+ If the same key already exists in the cache, an exception will be thrown to prevent overwriting.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AgentInvocationCache.html#put(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase,V)">put</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>method</code> - 目标方法</dd>
-<dd><code>phase</code> - AI 执行阶段</dd>
-<dd><code>resource</code> - 要缓存的过滤器资源</dd>
+<dd><code>method</code> - target method</dd>
+<dd><code>phase</code> - AI Execution phase</dd>
+<dd><code>resource</code> - Filter resource to cache</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 如果该方法和阶段的缓存已存在，则抛出此异常</dd>
+<dd><code><a href="../../../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - This exception is thrown if the cache for this method and stage already exists</dd>
 </dl>
 </section>
 </li>
@@ -225,15 +225,15 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">从缓存中获取指定方法和阶段的过滤器资源。</div>
+<div class="block">Gets the filter resource for the specified method and stage from the cache.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AgentInvocationCache.html#get(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)">get</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>method</code> - 目标方法</dd>
-<dd><code>phase</code> - AI 执行阶段</dd>
+<dd><code>method</code> - target method</dd>
+<dd><code>phase</code> - AI Execution phase</dd>
 <dt>Returns:</dt>
-<dd>缓存的过滤器资源，如果不存在则返回 null</dd>
+<dd>The cached filter resource, returned if it does not exist null</dd>
 </dl>
 </section>
 </li>
@@ -242,15 +242,15 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
 <h3>remove</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">remove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../../../../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">从缓存中移除指定方法和阶段的过滤器资源。</div>
+<div class="block">Removes the filter resource for the specified method and stage from the cache.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AgentInvocationCache.html#remove(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)">remove</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>method</code> - 目标方法</dd>
-<dd><code>phase</code> - AI 执行阶段</dd>
+<dd><code>method</code> - target method</dd>
+<dd><code>phase</code> - AI Execution phase</dd>
 <dt>Returns:</dt>
-<dd>如果成功移除返回 true，如果缓存中本就不存在则返回 false</dd>
+<dd>If removed successfully return true，If it does not exist in the cache, return false</dd>
 </dl>
 </section>
 </li>
@@ -258,7 +258,7 @@ implements <a href="../../../../api/AgentInvocationCache.html" title="interface 
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
-<div class="block">清空缓存中的所有数据。</div>
+<div class="block">Clear all data in cache.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/AgentInvocationCache.html#clear()">clear</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/AgentInvocationCache.html" title="interface in com.aispect.api">AgentInvocationCache</a>&lt;<a href="AgentInvocationCacheImpl.html" title="type parameter in AgentInvocationCacheImpl">H</a> extends <a href="../../../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</code></dd>

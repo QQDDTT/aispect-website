@@ -71,11 +71,11 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Documented.html" title="class or interface in java.lang.annotation" class="external-link">@Documented</a>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="AiGraphAgents.html" title="annotation interface in com.aispect.agent.annotation">AiGraphAgents.class</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">AiGraphAgent</span></div>
-<div class="block">标记一个主干路由或主进程方法作为图式 AI 代理（Graph Agent）的入口。
+<div class="block">Mark a backbone route or main process method as a schema AI acting(Graph Agent）entrance.
  <p>
- <code>Graph Agent</code> 负责组织 Java 程序。通过拦截主进程或特定路由，
- 识别外部传入的指令或链接来启动复杂的工作流。
- 修饰的方法返回值可以是 <code>Stream&lt;T&gt;</code> 等流式或反应式类型，用于分发节点计算结果。
+ <code>Graph Agent</code> Responsible for organization Java program. By intercepting the main process or specific routes,
+ Recognize external incoming instructions or links to initiate complex workflows.
+ The modified method return value can be <code>Stream&lt;T&gt;</code> Streaming or reactive types, used to distribute node calculation results.
  </p></div>
 </section>
 <section class="summary">
@@ -140,7 +140,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../api/AiGraphAgentHandler.html" title="interface in com.aispect.api">AiGraphAgentHandler</a>&lt;?,<wbr>?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">value</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>用于执行该 Graph Agent 的具体抽象实现类</dd>
+<dd>used to execute the Graph Agent concrete abstract implementation class</dd>
 </dl>
 </section>
 </li>
@@ -157,7 +157,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">instruction</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>匹配的自然语言指令或控制命令，当输入匹配该指令时触发此 Graph Agent 流程</dd>
+<dd>Matching natural language instructions or control commands, this is triggered when the input matches the instruction Graph Agent process</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -171,7 +171,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Graph Agent 的唯一名称或标识，用于在多重注解时和 AiNode 进行匹配映射</dd>
+<dd>Graph Agent Unique name or identifier for multiple annotations and AiNode Perform matching mapping</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -185,7 +185,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">link</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>匹配的路由链接或 URL，用于基于特定请求路径启动工作流</dd>
+<dd>matching routing link or URL，Used to start a workflow based on a specific request path</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -199,7 +199,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">description</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Agent 节点的功能描述，可作为 prompt 的一部分供大模型理解此 Skill 的作用</dd>
+<dd>Agent Functional description of the node, available as prompt part for larger models to understand this Skill role</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -213,7 +213,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">fallback</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Fallback 降级处理方法的名称</dd>
+<dd>Fallback The name of the downgrade handling method</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -227,7 +227,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">modelName</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>优先使用的模型名称，如果为空则使用配置文件中的 default model</dd>
+<dd>The model name to be used first. If it is empty, the model name in the configuration file will be used. default model</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

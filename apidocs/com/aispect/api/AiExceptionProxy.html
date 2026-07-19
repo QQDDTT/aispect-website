@@ -73,8 +73,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法调用的输入参数类型</dd>
-<dd><code>R</code> - 方法调用的预期返回结果类型</dd>
+<dd><code>T</code> - Input parameter types for method calls</dd>
+<dd><code>R</code> - Expected return result type of method call</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -91,9 +91,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiExceptionProxy&lt;T,<wbr>R&gt;</span></div>
-<div class="block">智能体的异常编排代理接口。
+<div class="block">Exception orchestration agent interface for agents.
  <p>
- 在方法执行发生异常时触发的 AI 拦截器代理逻辑。
+ Triggered when an exception occurs during method execution AI Interceptor proxy logic.
  </p></div>
 </section>
 <section class="summary">
@@ -113,7 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onException(com.aispect.api.AiInvocationContext,java.lang.Throwable)" class="member-name-link">onException</a><wbr>(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiExceptionProxy.html" title="type parameter in AiExceptionProxy">T</a>&gt;&nbsp;ctx,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">在原始方法执行抛出异常时被调用，用于异常恢复、日志收集或降级响应。</div>
+<div class="block">Called when the original method execution throws an exception, used for exception recovery, log collection, or downgrade response.</div>
 </div>
 </div>
 </div>
@@ -135,15 +135,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="AiExceptionProxy.html" title="type parameter in AiExceptionProxy">R</a></span>&nbsp;<span class="element-name">onException</span><wbr><span class="parameters">(<a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AiExceptionProxy.html" title="type parameter in AiExceptionProxy">T</a>&gt;&nbsp;ctx,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex)</span>
        throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">在原始方法执行抛出异常时被调用，用于异常恢复、日志收集或降级响应。</div>
+<div class="block">Called when the original method execution throws an exception, used for exception recovery, log collection, or downgrade response.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
-<dd><code>ex</code> - 原生方法抛出的异常</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
+<dd><code>ex</code> - Exceptions thrown by native methods</dd>
 <dt>Returns:</dt>
-<dd>降级后的返回结果</dd>
+<dd>Return result after downgrade</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 无法处理时继续抛出的异常</dd>
+<dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exception that continues to be thrown when it cannot be handled</dd>
 </dl>
 </section>
 </li>

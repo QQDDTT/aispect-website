@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">AiExecutePhase</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&gt;</span></div>
-<div class="block">标识 AI 代理在拦截被代理方法时的执行生命周期阶段。</div>
+<div class="block">logo AI The stage of the execution life cycle when the proxy intercepts the proxied method.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,27 +106,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#AFTER" class="member-name-link">AFTER</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">在目标方法成功执行后运行。
- 适用于对返回结果进行总结、格式转换、二次处理等场景。
- 可以通过 `AiInvocationContext.getProceedResult()` 获取原方法的执行结果。</div>
+<div class="block">Runs after the target method has successfully executed.
+ It is suitable for scenarios such as summarizing, format conversion, and secondary processing of returned results.
+ can pass `AiInvocationContext.getProceedResult()` Get the execution result of the original method.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#ALL" class="member-name-link">ALL</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">环绕运行。
- AI 代理负责完全接管调用链，并自行决定是否、何时通过 `ctx.proceed()` 调用原始方法。
- 这是最灵活的方式，也是默认值。</div>
+<div class="block">Orbiting around.
+ AI The agent is responsible for fully taking over the call chain and deciding for itself whether and when to pass `ctx.proceed()` Call the original method.
+ This is the most flexible way and is the default.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#BEFORE" class="member-name-link">BEFORE</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">在目标方法执行前运行。
- 适用于参数校验、安全审查、日志记录等场景。
- AI 的返回值通常不影响正常执行流程，除非在特定实现中明确短路。</div>
+<div class="block">Runs before the target method is executed.
+ Suitable for parameter verification, security review, logging and other scenarios.
+ AI The return value of usually does not affect the normal flow of execution unless explicitly short-circuited in a particular implementation.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#EXCEPTION" class="member-name-link">EXCEPTION</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">在目标方法执行抛出异常时运行。
- 适用于异常分类、兜底数据返回、自愈重试等场景。
- 可以通过 `AiInvocationContext.getError()` 获取抛出的异常。</div>
+<div class="block">Runs when the target method execution throws an exception.
+ It is suitable for scenarios such as exception classification, return of hidden data, self-healing and retry, etc.
+ can pass `AiInvocationContext.getError()` Get the exception thrown.</div>
 </div>
 </div>
 </section>
@@ -177,36 +177,36 @@ the order they are declared.</div>
 <section class="detail" id="BEFORE">
 <h3>BEFORE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">BEFORE</span></div>
-<div class="block">在目标方法执行前运行。
- 适用于参数校验、安全审查、日志记录等场景。
- AI 的返回值通常不影响正常执行流程，除非在特定实现中明确短路。</div>
+<div class="block">Runs before the target method is executed.
+ Suitable for parameter verification, security review, logging and other scenarios.
+ AI The return value of usually does not affect the normal flow of execution unless explicitly short-circuited in a particular implementation.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="AFTER">
 <h3>AFTER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">AFTER</span></div>
-<div class="block">在目标方法成功执行后运行。
- 适用于对返回结果进行总结、格式转换、二次处理等场景。
- 可以通过 `AiInvocationContext.getProceedResult()` 获取原方法的执行结果。</div>
+<div class="block">Runs after the target method has successfully executed.
+ It is suitable for scenarios such as summarizing, format conversion, and secondary processing of returned results.
+ can pass `AiInvocationContext.getProceedResult()` Get the execution result of the original method.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="EXCEPTION">
 <h3>EXCEPTION</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">EXCEPTION</span></div>
-<div class="block">在目标方法执行抛出异常时运行。
- 适用于异常分类、兜底数据返回、自愈重试等场景。
- 可以通过 `AiInvocationContext.getError()` 获取抛出的异常。</div>
+<div class="block">Runs when the target method execution throws an exception.
+ It is suitable for scenarios such as exception classification, return of hidden data, self-healing and retry, etc.
+ can pass `AiInvocationContext.getError()` Get the exception thrown.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ALL">
 <h3>ALL</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">ALL</span></div>
-<div class="block">环绕运行。
- AI 代理负责完全接管调用链，并自行决定是否、何时通过 `ctx.proceed()` 调用原始方法。
- 这是最灵活的方式，也是默认值。</div>
+<div class="block">Orbiting around.
+ AI The agent is responsible for fully taking over the call chain and deciding for itself whether and when to pass `ctx.proceed()` Call the original method.
+ This is the most flexible way and is the default.</div>
 </section>
 </li>
 </ul>

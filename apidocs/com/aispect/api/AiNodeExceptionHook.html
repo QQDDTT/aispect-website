@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">AiNodeExceptionHook</span></div>
-<div class="block">节点异常处理回调接口。</div>
+<div class="block">Node exception handling callback interface.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,8 +106,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">当某个 Node 运行抛出阻断异常（非业务处理异常）时触发。
- 返回一个策略枚举，指导 Engine 下一步的动作。</div>
+<div class="block">when someone Node Triggered when a blocking exception (non-business processing exception) is thrown during operation.
+ Returns a policy enumeration that guides Engine Next action.</div>
 </div>
 </div>
 </div>
@@ -129,15 +129,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="../agent/enumeration/NodeExceptionStrategy.html" title="enum class in com.aispect.agent.enumeration">NodeExceptionStrategy</a></span>&nbsp;<span class="element-name">onNodeException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nodeName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex,
  <a href="AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;?&gt;&nbsp;ctx)</span></div>
-<div class="block">当某个 Node 运行抛出阻断异常（非业务处理异常）时触发。
- 返回一个策略枚举，指导 Engine 下一步的动作。</div>
+<div class="block">when someone Node Triggered when a blocking exception (non-business processing exception) is thrown during operation.
+ Returns a policy enumeration that guides Engine Next action.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>nodeName</code> - 节点名称</dd>
-<dd><code>ex</code> - 抛出的异常</dd>
-<dd><code>ctx</code> - 当前执行上下文</dd>
+<dd><code>nodeName</code> - Node name</dd>
+<dd><code>ex</code> - Exception thrown</dd>
+<dd><code>ctx</code> - current execution context</dd>
 <dt>Returns:</dt>
-<dd>异常处理策略</dd>
+<dd>Exception handling strategy</dd>
 </dl>
 </section>
 </li>

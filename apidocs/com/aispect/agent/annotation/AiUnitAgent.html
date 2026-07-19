@@ -71,11 +71,11 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Documented.html" title="class or interface in java.lang.annotation" class="external-link">@Documented</a>
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Repeatable.html" title="class or interface in java.lang.annotation" class="external-link">@Repeatable</a>(<a href="AiUnitAgents.html" title="annotation interface in com.aispect.agent.annotation">AiUnitAgents.class</a>)
 </span><span class="modifiers">public @interface </span><span class="element-name type-name-label">AiUnitAgent</span></div>
-<div class="block">标记一个方法或类为独立的单元 AI 代理方法（Unit Agent/Skill）。
+<div class="block">Mark a method or class as an independent unit AI proxy method (Unit Agent/Skill）。
  <p>
- <code>Unit Agent</code> 的核心职责是协同 Java 程序，并且维持现有的设计和代码逻辑。
- 它不对整体流程结构进行破坏，仅在局部方法执行期间进行智能协同增强。
- 框架会自动拦截被此注解修饰的方法，并将上下文转发给具体的 <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> 处理。
+ <code>Unit Agent</code> core responsibility is to collaborate Java program, and maintain existing design and code logic.
+ It does not destroy the overall process structure, but only performs intelligent collaborative enhancement during the execution of local methods.
+ The framework will automatically intercept the method modified by this annotation and forward the context to the specific <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> deal with.
  </p></div>
 </section>
 <section class="summary">
@@ -134,7 +134,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;?,<wbr>?&gt;&gt;</span>&nbsp;<span class="element-name">value</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>负责处理该执行单元的具体代理类（如自定义的 AbstractUnitAgent 子类）。</dd>
+<dd>The specific agent class responsible for handling this execution unit (such as a custom AbstractUnitAgent subclass).</dd>
 </dl>
 </section>
 </li>
@@ -151,7 +151,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">description</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Agent 节点的功能描述，可作为 prompt 的一部分供大模型理解此 Skill 的作用</dd>
+<dd>Agent Functional description of the node, available as prompt part for larger models to understand this Skill role</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -165,7 +165,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">fallback</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Fallback 降级处理方法的名称</dd>
+<dd>Fallback The name of the downgrade handling method</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -179,7 +179,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="../enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a></span>&nbsp;<span class="element-name">executePhase</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>该 AI 代理在目标方法生命周期中的介入时机</dd>
+<dd>Should AI The timing of agent intervention in the life cycle of the target method</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -193,7 +193,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">modelName</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>优先使用的模型名称，如果为空则使用配置文件中的 default model</dd>
+<dd>The model name to be used first. If it is empty, the model name in the configuration file will be used. default model</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ProxyFactory</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">AI 代理工厂类，属于<b>启动阶段（Bootstrap）</b>职责。
+<div class="block">AI Agent factory class, which belongs to<b>startup phase (Bootstrap）</b>Responsibilities.
  <p>
- 使用 JDK 动态代理机制，为被注解修饰的接口生成代理实例。
- 代理实例的所有方法调用将被 <a href="../../runtime/interceptor/AgentInterceptor.html" title="class in com.aispect.core.engine.runtime.interceptor"><code>AgentInterceptor</code></a> 拦截并路由至相应引擎执行。
+ use JDK The dynamic proxy mechanism generates proxy instances for interfaces modified by annotations.
+ All method calls on the proxy instance will be <a href="../../runtime/interceptor/AgentInterceptor.html" title="class in com.aispect.core.engine.runtime.interceptor"><code>AgentInterceptor</code></a> Intercept and route to the corresponding engine for execution.
  </p></div>
 </section>
 <section class="summary">
@@ -114,7 +114,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;interfaceClass,
  <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">创建代理实例。</div>
+<div class="block">Create a proxy instance.</div>
 </div>
 </div>
 </div>
@@ -154,18 +154,18 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;interfaceClass,
  <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</span>
                          throws <span class="exceptions"><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></span></div>
-<div class="block">创建代理实例。</div>
+<div class="block">Create a proxy instance.</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 接口类型</dd>
+<dd><code>T</code> - Interface type</dd>
 <dt>Parameters:</dt>
-<dd><code>target</code> - 目标对象（接口实现类的实例）</dd>
-<dd><code>interfaceClass</code> - 被代理的接口类</dd>
-<dd><code>aiOperations</code> - AI 操作接口实例</dd>
+<dd><code>target</code> - Target object (an instance of the interface implementation class)</dd>
+<dd><code>interfaceClass</code> - Proxied interface class</dd>
+<dd><code>aiOperations</code> - AI Operation interface instance</dd>
 <dt>Returns:</dt>
-<dd>生成的 JDK 动态代理实例</dd>
+<dd>generated JDK Dynamic proxy instance</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></code> - 若启动阶段的组件扫描发现配置错误</dd>
+<dd><code><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></code> - If the component scan during the startup phase finds configuration errors</dd>
 </dl>
 </section>
 </li>

@@ -78,16 +78,16 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Record Components:</dt>
-<dd><code><span id="param-systemPrompt">systemPrompt</span></code> - 系统级提示词，用于定义模型的基础身份或全局规约</dd>
-<dd><code><span id="param-messages">messages</span></code> - 历史对话信息列表</dd>
-<dd><code><span id="param-tools">tools</span></code> - 允许模型在此次调用中使用的外部工具函数集合（可选）</dd>
+<dd><code><span id="param-systemPrompt">systemPrompt</span></code> - System-level prompt words used to define the basic identity or global specification of the model</dd>
+<dd><code><span id="param-messages">messages</span></code> - List of historical conversation information</dd>
+<dd><code><span id="param-tools">tools</span></code> - A collection of external utility functions that the model is allowed to use in this call (optional)</dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PromptContext</span>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;systemPrompt, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Message.html" title="class in com.aispect.core.client.model">Message</a>&gt;&nbsp;messages, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;tools)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">封装单次 AI 交互时的提示上下文信息。
+<div class="block">Encapsulate a single AI Prompt contextual information during interaction.
  <p>
- 包含系统提示词（System Prompt）、历史对话消息、以及挂载的工具调用信息（Function Calling）。
+ Contains system prompt words (System Prompt）、Historical conversation messages, and mounted tool call information (Function Calling）。
  </p></div>
 </section>
 <section class="summary">

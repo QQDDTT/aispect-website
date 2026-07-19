@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法预期的返回类型</dd>
+<dd><code>T</code> - The expected return type of the method</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -81,10 +81,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AiInvocationContext&lt;T&gt;</span></div>
-<div class="block">AI 方法代理调用的上下文接口。
+<div class="block">AI The context interface for method proxy calls.
  <p>
- 封装了一次方法拦截调用的所有上下文信息。框架在拦截到一个被 <a href="../agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a>
- 修饰的方法时，会将目标对象、方法引用、入参以及执行链上下文封装在此接口中，并在前置/后置处理器中进行传递。
+ Encapsulates all context information for a method interception call. The framework intercepts a <a href="../agent/annotation/AiNode.html" title="annotation interface in com.aispect.agent.annotation"><code>AiNode</code></a>
+ When modifying a method, the target object, method reference, input parameters and execution chain context are encapsulated in this interface and prepended/passed to the post-processor.
  </p></div>
 </section>
 <section class="summary">
@@ -103,77 +103,77 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAgentDescription()" class="member-name-link">getAgentDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取 Agent 的功能描述，用于辅助推理。</div>
+<div class="block">get Agent Functional description to assist reasoning.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAgentFallback()" class="member-name-link">getAgentFallback</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取 Agent 的降级处理方法名称。</div>
+<div class="block">get Agent The name of the downgrade processing method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAgentName()" class="member-name-link">getAgentName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取当前代理的逻辑名称。</div>
+<div class="block">Get the logical name of the current agent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAiOperations()" class="member-name-link">getAiOperations</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取 AI 操作门面。</div>
+<div class="block">get AI Operation facade.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getArgs()" class="member-name-link">getArgs</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取传递给该方法的原始参数列表。</div>
+<div class="block">Get the original parameter list passed to this method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnv()" class="member-name-link">getEnv</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取当前执行的挂载环境变量集合（上下文隐式数据）。</div>
+<div class="block">Get the currently executed set of mounted environment variables (context implicit data).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnv(java.lang.String)" class="member-name-link">getEnv</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取上下文中设定的某个特定环境变量值。</div>
+<div class="block">Gets the value of a specific environment variable set in the context.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取目标方法执行过程中抛出的异常（如果有）。</div>
+<div class="block">Gets the exception thrown during the execution of the target method (if any).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMethod()" class="member-name-link">getMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取当前正在执行的方法反射引用。</div>
+<div class="block">Get the reflection reference of the currently executing method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelName()" class="member-name-link">getModelName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取优先使用的模型名称。</div>
+<div class="block">Get the preferred model name.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProceedResult()" class="member-name-link">getProceedResult</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取目标方法执行的返回结果（如果已经被执行过）。</div>
+<div class="block">Get the return result of the target method execution (if it has been executed).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTarget()" class="member-name-link">getTarget</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">获取当前被代理的目标对象实例。</div>
+<div class="block">Get the currently proxied target object instance.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AiInvocationContext.html" title="type parameter in AiInvocationContext">T</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#proceed()" class="member-name-link">proceed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">放行方法调用，执行原始的 Java 方法实现逻辑。</div>
+<div class="block">Release the method call and execute the original Java Method implements logic.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setError(java.lang.Throwable)" class="member-name-link">setError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;error)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">设置目标方法执行过程中抛出的异常。</div>
+<div class="block">Set the exception thrown during the execution of the target method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProceedResult(java.lang.Object)" class="member-name-link">setProceedResult</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;result)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">设置目标方法执行的返回结果。</div>
+<div class="block">Set the return result of the target method execution.</div>
 </div>
 </div>
 </div>
@@ -193,10 +193,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTarget()">
 <h3>getTarget</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getTarget</span>()</div>
-<div class="block">获取当前被代理的目标对象实例。</div>
+<div class="block">Get the currently proxied target object instance.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>目标对象</dd>
+<dd>target audience</dd>
 </dl>
 </section>
 </li>
@@ -204,10 +204,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getMethod()">
 <h3>getMethod</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a></span>&nbsp;<span class="element-name">getMethod</span>()</div>
-<div class="block">获取当前正在执行的方法反射引用。</div>
+<div class="block">Get the reflection reference of the currently executing method.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>方法引用</dd>
+<dd>method reference</dd>
 </dl>
 </section>
 </li>
@@ -215,10 +215,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getArgs()">
 <h3>getArgs</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]</span>&nbsp;<span class="element-name">getArgs</span>()</div>
-<div class="block">获取传递给该方法的原始参数列表。</div>
+<div class="block">Get the original parameter list passed to this method.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>方法参数数组</dd>
+<dd>method parameter array</dd>
 </dl>
 </section>
 </li>
@@ -226,10 +226,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getEnv()">
 <h3>getEnv</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getEnv</span>()</div>
-<div class="block">获取当前执行的挂载环境变量集合（上下文隐式数据）。</div>
+<div class="block">Get the currently executed set of mounted environment variables (context implicit data).</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>环境变量字典</dd>
+<dd>Environment variable dictionary</dd>
 </dl>
 </section>
 </li>
@@ -237,12 +237,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getEnv(java.lang.String)">
 <h3>getEnv</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getEnv</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">获取上下文中设定的某个特定环境变量值。</div>
+<div class="block">Gets the value of a specific environment variable set in the context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - 环境变量名称</dd>
+<dd><code>key</code> - Environment variable name</dd>
 <dt>Returns:</dt>
-<dd>环境变量值</dd>
+<dd>environment variable value</dd>
 </dl>
 </section>
 </li>
@@ -251,16 +251,16 @@ loadScripts(document, 'script');</script>
 <h3>proceed</h3>
 <div class="member-signature"><span class="return-type"><a href="AiInvocationContext.html" title="type parameter in AiInvocationContext">T</a></span>&nbsp;<span class="element-name">proceed</span>()
    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<div class="block">放行方法调用，执行原始的 Java 方法实现逻辑。
+<div class="block">Release the method call and execute the original Java Method implements logic.
  <p>
- 在 AI 处理链中，通过调用此方法可以中断 AI 的接管，退回到原生的业务代码执行，
- 并返回原生代码计算出的结果。
+ exist AI The processing chain can be interrupted by calling this method AI Take over and return to the native business code execution.
+ And return the result calculated by the native code.
  </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>原生方法执行后的返回值</dd>
+<dd>Return value after native method execution</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - 原生逻辑执行过程中抛出的异常</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - Exceptions thrown during execution of native logic</dd>
 </dl>
 </section>
 </li>
@@ -268,10 +268,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getProceedResult()">
 <h3>getProceedResult</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getProceedResult</span>()</div>
-<div class="block">获取目标方法执行的返回结果（如果已经被执行过）。</div>
+<div class="block">Get the return result of the target method execution (if it has been executed).</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>目标方法的返回值，可能为 null</dd>
+<dd>The return value of the target method, which may be null</dd>
 </dl>
 </section>
 </li>
@@ -279,10 +279,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setProceedResult(java.lang.Object)">
 <h3>setProceedResult</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProceedResult</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;result)</span></div>
-<div class="block">设置目标方法执行的返回结果。</div>
+<div class="block">Set the return result of the target method execution.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>result</code> - 返回结果</dd>
+<dd><code>result</code> - Return results</dd>
 </dl>
 </section>
 </li>
@@ -290,10 +290,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getError()">
 <h3>getError</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></span>&nbsp;<span class="element-name">getError</span>()</div>
-<div class="block">获取目标方法执行过程中抛出的异常（如果有）。</div>
+<div class="block">Gets the exception thrown during the execution of the target method (if any).</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>抛出的异常，如果没有则为 null</dd>
+<dd>the exception thrown, or if none null</dd>
 </dl>
 </section>
 </li>
@@ -301,10 +301,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setError(java.lang.Throwable)">
 <h3>setError</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setError</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;error)</span></div>
-<div class="block">设置目标方法执行过程中抛出的异常。</div>
+<div class="block">Set the exception thrown during the execution of the target method.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>error</code> - 异常</dd>
+<dd><code>error</code> - abnormal</dd>
 </dl>
 </section>
 </li>
@@ -312,17 +312,17 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAiOperations()">
 <h3>getAiOperations</h3>
 <div class="member-signature"><span class="return-type"><a href="AiOperations.html" title="interface in com.aispect.api">AiOperations</a></span>&nbsp;<span class="element-name">getAiOperations</span>()</div>
-<div class="block">获取 AI 操作门面。</div>
+<div class="block">get AI Operation facade.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAgentName()">
 <h3>getAgentName</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAgentName</span>()</div>
-<div class="block">获取当前代理的逻辑名称。</div>
+<div class="block">Get the logical name of the current agent.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Agent 的逻辑名称</dd>
+<dd>Agent logical name of</dd>
 </dl>
 </section>
 </li>
@@ -330,10 +330,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAgentDescription()">
 <h3>getAgentDescription</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAgentDescription</span>()</div>
-<div class="block">获取 Agent 的功能描述，用于辅助推理。</div>
+<div class="block">get Agent Functional description to assist reasoning.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Agent 描述</dd>
+<dd>Agent describe</dd>
 </dl>
 </section>
 </li>
@@ -341,10 +341,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAgentFallback()">
 <h3>getAgentFallback</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAgentFallback</span>()</div>
-<div class="block">获取 Agent 的降级处理方法名称。</div>
+<div class="block">get Agent The name of the downgrade processing method.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>降级处理方法名称</dd>
+<dd>Downgrade processing method name</dd>
 </dl>
 </section>
 </li>
@@ -352,10 +352,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getModelName()">
 <h3>getModelName</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getModelName</span>()</div>
-<div class="block">获取优先使用的模型名称。</div>
+<div class="block">Get the preferred model name.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>优先使用的模型名称，如果没有指定则返回空字符串或 null</dd>
+<dd>The preferred model name, if not specified returns an empty string or null</dd>
 </dl>
 </section>
 </li>

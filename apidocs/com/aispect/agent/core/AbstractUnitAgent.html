@@ -76,8 +76,8 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>T</code> - 方法原始的参数/返回类型上下文</dd>
-<dd><code>R</code> - 实际返回结果类型</dd>
+<dd><code>T</code> - method original parameters/return type context</dd>
+<dd><code>R</code> - Actual return result type</dd>
 </dl>
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractUnitAgent&lt;T,<wbr>R&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api">AiUnitAgentHandler</a>&lt;T,<wbr>R&gt;</span></div>
-<div class="block">抽象的非流式智能体处理基类。</div>
+<div class="block">Abstract non-streaming agent processing base class.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,12 +124,12 @@ R1&gt;&nbsp;R1</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)" class="member-name-link">doFilter</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;T1&gt;&nbsp;ctx,
  <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T1,<wbr>R1&gt;&nbsp;next)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">过滤/拦截当前的 AI 代理请求。</div>
+<div class="block">filter/intercept the current AI Proxy request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute(com.aispect.api.AiInvocationContext)" class="member-name-link">execute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">编排整个 AI 调用流程，完全替代原生方法的执行。</div>
+<div class="block">Arrange the entire AI The calling process completely replaces the execution of native methods.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAiOperations(com.aispect.api.AiInvocationContext)" class="member-name-link">getAiOperations</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx)</code></div>
@@ -138,23 +138,23 @@ R1&gt;&nbsp;R1</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onException(com.aispect.api.AiInvocationContext,java.lang.Throwable)" class="member-name-link">onException</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">在原始方法执行抛出异常时被调用，用于异常恢复、日志收集或降级响应。</div>
+<div class="block">Called when the original method execution throws an exception, used for exception recovery, log collection, or downgrade response.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postExecute(com.aispect.api.AiInvocationContext,R)" class="member-name-link">postExecute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx,
  <a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&nbsp;result)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">在原始方法执行后被调用，用于后置处理、总结或格式转换等。</div>
+<div class="block">Called after the original method is executed, it is used for post-processing, summarization or format conversion, etc.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#preExecute(com.aispect.api.AiInvocationContext)" class="member-name-link">preExecute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">在原始方法执行前被调用，用于进行内容审查或前置预处理。</div>
+<div class="block">Called before the original method is executed, it is used for content review or pre-processing.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shouldProcess(java.lang.Object%5B%5D)" class="member-name-link">shouldProcess</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">断言过滤器：根据原生方法的入参，决定当前调用是否需要经过 AI 代理处理。</div>
+<div class="block">Assertion filter: Based on the input parameters of the native method, determine whether the current call needs to go through AI Agent processing.</div>
 </div>
 </div>
 </div>
@@ -192,14 +192,14 @@ R1&gt;&nbsp;R1</code></div>
 <h3>shouldProcess</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">shouldProcess</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiAgentFilter.html#shouldProcess(java.lang.Object%5B%5D)">AiAgentFilter</a></code></span></div>
-<div class="block">断言过滤器：根据原生方法的入参，决定当前调用是否需要经过 AI 代理处理。</div>
+<div class="block">Assertion filter: Based on the input parameters of the native method, determine whether the current call needs to go through AI Agent processing.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiAgentFilter.html#shouldProcess(java.lang.Object%5B%5D)">shouldProcess</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>args</code> - 方法参数</dd>
+<dd><code>args</code> - method parameters</dd>
 <dt>Returns:</dt>
-<dd>是否需要处理</dd>
+<dd>Does it need to be processed?</dd>
 </dl>
 </section>
 </li>
@@ -211,20 +211,20 @@ R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element
  <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;T1,<wbr>R1&gt;&nbsp;next)</span>
                     throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiAgentFilter.html#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">AiAgentFilter</a></code></span></div>
-<div class="block">过滤/拦截当前的 AI 代理请求。</div>
+<div class="block">filter/intercept the current AI Proxy request.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiAgentFilter.html#doFilter(com.aispect.api.AiInvocationContext,com.aispect.api.AiExecutionProxy)">doFilter</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a></code></dd>
 <dt>Type Parameters:</dt>
-<dd><code>T1</code> - 方法原始返回值类型</dd>
-<dd><code>R1</code> - 期待的最终处理结果类型</dd>
+<dd><code>T1</code> - Method original return value type</dd>
+<dd><code>R1</code> - The type of final processing result expected</dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的上下文</dd>
-<dd><code>next</code> - 用于推进过滤器链，执行下一个过滤器或最终的 <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api"><code>AiExecutionProxy</code></a></dd>
+<dd><code>ctx</code> - The context of the current method call</dd>
+<dd><code>next</code> - Used to advance the filter chain, executing the next filter or the final <a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api"><code>AiExecutionProxy</code></a></dd>
 <dt>Returns:</dt>
-<dd>执行过滤器链及代理后的最终结果</dd>
+<dd>The final result after executing the filter chain and proxy</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当拦截逻辑拒绝请求或后续调用链抛出异常时触发</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Triggered when the interception logic rejects the request or a subsequent call chain throws an exception</dd>
 </dl>
 </section>
 </li>
@@ -234,14 +234,14 @@ R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">preExecute</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx)</span>
                 throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiPreExecutionProxy.html#preExecute(com.aispect.api.AiInvocationContext)">AiPreExecutionProxy</a></code></span></div>
-<div class="block">在原始方法执行前被调用，用于进行内容审查或前置预处理。</div>
+<div class="block">Called before the original method is executed, it is used for content review or pre-processing.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiPreExecutionProxy.html#preExecute(com.aispect.api.AiInvocationContext)">preExecute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>
@@ -252,17 +252,17 @@ R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element
  <a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&nbsp;result)</span>
               throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiPostExecutionProxy.html#postExecute(com.aispect.api.AiInvocationContext,R)">AiPostExecutionProxy</a></code></span></div>
-<div class="block">在原始方法执行后被调用，用于后置处理、总结或格式转换等。</div>
+<div class="block">Called after the original method is executed, it is used for post-processing, summarization or format conversion, etc.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiPostExecutionProxy.html#postExecute(com.aispect.api.AiInvocationContext,R)">postExecute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiPostExecutionProxy.html" title="interface in com.aispect.api">AiPostExecutionProxy</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>,<wbr><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
-<dd><code>result</code> - 原生方法的执行结果</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
+<dd><code>result</code> - The execution result of the native method</dd>
 <dt>Returns:</dt>
-<dd>AI 处理后的最终结果</dd>
+<dd>AI The final result after processing</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>
@@ -273,17 +273,17 @@ R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;ex)</span>
               throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiExceptionProxy.html#onException(com.aispect.api.AiInvocationContext,java.lang.Throwable)">AiExceptionProxy</a></code></span></div>
-<div class="block">在原始方法执行抛出异常时被调用，用于异常恢复、日志收集或降级响应。</div>
+<div class="block">Called when the original method execution throws an exception, used for exception recovery, log collection, or downgrade response.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiExceptionProxy.html#onException(com.aispect.api.AiInvocationContext,java.lang.Throwable)">onException</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiExceptionProxy.html" title="interface in com.aispect.api">AiExceptionProxy</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>,<wbr><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
-<dd><code>ex</code> - 原生方法抛出的异常</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
+<dd><code>ex</code> - Exceptions thrown by native methods</dd>
 <dt>Returns:</dt>
-<dd>降级后的返回结果</dd>
+<dd>Return result after downgrade</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 无法处理时继续抛出的异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exception that continues to be thrown when it cannot be handled</dd>
 </dl>
 </section>
 </li>
@@ -293,16 +293,16 @@ R1&gt;</span>&nbsp;<span class="return-type">R1</span>&nbsp;<span class="element
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a></span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>&gt;&nbsp;ctx)</span>
           throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/AiExecutionProxy.html#execute(com.aispect.api.AiInvocationContext)">AiExecutionProxy</a></code></span></div>
-<div class="block">编排整个 AI 调用流程，完全替代原生方法的执行。</div>
+<div class="block">Arrange the entire AI The calling process completely replaces the execution of native methods.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiExecutionProxy.html#execute(com.aispect.api.AiInvocationContext)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiExecutionProxy.html" title="interface in com.aispect.api">AiExecutionProxy</a>&lt;<a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">T</a>,<wbr><a href="AbstractUnitAgent.html" title="type parameter in AbstractUnitAgent">R</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - 当前方法调用的拦截上下文</dd>
+<dd><code>ctx</code> - The interception context for the current method call</dd>
 <dt>Returns:</dt>
-<dd>AI 处理完毕后的结果</dd>
+<dd>AI The result after processing</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 在编排或底层调用期间抛出的异常</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Exceptions thrown during orchestration or underlying calls</dd>
 </dl>
 </section>
 </li>

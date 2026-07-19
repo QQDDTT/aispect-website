@@ -82,8 +82,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AiAgentBeanPostProcessor</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements org.springframework.beans.factory.config.BeanPostProcessor</span></div>
-<div class="block">Spring BeanPostProcessor 扩展，用于为带有 @AiNode 或 @AiGraphAgent 注解的 Bean 自动创建代理。
- 注意：为了能够脱离 Spring 上下文依赖编译，这只是一个简化版实现。</div>
+<div class="block">Spring BeanPostProcessor extension, used for applications with @AiNode or @AiGraphAgent annotated Bean Automatically create agents.
+ Note: In order to be able to escape Spring Context-dependent compilation, this is just a simplified implementation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,9 +115,9 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#postProcessAfterInitialization(java.lang.Object,java.lang.String)" class="member-name-link">postProcessAfterInitialization</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;bean,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;beanName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">在 Bean 初始化后进行后置处理。
- 扫描 Bean 中的所有方法，检查是否包含 @AiNode、@AiGraphAgent 或 @AiUnitAgent 注解。
- 如果包含，则尝试为其第一个接口创建代理对象，从而注入 AI 编排能力。</div>
+<div class="block">exist Bean Post-processing is performed after initialization.
+ scanning Bean For all methods in , check whether it contains @AiNode、@AiGraphAgent or @AiUnitAgent annotation.
+ If included, attempts to create a proxy object for its first interface, thus injecting AI Orchestration capabilities.</div>
 </div>
 </div>
 </div>
@@ -160,17 +160,17 @@ implements org.springframework.beans.factory.config.BeanPostProcessor</span></di
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;bean,
  @NonNull
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;beanName)</span></div>
-<div class="block">在 Bean 初始化后进行后置处理。
- 扫描 Bean 中的所有方法，检查是否包含 @AiNode、@AiGraphAgent 或 @AiUnitAgent 注解。
- 如果包含，则尝试为其第一个接口创建代理对象，从而注入 AI 编排能力。</div>
+<div class="block">exist Bean Post-processing is performed after initialization.
+ scanning Bean For all methods in , check whether it contains @AiNode、@AiGraphAgent or @AiUnitAgent annotation.
+ If included, attempts to create a proxy object for its first interface, thus injecting AI Orchestration capabilities.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>postProcessAfterInitialization</code>&nbsp;in interface&nbsp;<code>org.springframework.beans.factory.config.BeanPostProcessor</code></dd>
 <dt>Parameters:</dt>
-<dd><code>bean</code> - 原始 Bean 实例</dd>
-<dd><code>beanName</code> - Bean 的名称</dd>
+<dd><code>bean</code> - original Bean Example</dd>
+<dd><code>beanName</code> - Bean name</dd>
 <dt>Returns:</dt>
-<dd>如果需要代理则返回代理对象，否则返回原始 Bean</dd>
+<dd>Returns the proxy object if a proxy is required, otherwise returns the original Bean</dd>
 </dl>
 </section>
 </li>

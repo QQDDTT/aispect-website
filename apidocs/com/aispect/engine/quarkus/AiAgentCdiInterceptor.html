@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 @Priority(2000)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">AiAgentCdiInterceptor</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Quarkus / CDI 拦截器，用于处理带有 AI 注解的方法调用。</div>
+<div class="block">Quarkus / CDI Interceptor for handling with AI Annotated method calls.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -110,9 +110,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#intercept(jakarta.interceptor.InvocationContext)" class="member-name-link">intercept</a><wbr>(jakarta.interceptor.InvocationContext&nbsp;context)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">拦截带有 AI 注解的方法调用。
- 拦截后会根据 @AiNode 或 @AiGraphAgent 注解提取相关参数（如代理名称、模型名称等），
- 构建 AiInvocationContext 并交由对应的 UnitAgent 或 GraphAgent 进行编排与执行。</div>
+<div class="block">Interception with AI Annotated method calls.
+ After interception, it will be based on @AiNode or @AiGraphAgent Annotation extracts relevant parameters (such as agent name, model name, etc.),
+ build AiInvocationContext and handed over to the corresponding UnitAgent or GraphAgent Orchestrate and execute.</div>
 </div>
 </div>
 </div>
@@ -150,16 +150,16 @@ loadScripts(document, 'script');</script>
 <h3>intercept</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">intercept</span><wbr><span class="parameters">(jakarta.interceptor.InvocationContext&nbsp;context)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<div class="block">拦截带有 AI 注解的方法调用。
- 拦截后会根据 @AiNode 或 @AiGraphAgent 注解提取相关参数（如代理名称、模型名称等），
- 构建 AiInvocationContext 并交由对应的 UnitAgent 或 GraphAgent 进行编排与执行。</div>
+<div class="block">Interception with AI Annotated method calls.
+ After interception, it will be based on @AiNode or @AiGraphAgent Annotation extracts relevant parameters (such as agent name, model name, etc.),
+ build AiInvocationContext and handed over to the corresponding UnitAgent or GraphAgent Orchestrate and execute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>context</code> - 拦截器上下文，包含被拦截的方法及参数信息</dd>
+<dd><code>context</code> - Interceptor context, including intercepted method and parameter information</dd>
 <dt>Returns:</dt>
-<dd>AI 引擎执行后的结果</dd>
+<dd>AI The result after engine execution</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - 如果在执行过程中发生异常</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - If an exception occurs during execution</dd>
 </dl>
 </section>
 </li>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Type Parameters:</dt>
-<dd><code>V</code> - 缓存的资源对象类型（如 AiResourceContext 包装器等）</dd>
+<dd><code>V</code> - The cached resource object type (e.g. AiResourceContext wrapper etc.)</dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -81,11 +81,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AgentInvocationCache&lt;V extends <a href="AiAgentFilter.html" title="interface in com.aispect.api">AiAgentFilter</a>&gt;</span></div>
-<div class="block">代理与节点资源的全局调度缓存接口
+<div class="block">Global scheduling cache interface for agents and node resources
  <p>
- 采用组合模式（内部可封装 Hashtable 或 ConcurrentHashMap 等结构）。
- 具体实现类（如 UnitInvocationCache, GraphInvocationCache）应完全掌控
- 自身的 Hash 计算逻辑，并对外提供基础的资源检索能力。
+ Adopt combined mode (can be packaged internally Hashtable or ConcurrentHashMap etc. structure).
+ Concrete implementation class (such as UnitInvocationCache, GraphInvocationCache）should have complete control
+ own Hash Compute logic and provide basic resource retrieval capabilities to the outside world.
  </p></div>
 </section>
 <section class="summary">
@@ -104,32 +104,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">销毁或清空缓存，释放相关的资源。</div>
+<div class="block">Destroy or clear the cache and release related resources.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#computeHash(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">computeHash</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">计算缓存的 hash 值</div>
+<div class="block">Compute cached hash value</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AgentInvocationCache.html" title="type parameter in AgentInvocationCache">V</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">通过指定的联合主键极速检索对应的资源。</div>
+<div class="block">Quickly retrieve the corresponding resources through the specified joint primary key.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#put(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase,V)" class="member-name-link">put</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase,
  <a href="AgentInvocationCache.html" title="type parameter in AgentInvocationCache">V</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">将解析后的资源注册到内部缓存中。</div>
+<div class="block">Register the parsed resource into the internal cache.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove(java.lang.reflect.Method,com.aispect.agent.enumeration.AiExecutePhase)" class="member-name-link">remove</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">移除缓存中的资源。</div>
+<div class="block">Remove resources from cache.</div>
 </div>
 </div>
 </div>
@@ -150,13 +150,13 @@ loadScripts(document, 'script');</script>
 <h3>computeHash</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">computeHash</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">计算缓存的 hash 值</div>
+<div class="block">Compute cached hash value</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>method</code> - 方法</dd>
-<dd><code>phase</code> - 执行阶段</dd>
+<dd><code>method</code> - method</dd>
+<dd><code>phase</code> - Execution phase</dd>
 <dt>Returns:</dt>
-<dd>hash 值</dd>
+<dd>hash value</dd>
 </dl>
 </section>
 </li>
@@ -167,12 +167,12 @@ loadScripts(document, 'script');</script>
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase,
  <a href="AgentInvocationCache.html" title="type parameter in AgentInvocationCache">V</a>&nbsp;resource)</span>
   throws <span class="exceptions"><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">将解析后的资源注册到内部缓存中。</div>
+<div class="block">Register the parsed resource into the internal cache.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>method</code> - 方法</dd>
-<dd><code>phase</code> - 执行阶段</dd>
-<dd><code>resource</code> - 被缓存的资源实体</dd>
+<dd><code>method</code> - method</dd>
+<dd><code>phase</code> - Execution phase</dd>
+<dd><code>resource</code> - Cached resource entities</dd>
 <dt>Throws:</dt>
 <dd><code><a href="../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code></dd>
 </dl>
@@ -183,13 +183,13 @@ loadScripts(document, 'script');</script>
 <h3>get</h3>
 <div class="member-signature"><span class="return-type"><a href="AgentInvocationCache.html" title="type parameter in AgentInvocationCache">V</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">通过指定的联合主键极速检索对应的资源。</div>
+<div class="block">Quickly retrieve the corresponding resources through the specified joint primary key.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>method</code> - 方法</dd>
-<dd><code>phase</code> - 执行阶段</dd>
+<dd><code>method</code> - method</dd>
+<dd><code>phase</code> - Execution phase</dd>
 <dt>Returns:</dt>
-<dd>对应的资源，如果不存在则返回 null</dd>
+<dd>The corresponding resource is returned if it does not exist. null</dd>
 </dl>
 </section>
 </li>
@@ -198,13 +198,13 @@ loadScripts(document, 'script');</script>
 <h3>remove</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">remove</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="../agent/enumeration/AiExecutePhase.html" title="enum class in com.aispect.agent.enumeration">AiExecutePhase</a>&nbsp;phase)</span></div>
-<div class="block">移除缓存中的资源。</div>
+<div class="block">Remove resources from cache.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>method</code> - 方法</dd>
-<dd><code>phase</code> - 执行阶段</dd>
+<dd><code>method</code> - method</dd>
+<dd><code>phase</code> - Execution phase</dd>
 <dt>Returns:</dt>
-<dd>是否成功移除</dd>
+<dd>Removed successfully</dd>
 </dl>
 </section>
 </li>
@@ -212,7 +212,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
-<div class="block">销毁或清空缓存，释放相关的资源。</div>
+<div class="block">Destroy or clear the cache and release related resources.</div>
 </section>
 </li>
 </ul>

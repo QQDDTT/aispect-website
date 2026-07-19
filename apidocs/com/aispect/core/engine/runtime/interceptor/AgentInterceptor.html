@@ -82,12 +82,12 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AgentInterceptor</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/InvocationHandler.html" title="class or interface in java.lang.reflect" class="external-link">InvocationHandler</a></span></div>
-<div class="block">JDK 动态代理的核心拦截器，属于<b>运行阶段（Runtime）</b>职责。
+<div class="block">JDK The core interceptor of dynamic proxy, which belongs to<b>running phase (Runtime）</b>Responsibilities.
  <p>
- 在实例化时委托 <a href="../../bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> 完成启动期的注解扫描与资源注册；
- 在方法被调用时，从 <a href="../../bootstrap/registry/AgentInvocationCacheImpl.html" title="class in com.aispect.core.engine.bootstrap.registry"><code>AgentInvocationCacheImpl</code></a> 中读取已注册的 Agent，
- 通过 <code>instanceof</code> 区分 <a href="../../../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> 与 <a href="../../../../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core"><code>AbstractGraphAgent</code></a>，
- 并将调用路由至相应的执行引擎（Unit / Graph）。
+ delegate at instantiation <a href="../../bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> Complete annotation scanning and resource registration during startup;
+ When the method is called, from <a href="../../bootstrap/registry/AgentInvocationCacheImpl.html" title="class in com.aispect.core.engine.bootstrap.registry"><code>AgentInvocationCacheImpl</code></a> Read the registered Agent，
+ pass <code>instanceof</code> distinguish <a href="../../../../api/AiUnitAgentHandler.html" title="interface in com.aispect.api"><code>AiUnitAgentHandler</code></a> and <a href="../../../../agent/core/AbstractGraphAgent.html" title="class in com.aispect.agent.core"><code>AbstractGraphAgent</code></a>，
+ and routes the call to the appropriate execution engine (Unit / Graph）。
  </p></div>
 </section>
 <section class="summary">
@@ -104,7 +104,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;interfaceClass,
  <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</code></div>
 <div class="col-last even-row-color">
-<div class="block">拦截器构造函数。</div>
+<div class="block">Interceptor constructor.</div>
 </div>
 </div>
 </section>
@@ -125,7 +125,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">运行阶段拦截入口：根据缓存中的 Agent 资源，将调用路由至相应引擎。</div>
+<div class="block">Interception entry during running phase: According to the cached Agent Resources to route calls to the appropriate engine.</div>
 </div>
 </div>
 </div>
@@ -151,19 +151,19 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;interfaceClass,
  <a href="../../../../api/AiOperations.html" title="interface in com.aispect.api">AiOperations</a>&nbsp;aiOperations)</span>
                  throws <span class="exceptions"><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></span></div>
-<div class="block">拦截器构造函数。
+<div class="block">Interceptor constructor.
  <p>
- 实例化时立即触发启动阶段的组件扫描：
- 委托 <a href="../../bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> 扫描目标接口的注解，校验资源合法性，
- 并将实例化好的 Handler 存入 <code>invocationCache</code>。
+ Trigger component scanning in the startup phase immediately upon instantiation:
+ entrust <a href="../../bootstrap/scanner/AiComponentScanner.html" title="class in com.aispect.core.engine.bootstrap.scanner"><code>AiComponentScanner</code></a> Scan the annotations of the target interface and verify the legality of the resources.
+ and will instantiate Handler Deposit <code>invocationCache</code>。
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>target</code> - 代理的目标对象实例</dd>
-<dd><code>interfaceClass</code> - 代理对应的接口类</dd>
-<dd><code>aiOperations</code> - AI 服务操作接口实例</dd>
+<dd><code>target</code> - The proxy's target object instance</dd>
+<dd><code>interfaceClass</code> - The interface class corresponding to the agent</dd>
+<dd><code>aiOperations</code> - AI Service operation interface instance</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></code> - 若启动阶段的组件扫描发现配置错误</dd>
+<dd><code><a href="../../../../common/exception/AiScanException.html" title="class in com.aispect.common.exception">AiScanException</a></code> - If the component scan during the startup phase finds configuration errors</dd>
 </dl>
 </section>
 </li>
@@ -182,9 +182,9 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;args)</span>
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></span></div>
-<div class="block">运行阶段拦截入口：根据缓存中的 Agent 资源，将调用路由至相应引擎。
+<div class="block">Interception entry during running phase: According to the cached Agent Resources to route calls to the appropriate engine.
  <p>
- 优先级：Unit Agent > Graph Agent > 原生方法调用（兜底）
+ Priority:Unit Agent > Graph Agent > Native method call (informal)
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>

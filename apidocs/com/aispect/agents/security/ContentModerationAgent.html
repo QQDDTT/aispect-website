@@ -83,10 +83,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ContentModerationAgent</span>
 <span class="extends-implements">extends <a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span></div>
-<div class="block">内容审核 Agent。
+<div class="block">Content moderation Agent。
  <p>
- 在实际方法执行前拦截请求，并使用 AI 进行安全检查（例如：色情内容、暴力、仇恨言论）。
- 如果检测到违规行为，将抛出异常以阻止执行流程。
+ Intercept the request before the actual method is executed, and use AI Conduct safety checks (eg: pornography, violence, hate speech).
+ If a violation is detected, an exception will be thrown to block the execution flow.
  </p></div>
 </section>
 <section class="summary">
@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#preExecute(com.aispect.api.AiInvocationContext)" class="member-name-link">preExecute</a><wbr>(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">在目标方法执行前进行参数审核。</div>
+<div class="block">Parameter review is performed before the target method is executed.</div>
 </div>
 </div>
 </div>
@@ -159,16 +159,16 @@ loadScripts(document, 'script');</script>
 <h3>preExecute</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">preExecute</span><wbr><span class="parameters">(<a href="../../api/AiInvocationContext.html" title="interface in com.aispect.api">AiInvocationContext</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;ctx)</span>
                 throws <span class="exceptions"><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></span></div>
-<div class="block">在目标方法执行前进行参数审核。</div>
+<div class="block">Parameter review is performed before the target method is executed.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../api/AiPreExecutionProxy.html#preExecute(com.aispect.api.AiInvocationContext)">preExecute</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/AiPreExecutionProxy.html" title="interface in com.aispect.api">AiPreExecutionProxy</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="../../agent/core/AbstractUnitAgent.html#preExecute(com.aispect.api.AiInvocationContext)">preExecute</a></code>&nbsp;in class&nbsp;<code><a href="../../agent/core/AbstractUnitAgent.html" title="class in com.aispect.agent.core">AbstractUnitAgent</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></dd>
 <dt>Parameters:</dt>
-<dd><code>ctx</code> - AI 执行上下文，包含目标方法的所有参数</dd>
+<dd><code>ctx</code> - AI Execution context, containing all parameters of the target method</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - 当检测到不安全内容时抛出 AiAgentExecutionException 异常，或在 AI 调用中发生其他错误</dd>
+<dd><code><a href="../../common/exception/AiSpectException.html" title="class in com.aispect.common.exception">AiSpectException</a></code> - Thrown when unsafe content is detected AiAgentExecutionException abnormal, or in AI Another error occurred during the call</dd>
 </dl>
 </section>
 </li>

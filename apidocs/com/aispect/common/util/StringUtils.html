@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">StringUtils</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">字符串处理公共工具类。</div>
+<div class="block">Public utility class for string processing.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,31 +95,31 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isBlank(java.lang.CharSequence)" class="member-name-link">isBlank</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;cs)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">检查给定的 CharSequence 是否为空 ("")、为 null 或仅包含空白字符。</div>
+<div class="block">Check the given CharSequence Is it empty ("")、for null or contain only whitespace characters.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isNotBlank(java.lang.CharSequence)" class="member-name-link">isNotBlank</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;cs)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">检查给定的 CharSequence 是否不为空 ("")、不为 null 且不全为空白字符。</div>
+<div class="block">Check the given CharSequence Whether it is not empty ("")、Not for null And not all whitespace characters.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#toBoolean(java.lang.String,boolean)" class="member-name-link">toBoolean</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  boolean&nbsp;defaultValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">安全地将字符串转换为 boolean。如果字符串为 "true"（忽略大小写），则返回 true。
- 如果字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to boolean。If the string is "true"（Ignoring case), return true。
+ If the string is empty, the default value is returned.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#toInt(java.lang.String,int)" class="member-name-link">toInt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  int&nbsp;defaultValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">安全地将字符串转换为 int，如果转换失败或字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to int，If the conversion fails or the string is empty, the default value is returned.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#toLong(java.lang.String,long)" class="member-name-link">toLong</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  long&nbsp;defaultValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">安全地将字符串转换为 long，如果转换失败或字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to long，If the conversion fails or the string is empty, the default value is returned.</div>
 </div>
 </div>
 </div>
@@ -142,14 +142,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isBlank(java.lang.CharSequence)">
 <h3>isBlank</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isBlank</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;cs)</span></div>
-<div class="block">检查给定的 CharSequence 是否为空 ("")、为 null 或仅包含空白字符。</div>
+<div class="block">Check the given CharSequence Is it empty ("")、for null or contain only whitespace characters.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="isNotBlank(java.lang.CharSequence)">
 <h3>isNotBlank</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNotBlank</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;cs)</span></div>
-<div class="block">检查给定的 CharSequence 是否不为空 ("")、不为 null 且不全为空白字符。</div>
+<div class="block">Check the given CharSequence Whether it is not empty ("")、Not for null And not all whitespace characters.</div>
 </section>
 </li>
 <li>
@@ -157,7 +157,7 @@ loadScripts(document, 'script');</script>
 <h3>toInt</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">toInt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  int&nbsp;defaultValue)</span></div>
-<div class="block">安全地将字符串转换为 int，如果转换失败或字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to int，If the conversion fails or the string is empty, the default value is returned.</div>
 </section>
 </li>
 <li>
@@ -165,7 +165,7 @@ loadScripts(document, 'script');</script>
 <h3>toLong</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">toLong</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  long&nbsp;defaultValue)</span></div>
-<div class="block">安全地将字符串转换为 long，如果转换失败或字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to long，If the conversion fails or the string is empty, the default value is returned.</div>
 </section>
 </li>
 <li>
@@ -173,8 +173,8 @@ loadScripts(document, 'script');</script>
 <h3>toBoolean</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">toBoolean</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;str,
  boolean&nbsp;defaultValue)</span></div>
-<div class="block">安全地将字符串转换为 boolean。如果字符串为 "true"（忽略大小写），则返回 true。
- 如果字符串为空，则返回默认值。</div>
+<div class="block">Safely convert a string to boolean。If the string is "true"（Ignoring case), return true。
+ If the string is empty, the default value is returned.</div>
 </section>
 </li>
 </ul>
