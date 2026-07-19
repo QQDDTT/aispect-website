@@ -14,6 +14,7 @@ Provides the lowest-level annotation definitions and core AI communication inter
 ### Engine Adapters (Choose one)
 Download the corresponding adapter package according to your runtime environment:
 - 🍃 **Spring Boot Exclusive**: `aispect-engine-spring-1.0.0.jar` —— [Download](../downloads/aispect-engine-spring-1.0.0.jar)
+- 🚀 **Quarkus Exclusive**: `aispect-engine-quarkus-1.0.0.jar` —— [Download](../downloads/aispect-engine-quarkus-1.0.0.jar)
 - ☕ **Pure Java SE Exclusive**: `aispect-engine-se-1.0.0.jar` —— [Download](../downloads/aispect-engine-se-1.0.0.jar)
 
 ---

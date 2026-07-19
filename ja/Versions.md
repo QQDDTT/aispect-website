@@ -14,6 +14,7 @@ AiSpect のコアコードは現在クローズドソースですが、コンパ
 ### エンジンアダプター（いずれか1つを選択）
 実行環境に応じて対応するアダプターパッケージをダウンロードしてください：
 - 🍃 **Spring Boot 専用**: `aispect-engine-spring-1.0.0.jar` —— [ダウンロード](../downloads/aispect-engine-spring-1.0.0.jar)
+- 🚀 **Quarkus 専用**: `aispect-engine-quarkus-1.0.0.jar` —— [ダウンロード](../downloads/aispect-engine-quarkus-1.0.0.jar)
 - ☕ **Pure Java SE 専用**: `aispect-engine-se-1.0.0.jar` —— [ダウンロード](../downloads/aispect-engine-se-1.0.0.jar)
 
 ---
